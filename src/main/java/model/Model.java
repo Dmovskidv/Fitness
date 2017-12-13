@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class Model implements DateInterface {
 
-    ArrayList<Client> clients = new ArrayList<Client>();
+   private  ArrayList<Client> clients = new ArrayList<Client>();
    // ArrayList<Staff> staff = new ArrayList<Staff>();
 
 
@@ -14,5 +14,9 @@ public class Model implements DateInterface {
     @Override
     public DateInterface getDate() {
         return null;
+    }
+
+    public ArrayList<Client> getClients() {
+        return clients;
     }
 }
