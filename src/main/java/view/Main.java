@@ -1,6 +1,7 @@
 package view;
 
 import Interface.ViewInterface;
+import controller.Controller;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -10,51 +11,54 @@ import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.IOException;
 
-public class Main implements ViewInterface{
+public class Main implements ViewInterface {
 
     private static JMenuBar menuBar;
     private static JMenu sales, services, clients, staff, reports, lock, help, addSale, groupLessons, admin;
     private static JMenuItem addClient, findClient, gim, pool, timeTable, addStaff, findStaff, reportDay, reportMonth,
             lockOn, changeUser, exitApp, helpInfo;
     private static JMenuItem adminItem;
-    private static JFrame frame;
+
+    private  JFrame frame;
     private static JPanel panel;
-    // ClientModelTable model = new ClientModelTable();
-    private JButton buttonAddClient, buttonAddSale, buttonServices, buttonLock;
-    private JLayeredPane panelButtons;
+
+
+
+    private JButton buttonAddClient;
+    private static JButton buttonAddSale;
+    private JButton buttonServices;
+    private JButton buttonLock;
+    private static JLayeredPane panelButtons;
+    Controller controller;
+    static Boolean active = true;
 
     public Main() {
-
         frame = new JFrame();
-
         frame.setTitle("Фитнеc-центр");
         frame.setSize(1200, 750);
         frame.setResizable(false);
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.getContentPane().setLayout(null);
-        try {
-            panel = new JPanel() {
-                private Image backgroundImage = ImageIO.read(new File("src/main/resources/images/fitness2.jpg"));
-
-                public void paint(Graphics g) {
-                    super.paint(g);
-                    g.drawImage(backgroundImage, 0, 0, null);
-                }
-            };
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        ;
-
+        panel = new JPanel();
         panel.setLayout(null);
-        panel.setBounds(10, 11, 1164, 668);
+        panel.setBounds(0, 0, 1180, 690);
         frame.getContentPane().add(panel);
         setMenuBar();
+        setButtons();
+        setImage();
         frame.setVisible(true);
         MyDialog.control_password();
-        setButtons();
 
+        //setButtons();
+
+    }
+
+    private void setImage() {
+        JLabel images = new JLabel();
+        images.setIcon(new ImageIcon("src\\main\\resources\\images\\mainBackground11.jpg"));
+        images.setBounds(0, 0, 1180, 690);
+        panel.add(images);
     }
 
     public void setButtons() {
@@ -67,16 +71,24 @@ public class Main implements ViewInterface{
         buttonAddSale.setBounds(372, 196, 400, 70);
         panelButtons.add(buttonAddSale);
 
-        buttonServices = new JButton("Добавить нового клиента");
-        buttonServices.setBounds(372, 277, 400, 70);
-        panelButtons.add(buttonServices);
-        buttonAddClient = new JButton("Учёт посещений клиентов");
-        buttonAddClient.setBounds(372, 358, 400, 70);
+        buttonAddClient = new JButton("Добавить нового клиента");
+        buttonAddClient.setBounds(372, 277, 400, 70);
         panelButtons.add(buttonAddClient);
+        Controller.openAddClient(buttonAddClient);
+
+
+
+
+        buttonServices = new JButton("Учёт посещений клиентов");
+        buttonServices.setBounds(372, 358, 400, 70);
+        panelButtons.add(buttonServices);
+        Controller.openFindClient(buttonServices);
 
         buttonLock = new JButton("Блокировка");
-        buttonLock.setBounds(960, 24, 153, 59);
+        buttonLock.setBounds(1050, 24, 100, 100);
+        buttonLock.setBorder(null);
         panelButtons.add(buttonLock);
+        buttonLock.setIcon(new ImageIcon("src\\main\\resources\\images\\lock3.jpg"));
          buttonLock.addActionListener(new ActionListener() {
 
          @Override
@@ -181,9 +193,11 @@ public class Main implements ViewInterface{
 
     }
 
-    public static JFrame getFrame() {
+    public   JFrame  getFrame() {
         return frame;
     }
+
+
 
     public static JMenuItem setadminItem() {
         return adminItem;
@@ -191,7 +205,9 @@ public class Main implements ViewInterface{
 
 
     @Override
-    public ViewInterface showView() {
-        return this;
+    public void showView() {
+        return;
     }
+
+
 }

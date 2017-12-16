@@ -1,6 +1,7 @@
 package view;
 
 import Interface.ViewInterface;
+import controller.Controller;
 import net.sourceforge.jdatepicker.impl.JDatePanelImpl;
 import net.sourceforge.jdatepicker.impl.JDatePickerImpl;
 import net.sourceforge.jdatepicker.impl.UtilDateModel;
@@ -20,7 +21,7 @@ public class AddClient implements ViewInterface {
     private JTextField field_sirname, field_name, field_nameFather, field_birthday, field_mobile, field_homePhone,
             field_workHome, field_email, field_passport, field_infoPassport, field_photo;
     private JTextArea textArea_aboutClient;
-    private JButton button_create, button_cancel, button_addPhoto;
+    private JButton button_create, button_cancel, button_addPhoto, buttonReturnMain;
     private JComboBox comboBox_getPublic, comboBox_whyKnow, comboBox_pol;
     private String[] combo_items = { "Рассказали знакомые", "Реклама в интернете", "Реклама в метро",
             "Интернет-поисковик", "Находится рядом", "Рекламные листовки", "Другое" };
@@ -41,7 +42,7 @@ public class AddClient implements ViewInterface {
         panel.setLayout(null);
         getForm();
         getDate();
-        frame.setVisible(true);
+
     }
 
     public void getForm() {
@@ -149,6 +150,13 @@ public class AddClient implements ViewInterface {
         button_cancel.setBounds(983, 631, 177, 54);
         panel.add(button_cancel);
 
+        buttonReturnMain = new JButton("");
+        buttonReturnMain.setBorder(null);
+        buttonReturnMain.setIcon(new ImageIcon("src\\main\\resources\\images\\return.jpg"));
+        buttonReturnMain.setBounds(20, 633, 47, 53);
+        panel.add(buttonReturnMain);
+        Controller.returnMainMenu(buttonReturnMain, getFrame());
+
         textArea_aboutClient = new JTextArea();
         textArea_aboutClient.setBorder(BorderFactory.createLineBorder(Color.LIGHT_GRAY));
         textArea_aboutClient.setBounds(612, 369, 548, 234);
@@ -213,8 +221,14 @@ public class AddClient implements ViewInterface {
     }
 
     @Override
-    public ViewInterface showView() {
-        return this;
+    public void showView() {
+        frame.setVisible(true);
+
+    }
+
+    @Override
+    public JFrame getFrame() {
+        return frame;
     }
 
     public class DateLabelFormatter extends JFormattedTextField.AbstractFormatter {

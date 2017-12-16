@@ -1,6 +1,9 @@
 package Interface;
 
+import javax.swing.*;
+
 public interface ViewInterface {
 
-    ViewInterface showView();
+    void showView();
+    JFrame getFrame();
 }

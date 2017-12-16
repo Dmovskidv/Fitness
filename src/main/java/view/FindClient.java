@@ -1,5 +1,7 @@
 package view;
 
+import Interface.ViewInterface;
+import controller.Controller;
 import model.ModelTable;
 
 import javax.swing.JFrame;
@@ -15,7 +17,7 @@ import javax.swing.border.LineBorder;
 import java.awt.Color;
 import javax.swing.ImageIcon;
 
-public class FindClient {
+public class FindClient implements ViewInterface {
 
     private JFrame frame;
     private JTable tableClients;
@@ -27,7 +29,7 @@ public class FindClient {
             labelInfoClientPol;
     private JPanel mainpanel, panelInfo, panelClient, topPanel;
     private JScrollPane scrollPaneTable;
-    private JButton buttonFindClient, buttonClientEnter;
+    private JButton buttonFindClient, buttonClientEnter, buttonReturnMain, buttonClientExit, buttonChangePhoto;
 
     ModelTable modelTable = new ModelTable();
 
@@ -66,7 +68,7 @@ public class FindClient {
 
         // -------------------------------
 
-        frame.setVisible(true);
+
     }
 
     public void setPanelInfo() {
@@ -271,14 +273,21 @@ public class FindClient {
         labelFoto.setBounds(445, 0, 172, 170);
         topPanel.add(labelFoto);
 
-        JButton buttonChangePhoto = new JButton("");
+         buttonChangePhoto = new JButton("");
         buttonChangePhoto.setIcon(new ImageIcon("src\\main\\resources\\images\\icon2redact.png"));
         buttonChangePhoto.setBounds(622, 145, 25, 25);
         topPanel.add(buttonChangePhoto);
 
-        JButton buttonClientExit = new JButton("Выход  клиента");
+         buttonClientExit = new JButton("Выход  клиента");
         buttonClientExit.setBounds(959, 633, 203, 53);
         mainpanel.add(buttonClientExit);
+
+         buttonReturnMain = new JButton("");
+         buttonReturnMain.setBorder(null);
+        buttonReturnMain.setIcon(new ImageIcon("src\\main\\resources\\images\\return.jpg"));
+        buttonReturnMain.setBounds(10, 633, 47, 53);
+        mainpanel.add(buttonReturnMain);
+        Controller.returnMainMenu(buttonReturnMain, getFrame());
     }
 
     public void setTableClient() {
@@ -290,4 +299,14 @@ public class FindClient {
         tableClients.setBounds(10, 94, 381, 508);
         scrollPaneTable.setViewportView(tableClients);
             }
+
+    @Override
+    public void showView() {
+        frame.setVisible(true);
+    }
+
+    @Override
+    public JFrame getFrame() {
+        return frame;
+    }
 }

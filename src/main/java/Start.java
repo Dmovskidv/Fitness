@@ -1,3 +1,4 @@
+import controller.Controller;
 import view.AddClient;
 import view.FindClient;
 import view.Main;
@@ -11,6 +12,8 @@ public class Start {
         //new Main();
         //new FindClient();
         //new PoolInfo();
+
+        new Controller().showApp();
 
     }
 }
