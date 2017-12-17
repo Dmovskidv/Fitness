@@ -61,7 +61,7 @@ public class Main implements ViewInterface {
         buttonAddClient = new JButton("Добавить нового клиента");
         buttonAddClient.setBounds(372, 277, 400, 70);
         panelButtons.add(buttonAddClient);
-        Controller.openAddClient(buttonAddClient);
+        Controller.openAddClient(buttonAddClient, getFrame());
 
         buttonServices = new JButton("Учёт посещений клиентов");
         buttonServices.setBounds(372, 358, 400, 70);
@@ -108,25 +108,29 @@ public class Main implements ViewInterface {
 
         addClient = new JMenuItem("Добавить клиента");
         clients.add(addClient);
+        Controller.openAddClientClickItem(addClient, getFrame());
 
         findClient = new JMenuItem("Найти клиента");
         clients.add(findClient);
+        Controller.openFindClientClickItem(findClient, getFrame());
+
 
         services = new JMenu("Услуги");
         menuBar.add(services);
 
         gim = new JMenuItem("Тренажёрный зал");
         services.add(gim);
+        Controller.clickServicesGim(gim, getFrame());
 
         pool = new JMenuItem("Бассеин");
         services.add(pool);
+        Controller.clickServicesPool(pool, getFrame());
 
         groupLessons = new JMenu("Групповые занятия");
         services.add(groupLessons);
+        Controller.clickServicesClickAerobic(groupLessons.add("Аэробика"), getFrame());
         groupLessons.add("Йога");
-        groupLessons.add("Пилатес");
-        groupLessons.add("Стрипплаcтика");
-        groupLessons.add("Аэробмикc");
+
 
         timeTable = new JMenuItem("Расписание");
         services.add(timeTable);

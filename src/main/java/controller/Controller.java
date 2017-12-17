@@ -7,6 +7,9 @@ import model.Model;
 import view.AddClient;
 import view.FindClient;
 import view.Main;
+import view.services.FitnessInfo;
+import view.services.GimInfo;
+import view.services.PoolInfo;
 
 import javax.swing.*;
 import java.awt.*;
@@ -28,13 +31,23 @@ public class Controller  {
        main.showView();
     }
 
-    public static  void openAddClient(JButton button){
+    public static  void openAddClient(JButton button, final JFrame frame){
 
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                  new AddClient().showView();
-                 Main.getFrame().setVisible(false);
+                 frame.setVisible(false);
+            }
+        });
+    }
+
+    public static  void openAddClientClickItem(JMenuItem action, final JFrame frame){
+        action.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new AddClient().showView();
+                frame.setVisible(false);
             }
         });
     }
@@ -49,6 +62,17 @@ public class Controller  {
             }
         });
 
+    }
+
+    public static void openFindClientClickItem(JMenuItem findClient, final JFrame frame) {
+        findClient.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new FindClient().showView();
+                frame.setVisible(false);
+
+            }
+        });
     }
 
     public static void returnMainMenu(final JButton button3, final JFrame frame){
@@ -110,6 +134,37 @@ public class Controller  {
         });
     }
 
+    public static void clickServicesPool(final JMenuItem pool, final JFrame frame){
+        pool.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.setVisible(false);
+                new PoolInfo();
+            }
+        });
+    }
+
+    public static void clickServicesGim( JMenuItem gim, final JFrame frame) {
+        gim.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.setVisible(false);
+                new GimInfo();
+            }
+        });
+
+    }
 
 
- }
+    public static void clickServicesClickAerobic(JMenuItem action, final JFrame frame) {
+        action.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.setVisible(false);
+                new FitnessInfo();
+            }
+        });
+
+    }
+    }
+

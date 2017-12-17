@@ -1,25 +1,23 @@
 package view.services;
 
 import controller.Controller;
+
 import javax.swing.*;
-import javax.swing.border.LineBorder;
-import java.awt.Color;
-import java.awt.Font;
 import javax.swing.border.BevelBorder;
+import javax.swing.border.LineBorder;
+import java.awt.*;
 
-public class PoolInfo {
-
-
+public class GimInfo {
 
     private JFrame frame;
     private JPanel mainPanel, panelDop;
     private JLabel labelPhoto, labelTitleUsluga, labelRaz, labelTitleCena, labelAbonent1m, labelAbonent3m,
             labelAbonent6m, labelAbonentYear, labelCenaRaz, labelCenaAbonent1m, labelCenaAbonent3m, labelCenaAbonent6m,
             labelCenaAbonent1y, labelDopPanelTitle, labelInfoPool1, labelInfoPool2, labelInfoPool3, labelInfoPool4,
-            labelInfoPool5;
+            labelInfoPool5, labelInfoPool6;
     private JButton buttonReturnMain;
 
-    public PoolInfo() {
+    public GimInfo() {
         frame = new JFrame();
         frame.setTitle("Услуга");
         frame.setSize(1200, 750);
@@ -38,14 +36,14 @@ public class PoolInfo {
 
     public void setInterface() {
         labelPhoto = new JLabel("");
-        labelPhoto.setIcon(new ImageIcon("src\\main\\resources\\images\\pool.jpg"));
+        labelPhoto.setIcon(new ImageIcon("src\\main\\resources\\images\\gim.jpg"));
         labelPhoto.setBorder(new LineBorder(Color.LIGHT_GRAY));
         labelPhoto.setBounds(557, 57, 600, 600);
         mainPanel.add(labelPhoto);
 
-        labelTitleUsluga = new JLabel("Бассеин");
+        labelTitleUsluga = new JLabel("Тренажёрный зал");
         labelTitleUsluga.setFont(new Font("Verdana", Font.BOLD, 24));
-        labelTitleUsluga.setBounds(218, 57, 134, 35);
+        labelTitleUsluga.setBounds(123, 57, 292, 35);
         mainPanel.add(labelTitleUsluga);
 
         labelRaz = new JLabel(" Разовое посещение:");
@@ -83,31 +81,31 @@ public class PoolInfo {
         labelAbonentYear.setBounds(10, 324, 198, 35);
         mainPanel.add(labelAbonentYear);
 
-        labelCenaRaz = new JLabel(" 3$");
+        labelCenaRaz = new JLabel(" 2$");
         labelCenaRaz.setBorder(new BevelBorder(BevelBorder.LOWERED, Color.LIGHT_GRAY, null, null, null));
         labelCenaRaz.setFont(new Font("Tahoma", Font.BOLD, 20));
         labelCenaRaz.setBounds(218, 139, 59, 35);
         mainPanel.add(labelCenaRaz);
 
-        labelCenaAbonent1m = new JLabel(" 20$");
+        labelCenaAbonent1m = new JLabel(" 15$");
         labelCenaAbonent1m.setFont(new Font("Tahoma", Font.BOLD, 20));
         labelCenaAbonent1m.setBorder(new BevelBorder(BevelBorder.LOWERED, Color.LIGHT_GRAY, null, null, null));
         labelCenaAbonent1m.setBounds(218, 185, 59, 35);
         mainPanel.add(labelCenaAbonent1m);
 
-        labelCenaAbonent3m = new JLabel(" 35$");
+        labelCenaAbonent3m = new JLabel(" 25$");
         labelCenaAbonent3m.setFont(new Font("Tahoma", Font.BOLD, 20));
         labelCenaAbonent3m.setBorder(new BevelBorder(BevelBorder.LOWERED, Color.LIGHT_GRAY, null, null, null));
         labelCenaAbonent3m.setBounds(218, 231, 59, 35);
         mainPanel.add(labelCenaAbonent3m);
 
-        labelCenaAbonent6m = new JLabel(" 50$");
+        labelCenaAbonent6m = new JLabel(" 40$");
         labelCenaAbonent6m.setFont(new Font("Tahoma", Font.BOLD, 20));
         labelCenaAbonent6m.setBorder(new BevelBorder(BevelBorder.LOWERED, Color.LIGHT_GRAY, null, null, null));
         labelCenaAbonent6m.setBounds(218, 277, 59, 35);
         mainPanel.add(labelCenaAbonent6m);
 
-        labelCenaAbonent1y = new JLabel(" 80$");
+        labelCenaAbonent1y = new JLabel(" 70$");
         labelCenaAbonent1y.setFont(new Font("Tahoma", Font.BOLD, 20));
         labelCenaAbonent1y.setBorder(new BevelBorder(BevelBorder.LOWERED, Color.LIGHT_GRAY, null, null, null));
         labelCenaAbonent1y.setBounds(218, 323, 59, 35);
@@ -115,7 +113,7 @@ public class PoolInfo {
 
         panelDop = new JPanel();
         panelDop.setBorder(new BevelBorder(BevelBorder.LOWERED, Color.LIGHT_GRAY, null, null, null));
-        panelDop.setBounds(10, 370, 510, 196);
+        panelDop.setBounds(10, 370, 524, 252);
         mainPanel.add(panelDop);
         panelDop.setLayout(null);
 
@@ -124,30 +122,35 @@ public class PoolInfo {
         labelDopPanelTitle.setBounds(0, 11, 270, 20);
         panelDop.add(labelDopPanelTitle);
 
-        labelInfoPool1 = new JLabel("- 6 дорожек по 25 метров");
+        labelInfoPool1 = new JLabel("- современный спортивный зал с тренажерами (более 30) для");
         labelInfoPool1.setFont(new Font("Tahoma", Font.PLAIN, 14));
-        labelInfoPool1.setBounds(10, 42, 174, 20);
+        labelInfoPool1.setBounds(10, 42, 490, 20);
         panelDop.add(labelInfoPool1);
 
-        labelInfoPool2 = new JLabel("- ширина 18 метров");
+        labelInfoPool2 = new JLabel("различных групп мышц");
         labelInfoPool2.setFont(new Font("Tahoma", Font.PLAIN, 14));
-        labelInfoPool2.setBounds(10, 73, 174, 20);
+        labelInfoPool2.setBounds(20, 63, 517, 20);
         panelDop.add(labelInfoPool2);
 
-        labelInfoPool3 = new JLabel("- глубокая часть – 200см");
+        labelInfoPool3 = new JLabel("- различные спортивные снаряды, которые рассчитаны на");
         labelInfoPool3.setFont(new Font("Tahoma", Font.PLAIN, 14));
-        labelInfoPool3.setBounds(10, 104, 174, 20);
+        labelInfoPool3.setBounds(10, 94, 490, 20);
         panelDop.add(labelInfoPool3);
 
-        labelInfoPool4 = new JLabel("- мелкая часть – 140см");
+        labelInfoPool4 = new JLabel("посетителей разного уровня физической подготовки");
         labelInfoPool4.setFont(new Font("Tahoma", Font.PLAIN, 14));
-        labelInfoPool4.setBounds(10, 135, 174, 20);
+        labelInfoPool4.setBounds(20, 113, 480, 20);
         panelDop.add(labelInfoPool4);
 
-        labelInfoPool5 = new JLabel("- температура воды от +27° до +28°С");
+        labelInfoPool5 = new JLabel("- широкий гантельный ряд");
         labelInfoPool5.setFont(new Font("Tahoma", Font.PLAIN, 14));
-        labelInfoPool5.setBounds(10, 166, 300, 20);
+        labelInfoPool5.setBounds(10, 141, 517, 20);
         panelDop.add(labelInfoPool5);
+
+        labelInfoPool6 = new JLabel("- в тренажерном зале постоянно находятся отзывчивые тренеры");
+        labelInfoPool6.setFont(new Font("Tahoma", Font.PLAIN, 14));
+        labelInfoPool6.setBounds(10, 169, 480, 20);
+        panelDop.add(labelInfoPool6);
 
         buttonReturnMain = new JButton("");
         buttonReturnMain.setBorder(null);
@@ -155,8 +158,6 @@ public class PoolInfo {
         buttonReturnMain.setBounds(10, 633, 47, 53);
         mainPanel.add(buttonReturnMain);
         Controller.returnMainMenu(buttonReturnMain, getFrame());
-
-
 
     }
 
