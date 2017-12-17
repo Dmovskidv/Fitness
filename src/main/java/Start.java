@@ -1,4 +1,6 @@
 import controller.Controller;
+import model.Client;
+import model.Model;
 import view.AddClient;
 import view.FindClient;
 import view.Main;
@@ -13,7 +15,19 @@ public class Start {
         //new FindClient();
         //new PoolInfo();
 
-        new Controller().showApp();
+        //new Controller().showApp();
+
+        Model model = new Model();
+
+
+
+        for (Client m: model.getDate()
+             ) {
+            System.out.println(m.getName());
+            System.out.println("");
+        }
+
+
 
     }
 }

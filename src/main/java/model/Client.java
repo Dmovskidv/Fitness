@@ -9,131 +9,105 @@ public class Client {
     private String name;
     private String lastName;
     private String fatherName;
-    private Date dateBirthday;
-    private Boolean sex;
+    private String dateBirthday;
+    private String sex;
+    //more
     private int numberCard;
     private Image foto;
-    //more
-    private int phoneMobile;
-    private int phoneHome;
-    private int phoneWork;
-    private String email ="Не указан";
-    private int numPassport;
-    private int infoPassport;
-    private String aboutClient ="Не указана";
+    private String phoneMobile;
+    private String phoneHome;
+    private String phoneWork;
+    private String email;
+    private String numPassport;
+    private String infoPassport;
+    private String aboutClient;
 
-    public Client() {
+
+    public Client(String name, String lastName, String fatherName, String sex, int numberCard, String phoneMobile) {
+        this.name = name;
+        this.lastName = lastName;
+        this.fatherName = fatherName;
+        this.sex = sex;
+        this.numberCard = numberCard;
+        this.phoneMobile = phoneMobile;
     }
+
+    public Client(String name, String lastName, String fatherName, String sex ,String dateBirthday , int numberCard,
+                  /*Image foto,*/ String phoneMobile, String phoneHome, String phoneWork, String email, String numPassport, String infoPassport, String aboutClient) {
+        this.name = name;
+        this.lastName = lastName;
+        this.fatherName = fatherName;
+        this.dateBirthday = dateBirthday;
+        this.sex = sex;
+        this.numberCard = numberCard;
+        this.foto = foto;
+        this.phoneMobile = phoneMobile;
+        this.phoneHome = phoneHome;
+        this.phoneWork = phoneWork;
+        this.email = email;
+        this.numPassport = numPassport;
+        this.infoPassport = infoPassport;
+        this.aboutClient = aboutClient;
+    }
+
 
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getLastName() {
         return lastName;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
     public String getFatherName() {
         return fatherName;
     }
 
-    public void setFatherName(String fatherName) {
-        this.fatherName = fatherName;
-    }
-
-    public Date getDateBirthday() {
+    public String getDateBirthday() {
         return dateBirthday;
     }
 
-    public void setDateBirthday(Date dateBirthday) {
-        this.dateBirthday = dateBirthday;
-    }
-
-    public Boolean getSex() {
+    public String getSex() {
         return sex;
-    }
-
-    public void setSex(Boolean sex) {
-        this.sex = sex;
     }
 
     public int getNumberCard() {
         return numberCard;
     }
 
-    public void setNumberCard(int numberCard) {
-        this.numberCard = numberCard;
-    }
-
     public Image getFoto() {
         return foto;
     }
 
-    public void setFoto(Image foto) {
-        this.foto = foto;
-    }
-
-    public int getPhoneMobile() {
+    public String getPhoneMobile() {
         return phoneMobile;
     }
 
-    public void setPhoneMobile(int phoneMobile) {
-        this.phoneMobile = phoneMobile;
-    }
-
-    public int getPhoneHome() {
+    public String getPhoneHome() {
         return phoneHome;
     }
 
-    public void setPhoneHome(int phoneHome) {
-        this.phoneHome = phoneHome;
-    }
-
-    public int getPhoneWork() {
+    public String getPhoneWork() {
         return phoneWork;
-    }
-
-    public void setPhoneWork(int phoneWork) {
-        this.phoneWork = phoneWork;
     }
 
     public String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public int getNumPassport() {
+    public String getNumPassport() {
         return numPassport;
     }
 
-    public void setNumPassport(int numPassport) {
-        this.numPassport = numPassport;
-    }
-
-    public int getInfoPassport() {
+    public String getInfoPassport() {
         return infoPassport;
-    }
-
-    public void setInfoPassport(int infoPassport) {
-        this.infoPassport = infoPassport;
     }
 
     public String getAboutClient() {
         return aboutClient;
     }
 
-    public void setAboutClient(String aboutClient) {
-        this.aboutClient = aboutClient;
-    }
+
+
+
 }

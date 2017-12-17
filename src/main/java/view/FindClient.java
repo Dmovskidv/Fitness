@@ -305,7 +305,7 @@ public class FindClient implements ViewInterface {
         frame.setVisible(true);
     }
 
-    @Override
+
     public JFrame getFrame() {
         return frame;
     }

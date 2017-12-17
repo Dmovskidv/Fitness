@@ -11,7 +11,7 @@ public class ModelTable implements TableModel {
 
     @Override
     public int getRowCount() {
-        return model.getClients().size();
+        return model.getDate().size();
     }
 
     @Override

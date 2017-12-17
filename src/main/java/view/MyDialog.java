@@ -57,8 +57,6 @@ public class MyDialog {
             } else
                 control_password();
 
-            // System.out.println(res2);
-
         }
 
     }

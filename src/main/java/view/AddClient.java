@@ -2,11 +2,13 @@ package view;
 
 import Interface.ViewInterface;
 import controller.Controller;
+
 import net.sourceforge.jdatepicker.impl.JDatePanelImpl;
 import net.sourceforge.jdatepicker.impl.JDatePickerImpl;
 import net.sourceforge.jdatepicker.impl.UtilDateModel;
 import javax.swing.*;
 import java.awt.*;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -14,21 +16,26 @@ import java.util.Properties;
 
 public class AddClient implements ViewInterface {
 
-    private JPanel panel;
+    private static JPanel panel;
     private JLabel label_sirname, label_name, label_nameFather, label_getPublic, label_whyKnow, label_birthday,
             label_mobile, label_homePhone, label_workPhone, label_email, label_passportNum, label_infoPassport,
-            label_aboutClient;
-    private JTextField field_sirname, field_name, field_nameFather, field_birthday, field_mobile, field_homePhone,
-            field_workHome, field_email, field_passport, field_infoPassport, field_photo;
-    private JTextArea textArea_aboutClient;
+            label_aboutClient, label_Sex;
+    private static  JTextField field_sirname, field_name, field_nameFather, field_birthday, field_mobile, field_homePhone,
+            field_workPhone, field_email, field_passport, field_infoPassport, field_photo;
+    private static  JTextArea textArea_aboutClient;
     private JButton button_create, button_cancel, button_addPhoto, buttonReturnMain;
-    private JComboBox comboBox_getPublic, comboBox_whyKnow, comboBox_pol;
-    private String[] combo_items = { "Рассказали знакомые", "Реклама в интернете", "Реклама в метро",
+    private static  JComboBox comboBox_getPublic, comboBox_whyKnow, comboBox_sex;
+    private static String[] combo_items = { "Рассказали знакомые", "Реклама в интернете", "Реклама в метро",
             "Интернет-поисковик", "Находится рядом", "Рекламные листовки", "Другое" };
-    private String[] combo_items2 = { "Получать всё", "Не получать", "Только SMS", "Только email" };
+    private static String[] combo_items2 = { "Получать всё", "Не получать", "Только SMS", "Только email" };
     private String[] sexPerson = { "Мужской", "Женский" };
     private JPanel panelDate;
-    private JFrame frame;
+    private static JFrame frame;
+    private static JDatePickerImpl datePicker;
+
+
+
+   //methods
 
     public AddClient() {
         frame = new JFrame();
@@ -44,6 +51,8 @@ public class AddClient implements ViewInterface {
         getDate();
 
     }
+
+
 
     public void getForm() {
         label_sirname = new JLabel("Фамилия");
@@ -105,7 +114,7 @@ public class AddClient implements ViewInterface {
         field_name.setColumns(10);
         field_name.setBounds(213, 55, 180, 45);
         panel.add(field_name);
-        // System.out.println(field_name.getBorder().);
+
 
         field_nameFather = new JTextField();
         field_nameFather.setColumns(10);
@@ -122,10 +131,10 @@ public class AddClient implements ViewInterface {
         field_homePhone.setBounds(213, 260, 180, 45);
         panel.add(field_homePhone);
 
-        field_workHome = new JTextField();
-        field_workHome.setColumns(10);
-        field_workHome.setBounds(23, 260, 180, 45);
-        panel.add(field_workHome);
+        field_workPhone = new JTextField();
+        field_workPhone.setColumns(10);
+        field_workPhone.setBounds(23, 260, 180, 45);
+        panel.add(field_workPhone);
 
         field_email = new JTextField();
         field_email.setColumns(10);
@@ -145,10 +154,12 @@ public class AddClient implements ViewInterface {
         button_create = new JButton("Создать");
         button_create.setBounds(782, 631, 180, 54);
         panel.add(button_create);
+        Controller.addClientButton(button_create);
 
         button_cancel = new JButton("Отмена");
         button_cancel.setBounds(983, 631, 177, 54);
         panel.add(button_cancel);
+        Controller.cancelClientButton(button_cancel, getFrame());
 
         buttonReturnMain = new JButton("");
         buttonReturnMain.setBorder(null);
@@ -161,6 +172,7 @@ public class AddClient implements ViewInterface {
         textArea_aboutClient.setBorder(BorderFactory.createLineBorder(Color.LIGHT_GRAY));
         textArea_aboutClient.setBounds(612, 369, 548, 234);
         panel.add(textArea_aboutClient);
+
 
         label_aboutClient = new JLabel("Дополнительно:");
         label_aboutClient.setFont(new Font("Tahoma", Font.PLAIN, 14));
@@ -194,14 +206,14 @@ public class AddClient implements ViewInterface {
         button_addPhoto.setBounds(969, 316, 145, 32);
         panel.add(button_addPhoto);
 
-        comboBox_pol = new JComboBox(sexPerson);
-        comboBox_pol.setBounds(612, 55, 287, 45);
-        panel.add(comboBox_pol);
+        comboBox_sex = new JComboBox(sexPerson);
+        comboBox_sex.setBounds(612, 55, 287, 45);
+        panel.add(comboBox_sex);
 
-        JLabel label = new JLabel("Пол:");
-        label.setFont(new Font("Tahoma", Font.PLAIN, 14));
-        label.setBounds(612, 30, 74, 26);
-        panel.add(label);
+         label_Sex = new JLabel("Пол:");
+        label_Sex.setFont(new Font("Tahoma", Font.PLAIN, 14));
+        label_Sex.setBounds(612, 30, 74, 26);
+        panel.add(label_Sex);
 
     }
 
@@ -215,22 +227,21 @@ public class AddClient implements ViewInterface {
         p.put("text.month", "Month");
         p.put("text.year", "Year");
         JDatePanelImpl datePanel = new JDatePanelImpl(model);
-        JDatePickerImpl datePicker = new JDatePickerImpl(datePanel, new DateLabelFormatter());
+         datePicker = new JDatePickerImpl(datePanel, new DateLabelFormatter());
         // datePicker.setBorder(BorderFactory.createLineBorder(Color.gray,0 ));
         panelDate.add(datePicker);
+
     }
 
+//show frame Addclient()
     @Override
     public void showView() {
         frame.setVisible(true);
 
     }
 
-    @Override
-    public JFrame getFrame() {
-        return frame;
-    }
 
+//format show date
     public class DateLabelFormatter extends JFormattedTextField.AbstractFormatter {
 
         private String datePattern = "yyyy-MM-dd";
@@ -253,5 +264,82 @@ public class AddClient implements ViewInterface {
             return "";
         }
 
+    }
+
+
+
+//getters and setters
+
+
+    public static JFrame getFrame() {
+        return frame;
+    }
+
+    public static  JComboBox getComboBox_getPublic() {
+        return comboBox_getPublic;
+    }
+
+    public static JComboBox getComboBox_whyKnow() {
+        return comboBox_whyKnow;
+    }
+
+    public static JComboBox getComboBox_sex() {
+        return comboBox_sex;
+    }
+
+    public static JPanel getPanel() {
+        return panel;
+    }
+
+    public static  JTextField getField_sirname() {
+        return field_sirname;
+    }
+
+    public static JTextField getField_name() {
+        return field_name;
+    }
+
+    public static JTextField getField_nameFather() {
+        return field_nameFather;
+    }
+
+    public static JTextField getField_birthday() {
+        return field_birthday;
+    }
+
+    public static JTextField getField_workPhone() {
+        return getField_mobilePhone();
+    }
+
+    public static JTextField getField_homePhone() {
+        return field_homePhone;
+    }
+
+    public static JTextField getField_mobilePhone() {
+        return field_workPhone;
+    }
+
+    public static JTextField getField_email() {
+        return field_email;
+    }
+
+    public static JTextField getField_passport() {
+        return field_passport;
+    }
+
+    public static JTextField getField_infoPassport() {
+        return field_infoPassport;
+    }
+
+    public static JTextField getField_photo() {
+        return field_photo;
+    }
+
+    public static JTextArea getTextArea_aboutClient() {
+        return textArea_aboutClient;
+    }
+
+    public static JDatePickerImpl getDatePicker(){
+        return datePicker;
     }
 }

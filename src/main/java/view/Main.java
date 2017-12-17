@@ -2,14 +2,9 @@ package view;
 
 import Interface.ViewInterface;
 import controller.Controller;
-
-import javax.imageio.ImageIO;
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.File;
-import java.io.IOException;
 
 public class Main implements ViewInterface {
 
@@ -18,19 +13,11 @@ public class Main implements ViewInterface {
     private static JMenuItem addClient, findClient, gim, pool, timeTable, addStaff, findStaff, reportDay, reportMonth,
             lockOn, changeUser, exitApp, helpInfo;
     private static JMenuItem adminItem;
-
-    private  JFrame frame;
+    private static JFrame frame;
     private static JPanel panel;
-
-
-
-    private JButton buttonAddClient;
-    private static JButton buttonAddSale;
-    private JButton buttonServices;
-    private JButton buttonLock;
+    private JButton buttonAddClient,buttonAddSale,buttonServices, buttonLock;
     private static JLayeredPane panelButtons;
-    Controller controller;
-    static Boolean active = true;
+
 
     public Main() {
         frame = new JFrame();
@@ -48,9 +35,9 @@ public class Main implements ViewInterface {
         setButtons();
         setImage();
         frame.setVisible(true);
-        MyDialog.control_password();
+        //MyDialog.control_password();
 
-        //setButtons();
+
 
     }
 
@@ -75,9 +62,6 @@ public class Main implements ViewInterface {
         buttonAddClient.setBounds(372, 277, 400, 70);
         panelButtons.add(buttonAddClient);
         Controller.openAddClient(buttonAddClient);
-
-
-
 
         buttonServices = new JButton("Учёт посещений клиентов");
         buttonServices.setBounds(372, 358, 400, 70);
@@ -193,7 +177,7 @@ public class Main implements ViewInterface {
 
     }
 
-    public   JFrame  getFrame() {
+    public static JFrame  getFrame() {
         return frame;
     }
 
