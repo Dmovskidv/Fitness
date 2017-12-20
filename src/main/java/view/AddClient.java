@@ -3,40 +3,56 @@ package view;
 import Interface.ViewInterface;
 import controller.Controller;
 
+import model.Model;
 import net.sourceforge.jdatepicker.impl.JDatePanelImpl;
 import net.sourceforge.jdatepicker.impl.JDatePickerImpl;
 import net.sourceforge.jdatepicker.impl.UtilDateModel;
 import javax.swing.*;
+import javax.swing.border.LineBorder;
 import java.awt.*;
-
+import java.io.File;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Properties;
 
+import static java.awt.Color.LIGHT_GRAY;
+
 public class AddClient implements ViewInterface {
 
-    private static JPanel panel;
-    private JLabel label_sirname, label_name, label_nameFather, label_getPublic, label_whyKnow, label_birthday,
-            label_mobile, label_homePhone, label_workPhone, label_email, label_passportNum, label_infoPassport,
-            label_aboutClient, label_Sex;
+    private static JFrame frame;
+    private static JPanel panel,panelDate;
+    private JLabel label_sirname;
+    private JLabel label_name;
+    private JLabel label_nameFather;
+    private JLabel label_getPublic;
+    private JLabel label_whyKnow;
+    private JLabel label_birthday;
+    private JLabel label_mobile;
+    private JLabel label_homePhone;
+    private JLabel label_workPhone;
+    private JLabel label_email;
+    private JLabel label_passportNum;
+    private JLabel label_infoPassport;
+    private JLabel label_aboutClient;
+    private JLabel label_Sex;
+
+
+
+    private static JLabel label_foto;
     private static  JTextField field_sirname, field_name, field_nameFather, field_birthday, field_mobile, field_homePhone,
-            field_workPhone, field_email, field_passport, field_infoPassport, field_photo;
+            field_workPhone, field_email, field_passport, field_infoPassport;
     private static  JTextArea textArea_aboutClient;
     private JButton button_create, button_cancel, button_addPhoto, buttonReturnMain;
     private static  JComboBox comboBox_getPublic, comboBox_whyKnow, comboBox_sex;
-    private static String[] combo_items = { "Рассказали знакомые", "Реклама в интернете", "Реклама в метро",
-            "Интернет-поисковик", "Находится рядом", "Рекламные листовки", "Другое" };
-    private static String[] combo_items2 = { "Получать всё", "Не получать", "Только SMS", "Только email" };
-    private String[] sexPerson = { "Мужской", "Женский" };
-    private JPanel panelDate;
-    private static JFrame frame;
+    private static String[] combo_items = Model.getDateForAddClient("whereKnow");
+    private static String[] combo_items2 = Model.getDateForAddClient("getNews");
+    private String[] sexPerson = Model.getDateForAddClient("sexPerson");
     private static JDatePickerImpl datePicker;
 
 
 
    //methods
-
     public AddClient() {
         frame = new JFrame();
         frame.setTitle("Новый клиент");
@@ -51,8 +67,6 @@ public class AddClient implements ViewInterface {
         getDate();
 
     }
-
-
 
     public void getForm() {
         label_sirname = new JLabel("Фамилия");
@@ -169,7 +183,7 @@ public class AddClient implements ViewInterface {
         Controller.returnMainMenu(buttonReturnMain, getFrame());
 
         textArea_aboutClient = new JTextArea();
-        textArea_aboutClient.setBorder(BorderFactory.createLineBorder(Color.LIGHT_GRAY));
+        textArea_aboutClient.setBorder(BorderFactory.createLineBorder(LIGHT_GRAY));
         textArea_aboutClient.setBounds(612, 369, 548, 234);
         panel.add(textArea_aboutClient);
 
@@ -179,10 +193,12 @@ public class AddClient implements ViewInterface {
         label_aboutClient.setBounds(610, 329, 122, 41);
         panel.add(label_aboutClient);
 
-        field_photo = new JTextField();
-        field_photo.setBounds(917, 55, 243, 250);
-        panel.add(field_photo);
-        field_photo.setColumns(10);
+        label_foto = new JLabel();
+        label_foto.setBounds(917, 55, 245, 245);
+        label_foto.setIcon(new ImageIcon("src\\main\\resources\\images\\fotoForAddClient.jpg"));
+        label_foto.setBorder(new LineBorder(Color.LIGHT_GRAY));
+        panel.add(label_foto);
+
 
         label_getPublic = new JLabel("Получать рекламу:");
         label_getPublic.setFont(new Font("Tahoma", Font.PLAIN, 14));
@@ -202,9 +218,11 @@ public class AddClient implements ViewInterface {
         comboBox_whyKnow.setBounds(612, 260, 287, 45);
         panel.add(comboBox_whyKnow);
 
-        button_addPhoto = new JButton("Добавить фото");
-        button_addPhoto.setBounds(969, 316, 145, 32);
-        panel.add(button_addPhoto);
+//addFoto
+        JButton fileopen = new JButton("Добавить");
+        fileopen.setBounds(969, 316, 140, 32);
+        panel.add(fileopen);
+        Controller.clickOpenFoto(fileopen);
 
         comboBox_sex = new JComboBox(sexPerson);
         comboBox_sex.setBounds(612, 55, 287, 45);
@@ -331,8 +349,8 @@ public class AddClient implements ViewInterface {
         return field_infoPassport;
     }
 
-    public static JTextField getField_photo() {
-        return field_photo;
+    public static JLabel getLabel_foto() {
+        return label_foto;
     }
 
     public static JTextArea getTextArea_aboutClient() {
@@ -342,4 +360,6 @@ public class AddClient implements ViewInterface {
     public static JDatePickerImpl getDatePicker(){
         return datePicker;
     }
+
+
 }

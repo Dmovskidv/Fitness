@@ -179,7 +179,7 @@ public class FitnessInfo {
         buttonReturnMain.setBorder(null);
         buttonReturnMain.setIcon(new ImageIcon("src\\main\\resources\\images\\return.jpg"));
         buttonReturnMain.setBounds(10, 633, 47, 53);
-        panelDop.add(buttonReturnMain);
+        mainPanel.add(buttonReturnMain);
         Controller.returnMainMenu(buttonReturnMain, getFrame());
 
     }

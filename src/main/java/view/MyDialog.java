@@ -1,6 +1,7 @@
 package view;
 
-import java.awt.Color;
+import java.awt.*;
+import java.awt.event.*;
 import java.util.HashMap;
 import java.util.Map;
 import javax.swing.BorderFactory;
@@ -8,11 +9,15 @@ import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
+import javax.swing.event.AncestorEvent;
+import javax.swing.event.AncestorListener;
 
 
 public class MyDialog {
 
     private static JPasswordField passwordField = new JPasswordField(10);
+
+
     private static JLabel label_login = new JLabel("Администратор");
     private static JLabel label_password = new JLabel("Пароль");
     private static String[] user = { "Дмовский Дмитрий", "Пашковец Екатерина", "Чика Кноповна" };
@@ -21,8 +26,24 @@ public class MyDialog {
     private static HashMap<String, String> map;
     static String login = "";
 
-    static void control_password() {
+    public static void control_password() {
 
+        passwordField.addAncestorListener(new AncestorListener() {
+             @Override
+             public void ancestorAdded(AncestorEvent event) {
+                 passwordField.requestFocusInWindow();
+             }
+
+             @Override
+             public void ancestorRemoved(AncestorEvent event) {
+
+             }
+
+             @Override
+             public void ancestorMoved(AncestorEvent event) {
+
+             }
+         });
         int res = JOptionPane.showConfirmDialog(null, array, "Авторизация", JOptionPane.OK_CANCEL_OPTION,
                 JOptionPane.QUESTION_MESSAGE);
 

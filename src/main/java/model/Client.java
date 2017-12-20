@@ -33,7 +33,7 @@ public class Client {
     }
 
     public Client(String name, String lastName, String fatherName, String sex ,String dateBirthday , int numberCard,
-                  /*Image foto,*/ String phoneMobile, String phoneHome, String phoneWork, String email, String numPassport, String infoPassport, String aboutClient) {
+                  Image foto, String phoneMobile, String phoneHome, String phoneWork, String email, String numPassport, String infoPassport, String aboutClient) {
         this.name = name;
         this.lastName = lastName;
         this.fatherName = fatherName;

@@ -270,7 +270,7 @@ public class FindClient implements ViewInterface {
         JLabel labelFoto = new JLabel("");
         labelFoto.setIcon(new ImageIcon("src\\main\\resources\\images\\foto2.jpg"));
         labelFoto.setBorder(new LineBorder(Color.LIGHT_GRAY));
-        labelFoto.setBounds(445, 0, 172, 170);
+        labelFoto.setBounds(445, 0, 172, 172);
         topPanel.add(labelFoto);
 
          buttonChangePhoto = new JButton("");

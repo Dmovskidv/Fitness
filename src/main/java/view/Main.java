@@ -11,8 +11,7 @@ public class Main implements ViewInterface {
     private static JMenuBar menuBar;
     private static JMenu sales, services, clients, staff, reports, lock, help, addSale, groupLessons, admin;
     private static JMenuItem addClient, findClient, gim, pool, timeTable, addStaff, findStaff, reportDay, reportMonth,
-            lockOn, changeUser, exitApp, helpInfo;
-    private static JMenuItem adminItem;
+            lockOn, exitApp, helpInfo, adminItem;
     private static JFrame frame;
     private static JPanel panel;
     private JButton buttonAddClient,buttonAddSale,buttonServices, buttonLock;
@@ -35,7 +34,7 @@ public class Main implements ViewInterface {
         setButtons();
         setImage();
         frame.setVisible(true);
-        //MyDialog.control_password();
+        MyDialog.control_password();
 
 
 
@@ -57,6 +56,7 @@ public class Main implements ViewInterface {
         buttonAddSale = new JButton("Добавить продажу");
         buttonAddSale.setBounds(372, 196, 400, 70);
         panelButtons.add(buttonAddSale);
+        Controller.openAddSale(buttonAddSale, getFrame() );
 
         buttonAddClient = new JButton("Добавить нового клиента");
         buttonAddClient.setBounds(372, 277, 400, 70);
@@ -73,16 +73,7 @@ public class Main implements ViewInterface {
         buttonLock.setBorder(null);
         panelButtons.add(buttonLock);
         buttonLock.setIcon(new ImageIcon("src\\main\\resources\\images\\lock3.jpg"));
-         buttonLock.addActionListener(new ActionListener() {
-
-         @Override
-         public void actionPerformed(ActionEvent arg0) {
-         MyDialog.control_password();
-
-         }
-         });
-
-
+        Controller.clickLockProgram(buttonLock);
     }
 
     public void setMenuBar() {
@@ -167,11 +158,9 @@ public class Main implements ViewInterface {
          }
          });
 
-        changeUser = new JMenuItem("Сменить пользователь");
-        lock.add(changeUser);
-
         exitApp = new JMenuItem("Выход из программы");
         lock.add(exitApp);
+        Controller.exitProgram(exitApp);
 
         help = new JMenu("Справка");
         menuBar.add(help);
@@ -185,12 +174,9 @@ public class Main implements ViewInterface {
         return frame;
     }
 
-
-
     public static JMenuItem setadminItem() {
         return adminItem;
     }
-
 
     @Override
     public void showView() {
