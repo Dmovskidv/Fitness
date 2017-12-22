@@ -16,7 +16,7 @@ public class Model implements DateInterface {
     private static String[] whereKnow = { "Не выбрано","Рассказали знакомые", "Реклама в интернете", "Реклама в метро",
             "Интернет-поисковик", "Находится рядом", "Рекламные листовки", "Другое" };
     private static String[] getNews = {"Не выбрано", "Получать всё", "Не получать", "Только SMS", "Только email" };
-    private String[] sexPerson = {"Не выбрано", "Мужской", "Женский" };
+    private static String[] sexPerson = {"Не выбрано", "Мужской", "Женский" };
 
 
 
@@ -49,11 +49,11 @@ public class Model implements DateInterface {
 
     public static String[] getDateForAddClient(String name){
         switch(name){
-            case "whereKnow" : return itemServices;
+            case "whereKnow" : return whereKnow;
 
-            case "getNews": return  itemTypeVisit;
+            case "getNews": return  getNews;
 
-            case "sexPerson": return itemTypeClient;
+            case "sexPerson": return sexPerson;
 
             default: return new String[]{""};
         }
@@ -64,17 +64,17 @@ public class Model implements DateInterface {
 
 
 
-    public String[] getItemServices() {
-        return itemServices;
-    }
-
-    public String[] getItemTypeVisit() {
-        return itemTypeVisit;
-    }
-
-    public String[] getItemTypeClient() {
-        return itemTypeClient;
-    }
+//    public String[] getItemServices() {
+//        return itemServices;
+//    }
+//
+//    public String[] getItemTypeVisit() {
+//        return itemTypeVisit;
+//    }
+//
+//    public String[] getItemTypeClient() {
+//        return itemTypeClient;
+//    }
 
 
 

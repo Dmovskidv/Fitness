@@ -1,5 +1,6 @@
 package model;
 
+import javax.swing.*;
 import java.awt.*;
 import java.util.Date;
 
@@ -13,7 +14,7 @@ public class Client {
     private String sex;
     //more
     private int numberCard;
-    private Image foto;
+    private ImageIcon foto;
     private String phoneMobile;
     private String phoneHome;
     private String phoneWork;
@@ -33,7 +34,7 @@ public class Client {
     }
 
     public Client(String name, String lastName, String fatherName, String sex ,String dateBirthday , int numberCard,
-                  Image foto, String phoneMobile, String phoneHome, String phoneWork, String email, String numPassport, String infoPassport, String aboutClient) {
+                  ImageIcon foto, String phoneMobile, String phoneHome, String phoneWork, String email, String numPassport, String infoPassport, String aboutClient) {
         this.name = name;
         this.lastName = lastName;
         this.fatherName = fatherName;
@@ -75,7 +76,7 @@ public class Client {
         return numberCard;
     }
 
-    public Image getFoto() {
+    public ImageIcon getFoto() {
         return foto;
     }
 

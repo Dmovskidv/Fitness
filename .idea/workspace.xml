@@ -2,35 +2,55 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e00d1bc-47f9-4a35-be1e-66e9c856f6e2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/view/AddSale.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/view/Main$2.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$1.class" afterPath="$PROJECT_DIR$/target/classes/controller/Controller$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$10.class" afterPath="$PROJECT_DIR$/target/classes/controller/Controller$10.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$2.class" afterPath="$PROJECT_DIR$/target/classes/controller/Controller$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$3.class" afterPath="$PROJECT_DIR$/target/classes/controller/Controller$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$4.class" afterPath="$PROJECT_DIR$/target/classes/controller/Controller$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$5.class" afterPath="$PROJECT_DIR$/target/classes/controller/Controller$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$6.class" afterPath="$PROJECT_DIR$/target/classes/controller/Controller$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$7.class" afterPath="$PROJECT_DIR$/target/classes/controller/Controller$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$8.class" afterPath="$PROJECT_DIR$/target/classes/controller/Controller$8.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$9.class" afterPath="$PROJECT_DIR$/target/classes/controller/Controller$9.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/Controller.class" afterPath="$PROJECT_DIR$/target/classes/controller/Controller.class" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/images/foto2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$10.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$11.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$12.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$13.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$14.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$15.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$16.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$5.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$6.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$7.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$8.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$9.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/Controller.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/images/foto2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/view/AddClient$DateLabelFormatter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/view/AddClient.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/images/fotoClients/Scala.jpg" afterPath="$PROJECT_DIR$/src/main/resources/images/fotoClients/Scala.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/images/fotoClients/Statham.jpg" afterPath="$PROJECT_DIR$/src/main/resources/images/fotoClients/Statham.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/images/fotoClients/margo.jpg" afterPath="$PROJECT_DIR$/src/main/resources/images/fotoClients/margo.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/images/fotoForAddClient.jpg" afterPath="$PROJECT_DIR$/src/main/resources/images/fotoForAddClient.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/images/mainBackground11.jpg" afterPath="$PROJECT_DIR$/src/main/resources/images/mainBackground11.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/images/fotoClients/Scala.jpg" afterPath="$PROJECT_DIR$/target/classes/images/fotoClients/Scala.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/images/fotoClients/Statham.jpg" afterPath="$PROJECT_DIR$/target/classes/images/fotoClients/Statham.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/images/fotoForAddClient.jpg" afterPath="$PROJECT_DIR$/target/classes/images/fotoForAddClient.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/images/mainBackground11.jpg" afterPath="$PROJECT_DIR$/target/classes/images/mainBackground11.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/Client.class" afterPath="$PROJECT_DIR$/target/classes/model/Client.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/Model.class" afterPath="$PROJECT_DIR$/target/classes/model/Model.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/view/AddClient.class" afterPath="$PROJECT_DIR$/target/classes/view/AddClient.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/view/FindClient.class" afterPath="$PROJECT_DIR$/target/classes/view/FindClient.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/view/Main$1.class" afterPath="$PROJECT_DIR$/target/classes/view/Main$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/view/Main.class" afterPath="$PROJECT_DIR$/target/classes/view/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/view/MyDialog.class" afterPath="$PROJECT_DIR$/target/classes/view/MyDialog.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/view/services/FitnessInfo.class" afterPath="$PROJECT_DIR$/target/classes/view/services/FitnessInfo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/view/services/GimInfo.class" afterPath="$PROJECT_DIR$/target/classes/view/services/GimInfo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/view/services/PoolInfo.class" afterPath="$PROJECT_DIR$/target/classes/view/services/PoolInfo.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/Controller.java" afterPath="$PROJECT_DIR$/src/main/java/controller/Controller.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/Client.java" afterPath="$PROJECT_DIR$/src/main/java/model/Client.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/Model.java" afterPath="$PROJECT_DIR$/src/main/java/model/Model.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/view/AddClient.java" afterPath="$PROJECT_DIR$/src/main/java/view/AddClient.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/view/AddSale.java" afterPath="$PROJECT_DIR$/src/main/java/view/AddSale.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/view/FindClient.java" afterPath="$PROJECT_DIR$/src/main/java/view/FindClient.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/view/Main.java" afterPath="$PROJECT_DIR$/src/main/java/view/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/view/MyDialog.java" afterPath="$PROJECT_DIR$/src/main/java/view/MyDialog.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/view/services/FitnessInfo.java" afterPath="$PROJECT_DIR$/src/main/java/view/services/FitnessInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/view/services/GimInfo.java" afterPath="$PROJECT_DIR$/src/main/java/view/services/GimInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/view/services/PoolInfo.java" afterPath="$PROJECT_DIR$/src/main/java/view/services/PoolInfo.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -46,67 +66,9 @@
       <file leaf-file-name="Start.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Start.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="238">
+              <caret line="14" column="1" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Client.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/model/Client.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-765">
-              <caret line="13" column="10" lean-forward="true" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
-              <folding>
-                <element signature="e#2380#2381#0" expanded="true" />
-                <element signature="e#2414#2415#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddClient.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/view/AddClient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2292">
-              <caret line="224" column="43" lean-forward="true" selection-start-line="224" selection-start-column="43" selection-end-line="224" selection-end-column="43" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#AddClient#0;class#AddClient#0" expanded="false" />
-                <element signature="method#getDate#0;class#AddClient#0" expanded="false" />
-                <element signature="method#showView#0;class#AddClient#0" expanded="false" />
-                <element signature="class#DateLabelFormatter#0;class#AddClient#0" expanded="false" />
-                <element signature="e#11390#11391#0" expanded="true" />
-                <element signature="e#11423#11424#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Model.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/model/Model.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="26" column="37" lean-forward="false" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
-              <folding>
-                <element signature="e#1063#1064#0" expanded="true" />
-                <element signature="e#1093#1094#0" expanded="true" />
-                <element signature="method#getDateForAddSale#0;class#Model#0" expanded="false" />
-                <element signature="method#getDateForAddClient#0;class#Model#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddSale.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/view/AddSale.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-              <folding>
-                <element signature="method#AddSale#0;class#AddSale#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -114,14 +76,15 @@
       <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/controller/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="104" column="18" lean-forward="false" selection-start-line="104" selection-start-column="18" selection-end-line="104" selection-end-column="18" />
+            <state relative-caret-position="104">
+              <caret line="316" column="60" lean-forward="false" selection-start-line="316" selection-start-column="60" selection-end-line="316" selection-end-column="60" />
               <folding>
                 <element signature="method#openAddClient#0;class#Controller#0" expanded="false" />
                 <element signature="method#openAddClientClickItem#0;class#Controller#0" expanded="false" />
                 <element signature="method#openFindClient#0;class#Controller#0" expanded="false" />
                 <element signature="method#openFindClientClickItem#0;class#Controller#0" expanded="false" />
                 <element signature="method#returnMainMenu#0;class#Controller#0" expanded="false" />
+                <element signature="method#addClientButton#0;class#Controller#0" expanded="false" />
                 <element signature="method#cancelClientButton#0;class#Controller#0" expanded="false" />
                 <element signature="method#clickServicesPool#0;class#Controller#0" expanded="false" />
                 <element signature="method#clickServicesGim#0;class#Controller#0" expanded="false" />
@@ -132,17 +95,10 @@
                 <element signature="method#clickComboBoxClientClub#0;class#Controller#0" expanded="false" />
                 <element signature="method#closeAddSale#0;class#Controller#0" expanded="false" />
                 <element signature="method#clickOpenFoto#0;class#Controller#0" expanded="false" />
+                <element signature="method#cleanFormButton#0;class#Controller#0" expanded="false" />
+                <element signature="method#clickAddSaleAbonement#0;class#Controller#0" expanded="false" />
+                <element signature="method#clickaddSaleRaz#0;class#Controller#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Gim.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/model/Gim.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="16" lean-forward="false" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -177,16 +133,16 @@
         <option value="$PROJECT_DIR$/src/main/java/model/ModelTable.java" />
         <option value="$PROJECT_DIR$/src/main/java/Interface/ViewInterface.java" />
         <option value="$PROJECT_DIR$/src/main/java/Start.java" />
-        <option value="$PROJECT_DIR$/src/main/java/view/services/GimInfo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/view/services/PoolInfo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/view/services/FitnessInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/view/MyDialog.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/Model.java" />
-        <option value="$PROJECT_DIR$/src/main/java/view/AddSale.java" />
-        <option value="$PROJECT_DIR$/src/main/java/view/FindClient.java" />
-        <option value="$PROJECT_DIR$/src/main/java/view/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/view/AddClient.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/Client.java" />
+        <option value="$PROJECT_DIR$/src/main/java/view/services/PoolInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/view/services/GimInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/view/services/FitnessInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/view/FindClient.java" />
+        <option value="$PROJECT_DIR$/src/main/java/view/AddSale.java" />
+        <option value="$PROJECT_DIR$/src/main/java/view/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/Model.java" />
+        <option value="$PROJECT_DIR$/src/main/java/view/AddClient.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/Controller.java" />
       </list>
     </option>
@@ -205,8 +161,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="401" />
-    <option name="y" value="343" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1071" />
     <option name="height" value="870" />
   </component>
@@ -225,7 +181,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -265,14 +223,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Interface" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Diplom" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Diplom" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -288,31 +238,13 @@
               <item name="Diplom" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Diplom" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Diplom" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Diplom" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Diplom" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -459,11 +391,15 @@
       <workItem from="1513697011030" duration="6758000" />
       <workItem from="1513712478537" duration="2556000" />
       <workItem from="1513783082649" duration="16896000" />
+      <workItem from="1513841125844" duration="8796000" />
+      <workItem from="1513860297216" duration="3772000" />
+      <workItem from="1513864502851" duration="334000" />
+      <workItem from="1513938106865" duration="7858000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="149255000" />
+    <option name="totallyTimeSpent" value="170015000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
@@ -482,7 +418,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298153" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19473007" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="20" y="95" width="236" height="826" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20501286" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="20" y="95" width="236" height="826" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14600147" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -511,50 +447,12 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="16" lean-forward="false" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
-          <folding>
-            <element signature="method#openAddClient#0;class#Controller#0" expanded="false" />
-            <element signature="method#openAddClientClickItem#0;class#Controller#0" expanded="false" />
-            <element signature="method#openFindClient#0;class#Controller#0" expanded="false" />
-            <element signature="method#openFindClientClickItem#0;class#Controller#0" expanded="false" />
-            <element signature="method#returnMainMenu#0;class#Controller#0" expanded="false" />
-            <element signature="method#cancelClientButton#0;class#Controller#0" expanded="false" />
-            <element signature="method#clickServicesPool#0;class#Controller#0" expanded="false" />
-            <element signature="method#clickServicesGim#0;class#Controller#0" expanded="false" />
-            <element signature="method#clickServicesClickAerobic#0;class#Controller#0" expanded="false" />
-            <element signature="method#clickLockProgram#0;class#Controller#0" expanded="false" />
-            <element signature="method#exitProgram#0;class#Controller#0" expanded="false" />
-            <element signature="method#openAddSale#0;class#Controller#0" expanded="false" />
-            <element signature="method#clickComboBoxClientClub#0;class#Controller#0" expanded="false" />
-            <element signature="method#closeAddSale#0;class#Controller#0" expanded="false" />
-            <element signature="method#clickOpenFoto#0;class#Controller#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/view/AddClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3672">
-          <caret line="216" column="19" lean-forward="false" selection-start-line="216" selection-start-column="19" selection-end-line="216" selection-end-column="19" />
-          <folding>
-            <element signature="method#AddClient#0;class#AddClient#0" expanded="false" />
-            <element signature="method#getDate#0;class#AddClient#0" expanded="false" />
-            <element signature="method#showView#0;class#AddClient#0" expanded="false" />
-            <element signature="class#DateLabelFormatter#0;class#AddClient#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/view/FindClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4590">
           <caret line="283" column="33" lean-forward="false" selection-start-line="283" selection-start-column="33" selection-end-line="283" selection-end-column="33" />
           <folding>
             <element signature="method#setPanelInfo#0;class#FindClient#0" expanded="false" />
-            <element signature="method#setTableClient#0;class#FindClient#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -572,9 +470,7 @@
         <state relative-caret-position="867">
           <caret line="59" column="29" lean-forward="false" selection-start-line="59" selection-start-column="29" selection-end-line="59" selection-end-column="29" />
           <folding>
-            <element signature="method#Main#0;class#Main#0" expanded="false" />
-            <element signature="method#setImage#0;class#Main#0" expanded="false" />
-            <element signature="method#setMenuBar#0;class#Main#0" expanded="false" />
+            <element signature="method#setButtons#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -597,6 +493,7 @@
             <element signature="method#openFindClient#0;class#Controller#0" expanded="false" />
             <element signature="method#openFindClientClickItem#0;class#Controller#0" expanded="false" />
             <element signature="method#returnMainMenu#0;class#Controller#0" expanded="false" />
+            <element signature="method#addClientButton#0;class#Controller#0" expanded="false" />
             <element signature="method#cancelClientButton#0;class#Controller#0" expanded="false" />
             <element signature="method#clickServicesPool#0;class#Controller#0" expanded="false" />
             <element signature="method#clickServicesGim#0;class#Controller#0" expanded="false" />
@@ -607,6 +504,9 @@
             <element signature="method#clickComboBoxClientClub#0;class#Controller#0" expanded="false" />
             <element signature="method#closeAddSale#0;class#Controller#0" expanded="false" />
             <element signature="method#clickOpenFoto#0;class#Controller#0" expanded="false" />
+            <element signature="method#cleanFormButton#0;class#Controller#0" expanded="false" />
+            <element signature="method#clickAddSaleAbonement#0;class#Controller#0" expanded="false" />
+            <element signature="method#clickaddSaleRaz#0;class#Controller#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -705,13 +605,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/Clients.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/images/return.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -752,106 +645,14 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/view/services/GimInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="159" column="64" lean-forward="false" selection-start-line="159" selection-start-column="8" selection-end-line="159" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/view/services/FitnessInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="181" column="17" lean-forward="false" selection-start-line="181" selection-start-column="17" selection-end-line="181" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#FitnessInfo#0;class#FitnessInfo#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/view/MyDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="54" column="37" lean-forward="false" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="37" />
-          <folding>
-            <element signature="class#1014:1406" expanded="false" />
-            <element signature="method#getPassword#0;class#MyDialog#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Interface/ViewInterface.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/images/foto2.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/view/services/PoolInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="158" column="0" lean-forward="false" selection-start-line="158" selection-start-column="0" selection-end-line="158" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/ModelTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="13" column="38" lean-forward="false" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
-          <folding>
-            <element signature="e#225#226#0" expanded="true" />
-            <element signature="e#270#271#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/view/FindClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="596">
-          <caret line="270" column="40" lean-forward="true" selection-start-line="270" selection-start-column="40" selection-end-line="270" selection-end-column="81" />
-          <folding>
-            <element signature="method#setPanelInfo#0;class#FindClient#0" expanded="false" />
-            <element signature="method#setTableClient#0;class#FindClient#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/view/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="14" column="32" lean-forward="true" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
-          <folding>
-            <element signature="method#Main#0;class#Main#0" expanded="false" />
-            <element signature="method#setImage#0;class#Main#0" expanded="false" />
-            <element signature="method#setMenuBar#0;class#Main#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/images/fotoForAddClient.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Start.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/images/foto2.jpg" />
     <entry file="file://$PROJECT_DIR$/src/main/java/model/Gim.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -862,22 +663,117 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-765">
-          <caret line="13" column="10" lean-forward="true" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+        <state relative-caret-position="1003">
+          <caret line="69" column="0" lean-forward="true" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/view/services/PoolInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="154" column="41" lean-forward="false" selection-start-line="154" selection-start-column="41" selection-end-line="154" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/view/services/GimInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="157" column="41" lean-forward="false" selection-start-line="157" selection-start-column="41" selection-end-line="157" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/view/MyDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="54" column="37" lean-forward="false" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="37" />
           <folding>
-            <element signature="e#2380#2381#0" expanded="true" />
-            <element signature="e#2414#2415#0" expanded="true" />
+            <element signature="class#1014:1406" expanded="false" />
+            <element signature="method#getPassword#0;class#MyDialog#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/images/fotoForAddClient.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/view/FindClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3230">
+          <caret line="272" column="40" lean-forward="false" selection-start-line="272" selection-start-column="40" selection-end-line="272" selection-end-column="40" />
+          <folding>
+            <element signature="method#setPanelInfo#0;class#FindClient#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/view/services/FitnessInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="189" column="1" lean-forward="false" selection-start-line="189" selection-start-column="1" selection-end-line="189" selection-end-column="1" />
+          <folding>
+            <element signature="method#FitnessInfo#0;class#FitnessInfo#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9/lib/src.zip!/java.desktop/java/awt/event/ActionListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="50" column="16" lean-forward="false" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/ModelTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2">
+          <caret line="13" column="38" lean-forward="false" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
+          <folding>
+            <element signature="e#225#226#0" expanded="true" />
+            <element signature="e#270#271#0" expanded="true" />
+            <element signature="method#getColumnName#0;class#ModelTable#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/view/AddClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="172" column="47" lean-forward="false" selection-start-line="172" selection-start-column="47" selection-end-line="172" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getDate#0;class#AddClient#0" expanded="false" />
+            <element signature="class#DateLabelFormatter#0;class#AddClient#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/file.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/clients.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/Model.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
-          <caret line="26" column="37" lean-forward="false" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
+          <caret line="27" column="20" lean-forward="false" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
           <folding>
-            <element signature="e#1063#1064#0" expanded="true" />
-            <element signature="e#1093#1094#0" expanded="true" />
             <element signature="method#getDateForAddSale#0;class#Model#0" expanded="false" />
             <element signature="method#getDateForAddClient#0;class#Model#0" expanded="false" />
           </folding>
@@ -886,40 +782,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/view/AddSale.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+        <state relative-caret-position="-1139">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/view/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="97" column="39" lean-forward="false" selection-start-line="97" selection-start-column="39" selection-end-line="97" selection-end-column="39" />
           <folding>
-            <element signature="method#AddSale#0;class#AddSale#0" expanded="false" />
+            <element signature="method#setButtons#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/view/AddClient.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Start.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2292">
-          <caret line="224" column="43" lean-forward="true" selection-start-line="224" selection-start-column="43" selection-end-line="224" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#AddClient#0;class#AddClient#0" expanded="false" />
-            <element signature="method#getDate#0;class#AddClient#0" expanded="false" />
-            <element signature="method#showView#0;class#AddClient#0" expanded="false" />
-            <element signature="class#DateLabelFormatter#0;class#AddClient#0" expanded="false" />
-            <element signature="e#11390#11391#0" expanded="true" />
-            <element signature="e#11423#11424#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="238">
+          <caret line="14" column="1" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controller/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="104" column="18" lean-forward="false" selection-start-line="104" selection-start-column="18" selection-end-line="104" selection-end-column="18" />
+        <state relative-caret-position="104">
+          <caret line="316" column="60" lean-forward="false" selection-start-line="316" selection-start-column="60" selection-end-line="316" selection-end-column="60" />
           <folding>
             <element signature="method#openAddClient#0;class#Controller#0" expanded="false" />
             <element signature="method#openAddClientClickItem#0;class#Controller#0" expanded="false" />
             <element signature="method#openFindClient#0;class#Controller#0" expanded="false" />
             <element signature="method#openFindClientClickItem#0;class#Controller#0" expanded="false" />
             <element signature="method#returnMainMenu#0;class#Controller#0" expanded="false" />
+            <element signature="method#addClientButton#0;class#Controller#0" expanded="false" />
             <element signature="method#cancelClientButton#0;class#Controller#0" expanded="false" />
             <element signature="method#clickServicesPool#0;class#Controller#0" expanded="false" />
             <element signature="method#clickServicesGim#0;class#Controller#0" expanded="false" />
@@ -930,6 +827,9 @@
             <element signature="method#clickComboBoxClientClub#0;class#Controller#0" expanded="false" />
             <element signature="method#closeAddSale#0;class#Controller#0" expanded="false" />
             <element signature="method#clickOpenFoto#0;class#Controller#0" expanded="false" />
+            <element signature="method#cleanFormButton#0;class#Controller#0" expanded="false" />
+            <element signature="method#clickAddSaleAbonement#0;class#Controller#0" expanded="false" />
+            <element signature="method#clickaddSaleRaz#0;class#Controller#0" expanded="false" />
           </folding>
         </state>
       </provider>

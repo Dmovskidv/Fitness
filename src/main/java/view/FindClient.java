@@ -53,17 +53,17 @@ public class FindClient implements ViewInterface {
         // input FIO or ID Client
         textfieldInputClient = new JTextField();
         textfieldInputClient.setText("Введите ФИО клиента или номер карты");
-        textfieldInputClient.setBounds(10, 47, 272, 36);
+        textfieldInputClient.setBounds(10, 72, 272, 36);
         mainpanel.add(textfieldInputClient);
         textfieldInputClient.setColumns(10);
 
         // Buttons control visit clients
         buttonFindClient = new JButton("Поиск");
-        buttonFindClient.setBounds(292, 47, 99, 36);
+        buttonFindClient.setBounds(292, 72, 99, 36);
         mainpanel.add(buttonFindClient);
 
         buttonClientEnter = new JButton("Вход  клиента");
-        buttonClientEnter.setBounds(746, 633, 203, 53);
+        buttonClientEnter.setBounds(746, 638, 203, 53);
         mainpanel.add(buttonClientEnter);
 
         // -------------------------------
@@ -74,7 +74,7 @@ public class FindClient implements ViewInterface {
     public void setPanelInfo() {
         panelInfo = new JPanel();
         panelInfo.setBorder(new LineBorder(Color.LIGHT_GRAY));
-        panelInfo.setBounds(416, 230, 320, 372);
+        panelInfo.setBounds(416, 250, 320, 372);
         mainpanel.add(panelInfo);
         panelInfo.setLayout(null);
 
@@ -144,7 +144,7 @@ public class FindClient implements ViewInterface {
         panelClient = new JPanel();
         panelClient.setLayout(null);
         panelClient.setBorder(new LineBorder(Color.LIGHT_GRAY));
-        panelClient.setBounds(746, 230, 412, 372);
+        panelClient.setBounds(746, 250, 412, 372);
         mainpanel.add(panelClient);
 
         labelInfoClientCard = new JLabel("123");
@@ -268,9 +268,9 @@ public class FindClient implements ViewInterface {
         labelTitle.setFont(new Font("Tahoma", Font.PLAIN, 26));
 
         JLabel labelFoto = new JLabel("");
-        labelFoto.setIcon(new ImageIcon("src\\main\\resources\\images\\foto2.jpg"));
+        labelFoto.setIcon(new ImageIcon("src\\main\\resources\\images\\fotoForAddClient.jpg"));
         labelFoto.setBorder(new LineBorder(Color.LIGHT_GRAY));
-        labelFoto.setBounds(445, 0, 172, 172);
+        labelFoto.setBounds(445, 20, 172, 172);
         topPanel.add(labelFoto);
 
          buttonChangePhoto = new JButton("");
@@ -279,24 +279,24 @@ public class FindClient implements ViewInterface {
         topPanel.add(buttonChangePhoto);
 
          buttonClientExit = new JButton("Выход  клиента");
-        buttonClientExit.setBounds(959, 633, 203, 53);
+        buttonClientExit.setBounds(959, 638, 203, 53);
         mainpanel.add(buttonClientExit);
 
          buttonReturnMain = new JButton("");
          buttonReturnMain.setBorder(null);
         buttonReturnMain.setIcon(new ImageIcon("src\\main\\resources\\images\\return.jpg"));
-        buttonReturnMain.setBounds(10, 633, 47, 53);
+        buttonReturnMain.setBounds(10, 10, 47, 53);
         mainpanel.add(buttonReturnMain);
         Controller.returnMainMenu(buttonReturnMain, getFrame());
     }
 
     public void setTableClient() {
         scrollPaneTable = new JScrollPane();
-        scrollPaneTable.setBounds(10, 94, 381, 508);
+        scrollPaneTable.setBounds(10, 114, 381, 508);
         mainpanel.add(scrollPaneTable);
         tableClients = new JTable(modelTable);
         tableClients.setBorder(new LineBorder(Color.LIGHT_GRAY));
-        tableClients.setBounds(10, 94, 381, 508);
+        tableClients.setBounds(10, 114, 381, 508);
         scrollPaneTable.setViewportView(tableClients);
             }
 

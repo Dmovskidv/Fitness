@@ -1,0 +1,2 @@
+|Дмовский|Дмитрий|Витальевич|Мужской|1986-12-09|1|3301815|3301815|7962065|777|dmovskidv@gmail.com|Пинским ГОВД|Не указано|I:\Study_IBA\Java\Diplom\src\main\resources\images\fotoClients\Scala.jpgНомер карты: |Дмовская|Екатерина|Александровна|Не выбрано|2017-12-19|232312321|54331|12345|555|asd@ddfdfdfmail.ru|dfddd|gtgtg4g|I:\Study_IBA\Java\Diplom\src\main\resources\images\fotoClients\margo.jpg
+Номер карты: |dddassssdasd|asdsadadd|defewfwef|Мужской|Не указано|4444444|333333|11111|323232|eeeeeeeeeeeeee|gggf|Не указано|src\main\resources\images\fotoForAddClient.jpg

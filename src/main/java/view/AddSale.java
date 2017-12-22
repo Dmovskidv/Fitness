@@ -22,10 +22,18 @@ public class AddSale implements ViewInterface {
     private JFrame frame;
     private static JTextField textFieldNumCard;
     private JPanel panel;
-    private JComboBox comboBoxServices, comboBoxTypeVisit, comboBoxTypeClient;
+    private JComboBox comboBoxServices;
+
+
+
+    private JComboBox comboBoxTypeVisit;
+    private JComboBox comboBoxTypeClient;
     private JLabel labelTitle, labelService, labelTypeVisit, labelTypeClient, labelNumCard, labelPay, labelStatusPay, labelSum,
             labelStatus;
     private JButton buttonCancel, buttonPay;
+
+
+
     private String[] itemServices = Model.getDateForAddSale("services");
     private String[] itemTypeVisit = Model.getDateForAddSale("visit");
     private String[] itemTypeClient = Model.getDateForAddSale("client");
@@ -144,6 +152,10 @@ public class AddSale implements ViewInterface {
     }
     public static JTextField getTextFieldNumCard() {
         return textFieldNumCard;
+    }
+
+    public JComboBox getComboBoxTypeVisit() {
+        return comboBoxTypeVisit;
     }
 
 

@@ -178,7 +178,7 @@ public class FitnessInfo {
         buttonReturnMain = new JButton("");
         buttonReturnMain.setBorder(null);
         buttonReturnMain.setIcon(new ImageIcon("src\\main\\resources\\images\\return.jpg"));
-        buttonReturnMain.setBounds(10, 633, 47, 53);
+        buttonReturnMain.setBounds(10, 10, 47, 53);
         mainPanel.add(buttonReturnMain);
         Controller.returnMainMenu(buttonReturnMain, getFrame());
 

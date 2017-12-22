@@ -10,7 +10,7 @@ import net.sourceforge.jdatepicker.impl.UtilDateModel;
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
-import java.io.File;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -40,10 +40,10 @@ public class AddClient implements ViewInterface {
 
 
     private static JLabel label_foto;
-    private static  JTextField field_sirname, field_name, field_nameFather, field_birthday, field_mobile, field_homePhone,
-            field_workPhone, field_email, field_passport, field_infoPassport;
-    private static  JTextArea textArea_aboutClient;
-    private JButton button_create, button_cancel, button_addPhoto, buttonReturnMain;
+    private static  JTextField field_sirname, field_name, field_nameFather, field_mobile, field_homePhone,
+            field_workPhone, field_email, field_passport, field_infoPassport ;
+    private static JTextArea textArea_aboutClient;
+    private JButton button_create, button_cancel, button_clean, buttonReturnMain;
     private static  JComboBox comboBox_getPublic, comboBox_whyKnow, comboBox_sex;
     private static String[] combo_items = Model.getDateForAddClient("whereKnow");
     private static String[] combo_items2 = Model.getDateForAddClient("getNews");
@@ -71,130 +71,136 @@ public class AddClient implements ViewInterface {
     public void getForm() {
         label_sirname = new JLabel("Фамилия");
         label_sirname.setFont(new Font("Tahoma", Font.PLAIN, 14));
-        label_sirname.setBounds(23, 30, 94, 26);
+        label_sirname.setBounds(20, 60, 94, 26);
         panel.add(label_sirname);
 
         label_name = new JLabel("Имя");
         label_name.setFont(new Font("Tahoma", Font.PLAIN, 14));
-        label_name.setBounds(213, 30, 94, 26);
+        label_name.setBounds(213, 60, 94, 26);
         panel.add(label_name);
 
         label_nameFather = new JLabel("Отчество");
         label_nameFather.setFont(new Font("Tahoma", Font.PLAIN, 14));
-        label_nameFather.setBounds(403, 30, 94, 26);
+        label_nameFather.setBounds(403, 60, 94, 26);
         panel.add(label_nameFather);
 
         field_sirname = new JTextField();
-        field_sirname.setBounds(23, 55, 180, 45);
+        field_sirname.setBounds(20, 85, 180, 45);
         panel.add(field_sirname);
         field_sirname.setColumns(10);
 
         label_birthday = new JLabel("Дата рождения");
         label_birthday.setFont(new Font("Tahoma", Font.PLAIN, 14));
-        label_birthday.setBounds(23, 125, 122, 20);
+        label_birthday.setBounds(20, 165, 122, 20);
         panel.add(label_birthday);
 
         label_mobile = new JLabel("Мобильный");
         label_mobile.setFont(new Font("Tahoma", Font.PLAIN, 14));
-        label_mobile.setBounds(23, 234, 82, 26);
+        label_mobile.setBounds(20, 254, 82, 26);
         panel.add(label_mobile);
 
         label_homePhone = new JLabel("Домашний");
         label_homePhone.setFont(new Font("Tahoma", Font.PLAIN, 14));
-        label_homePhone.setBounds(213, 234, 82, 26);
+        label_homePhone.setBounds(213, 254, 82, 26);
         panel.add(label_homePhone);
 
         label_workPhone = new JLabel("Рабочий");
         label_workPhone.setFont(new Font("Tahoma", Font.PLAIN, 14));
-        label_workPhone.setBounds(403, 234, 82, 26);
+        label_workPhone.setBounds(403, 254, 82, 26);
         panel.add(label_workPhone);
 
         label_email = new JLabel("Email");
         label_email.setFont(new Font("Tahoma", Font.PLAIN, 14));
-        label_email.setBounds(23, 344, 82, 26);
+        label_email.setBounds(20, 364, 82, 26);
         panel.add(label_email);
 
         label_passportNum = new JLabel("Номер паспорта");
         label_passportNum.setFont(new Font("Tahoma", Font.PLAIN, 14));
-        label_passportNum.setBounds(23, 449, 133, 26);
+        label_passportNum.setBounds(20, 469, 133, 26);
         panel.add(label_passportNum);
 
         label_infoPassport = new JLabel("Кем и когда выдан");
         label_infoPassport.setFont(new Font("Tahoma", Font.PLAIN, 14));
-        label_infoPassport.setBounds(311, 449, 122, 26);
+        label_infoPassport.setBounds(311, 469, 122, 26);
         panel.add(label_infoPassport);
 
         field_name = new JTextField();
         field_name.setColumns(10);
-        field_name.setBounds(213, 55, 180, 45);
+        field_name.setBounds(213, 85, 180, 45);
         panel.add(field_name);
 
 
         field_nameFather = new JTextField();
         field_nameFather.setColumns(10);
-        field_nameFather.setBounds(403, 55, 180, 45);
+        field_nameFather.setBounds(403, 85, 180, 45);
         panel.add(field_nameFather);
 
         field_mobile = new JTextField();
         field_mobile.setColumns(10);
-        field_mobile.setBounds(403, 260, 180, 45);
+        field_mobile.setBounds(403, 280, 180, 45);
         panel.add(field_mobile);
 
         field_homePhone = new JTextField();
         field_homePhone.setColumns(10);
-        field_homePhone.setBounds(213, 260, 180, 45);
+        field_homePhone.setBounds(213, 280, 180, 45);
         panel.add(field_homePhone);
 
         field_workPhone = new JTextField();
         field_workPhone.setColumns(10);
-        field_workPhone.setBounds(23, 260, 180, 45);
+        field_workPhone.setBounds(20, 280, 180, 45);
         panel.add(field_workPhone);
 
         field_email = new JTextField();
         field_email.setColumns(10);
-        field_email.setBounds(23, 369, 560, 45);
+        field_email.setBounds(20, 389, 560, 45);
         panel.add(field_email);
 
         field_passport = new JTextField();
         field_passport.setColumns(10);
-        field_passport.setBounds(23, 476, 272, 45);
+        field_passport.setBounds(23, 496, 272, 45);
         panel.add(field_passport);
 
         field_infoPassport = new JTextField();
         field_infoPassport.setColumns(10);
-        field_infoPassport.setBounds(311, 476, 272, 45);
+        field_infoPassport.setBounds(311, 496, 272, 45);
         panel.add(field_infoPassport);
 
+        button_clean = new JButton("Очистить");
+        button_clean.setBounds(612, 638, 179, 54);
+        panel.add(button_clean);
+        Controller.cleanFormButton(button_clean);
+
         button_create = new JButton("Создать");
-        button_create.setBounds(782, 631, 180, 54);
+        button_create.setBounds(796, 638, 179, 54);
         panel.add(button_create);
-        Controller.addClientButton(button_create);
+        //Controller.addClientButton(button_create);
+        Controller.writeClientFile(button_create);
 
         button_cancel = new JButton("Отмена");
-        button_cancel.setBounds(983, 631, 177, 54);
+        button_cancel.setBounds(980, 638, 179, 54);
         panel.add(button_cancel);
         Controller.cancelClientButton(button_cancel, getFrame());
 
         buttonReturnMain = new JButton("");
         buttonReturnMain.setBorder(null);
         buttonReturnMain.setIcon(new ImageIcon("src\\main\\resources\\images\\return.jpg"));
-        buttonReturnMain.setBounds(20, 633, 47, 53);
+        buttonReturnMain.setBounds(20, 10, 47, 53);
         panel.add(buttonReturnMain);
         Controller.returnMainMenu(buttonReturnMain, getFrame());
 
         textArea_aboutClient = new JTextArea();
         textArea_aboutClient.setBorder(BorderFactory.createLineBorder(LIGHT_GRAY));
-        textArea_aboutClient.setBounds(612, 369, 548, 234);
+        textArea_aboutClient.setBounds(612, 389, 548, 234);
         panel.add(textArea_aboutClient);
 
 
         label_aboutClient = new JLabel("Дополнительно:");
         label_aboutClient.setFont(new Font("Tahoma", Font.PLAIN, 14));
-        label_aboutClient.setBounds(610, 329, 122, 41);
+        label_aboutClient.setBounds(610, 349, 122, 41);
         panel.add(label_aboutClient);
 
         label_foto = new JLabel();
-        label_foto.setBounds(917, 55, 245, 245);
+        label_foto.setBounds(957, 115, 172, 172);
         label_foto.setIcon(new ImageIcon("src\\main\\resources\\images\\fotoForAddClient.jpg"));
         label_foto.setBorder(new LineBorder(Color.LIGHT_GRAY));
         panel.add(label_foto);
@@ -202,42 +208,43 @@ public class AddClient implements ViewInterface {
 
         label_getPublic = new JLabel("Получать рекламу:");
         label_getPublic.setFont(new Font("Tahoma", Font.PLAIN, 14));
-        label_getPublic.setBounds(612, 128, 133, 32);
+        label_getPublic.setBounds(612, 148, 133, 32);
         panel.add(label_getPublic);
 
         label_whyKnow = new JLabel("Откуда узнал:");
         label_whyKnow.setFont(new Font("Tahoma", Font.PLAIN, 14));
-        label_whyKnow.setBounds(612, 237, 133, 20);
+        label_whyKnow.setBounds(612, 257, 133, 20);
         panel.add(label_whyKnow);
 
         comboBox_getPublic = new JComboBox(combo_items2);
-        comboBox_getPublic.setBounds(612, 156, 287, 45);
+        comboBox_getPublic.setBounds(612, 176, 287, 45);
         panel.add(comboBox_getPublic);
 
         comboBox_whyKnow = new JComboBox(combo_items);
-        comboBox_whyKnow.setBounds(612, 260, 287, 45);
+        comboBox_whyKnow.setBounds(612, 280, 287, 45);
         panel.add(comboBox_whyKnow);
 
 //addFoto
         JButton fileopen = new JButton("Добавить");
-        fileopen.setBounds(969, 316, 140, 32);
+        fileopen.setBounds(958, 292, 171, 32);
         panel.add(fileopen);
         Controller.clickOpenFoto(fileopen);
 
+
         comboBox_sex = new JComboBox(sexPerson);
-        comboBox_sex.setBounds(612, 55, 287, 45);
+        comboBox_sex.setBounds(612, 85, 287, 45);
         panel.add(comboBox_sex);
 
          label_Sex = new JLabel("Пол:");
         label_Sex.setFont(new Font("Tahoma", Font.PLAIN, 14));
-        label_Sex.setBounds(612, 30, 74, 26);
+        label_Sex.setBounds(612, 60, 74, 26);
         panel.add(label_Sex);
 
     }
 
     void getDate() {
         panelDate = new JPanel();
-        panelDate.setBounds(0, 145, 250, 73);
+        panelDate.setBounds(0, 185, 250, 73);
         panel.add(panelDate);
         UtilDateModel model = new UtilDateModel();
         Properties p = new Properties();
@@ -321,12 +328,8 @@ public class AddClient implements ViewInterface {
         return field_nameFather;
     }
 
-    public static JTextField getField_birthday() {
-        return field_birthday;
-    }
-
     public static JTextField getField_workPhone() {
-        return getField_mobilePhone();
+        return field_workPhone;
     }
 
     public static JTextField getField_homePhone() {
@@ -334,7 +337,7 @@ public class AddClient implements ViewInterface {
     }
 
     public static JTextField getField_mobilePhone() {
-        return field_workPhone;
+        return field_mobile;
     }
 
     public static JTextField getField_email() {

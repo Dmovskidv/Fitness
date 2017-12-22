@@ -13,9 +13,9 @@ public class Main implements ViewInterface {
     private static JMenuItem addClient, findClient, gim, pool, timeTable, addStaff, findStaff, reportDay, reportMonth,
             lockOn, exitApp, helpInfo, adminItem;
     private static JFrame frame;
-    private static JPanel panel;
+    private static JPanel panel ;
     private JButton buttonAddClient,buttonAddSale,buttonServices, buttonLock;
-    private static JLayeredPane panelButtons;
+    private static JLayeredPane panelButtons ;
 
 
     public Main() {
@@ -28,13 +28,13 @@ public class Main implements ViewInterface {
         frame.getContentPane().setLayout(null);
         panel = new JPanel();
         panel.setLayout(null);
-        panel.setBounds(0, 0, 1180, 690);
+        panel.setBounds(0, 0, 1190, 700);
         frame.getContentPane().add(panel);
         setMenuBar();
         setButtons();
         setImage();
         frame.setVisible(true);
-        MyDialog.control_password();
+      //  MyDialog.control_password();
 
 
 
@@ -45,12 +45,13 @@ public class Main implements ViewInterface {
         images.setIcon(new ImageIcon("src\\main\\resources\\images\\mainBackground11.jpg"));
         images.setBounds(0, 0, 1180, 690);
         panel.add(images);
-    }
+
+       }
 
     public void setButtons() {
 
         panelButtons = new JLayeredPane();
-        panelButtons.setBounds(10, 11, 1144, 646);
+        panelButtons.setBounds(10, 10, 1150, 646);
         panel.add(panelButtons);
 
         buttonAddSale = new JButton("Добавить продажу");
@@ -69,7 +70,7 @@ public class Main implements ViewInterface {
         Controller.openFindClient(buttonServices);
 
         buttonLock = new JButton("Блокировка");
-        buttonLock.setBounds(1050, 24, 100, 100);
+        buttonLock.setBounds(1060, 10, 100, 100);
         buttonLock.setBorder(null);
         panelButtons.add(buttonLock);
         buttonLock.setIcon(new ImageIcon("src\\main\\resources\\images\\lock3.jpg"));
@@ -91,8 +92,8 @@ public class Main implements ViewInterface {
 
         addSale = new JMenu("Добавить продажу");
         sales.add(addSale);
-        addSale.add("Абонемент");
-        addSale.add("Разовое посещение");
+        Controller.clickAddSaleAbonement(addSale.add("Абонемент"));
+        Controller.clickaddSaleRaz(addSale.add("Разовое посещение"));
 
         clients = new JMenu("Клиенты");
         menuBar.add(clients);
