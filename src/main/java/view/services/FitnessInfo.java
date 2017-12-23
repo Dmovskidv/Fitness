@@ -1,5 +1,6 @@
 package view.services;
 
+import Interface.ViewInterface;
 import controller.Controller;
 
 import java.awt.Color;
@@ -13,33 +14,14 @@ import javax.swing.JPanel;
 import javax.swing.border.BevelBorder;
 import javax.swing.border.LineBorder;
 
-public class FitnessInfo {
-    private JFrame frame;
+public class FitnessInfo implements ViewInterface {
+
     private JPanel mainPanel, panelDop;
-    private JLabel labelPhoto;
-    private JLabel labelTitleUsluga;
-    private JLabel labelRaz;
-    private JLabel labelTitleCena;
-    private JLabel labelAbonent1m;
-    private JLabel labelAbonent3m;
-    private JLabel labelAbonent6m;
-    private JLabel labelAbonentYear;
-    private JLabel labelCenaRaz;
-    private JLabel labelCenaAbonent1m;
-    private JLabel labelCenaAbonent3m;
-    private JLabel labelCenaAbonent6m;
-    private JLabel labelCenaAbonent1y;
-    private JLabel labelDopPanelTitle;
-    private JLabel labelInfoAerobic1;
-    private JLabel labelInfoAerobic2;
-    private JLabel labelInfoAerobic3;
-    private JLabel labelInfoAerobic4;
-    private JLabel labelInfoAerobic5;
-
-
-
-    private JLabel labelInfoAerobic6;
+    private JLabel labelPhoto, labelTitleUsluga, labelRaz, labelTitleCena, labelAbonent1m, labelAbonent3m,labelAbonent6m,labelAbonentYear,labelCenaRaz,labelCenaAbonent1m,
+            labelCenaAbonent3m, labelCenaAbonent6m, labelCenaAbonent1y, labelDopPanelTitle,labelInfoAerobic1, labelInfoAerobic2, labelInfoAerobic3, labelInfoAerobic4,labelInfoAerobic5, labelInfoAerobic6;
     private JButton buttonReturnMain;
+    private final JFrame frame;
+
 
     public FitnessInfo() {
         frame = new JFrame();
@@ -54,7 +36,7 @@ public class FitnessInfo {
         frame.getContentPane().add(mainPanel);
         mainPanel.setLayout(null);
         setInterface();
-        frame.setVisible(true);
+
     }
 
     public void setInterface() {
@@ -186,5 +168,10 @@ public class FitnessInfo {
 
     public JFrame getFrame() {
         return frame;
+    }
+
+    @Override
+    public void showView() {
+        frame.setVisible(true);
     }
 }

@@ -9,9 +9,9 @@ import java.awt.event.ActionListener;
 public class Main implements ViewInterface {
 
     private static JMenuBar menuBar;
-    private static JMenu sales, services, clients, staff, reports, lock, help, addSale, groupLessons, admin;
+    private static JMenu sales, services, clients, staff, reports, lock, help, groupLessons, admin, addAbonement ;
     private static JMenuItem addClient, findClient, gim, pool, timeTable, addStaff, findStaff, reportDay, reportMonth,
-            lockOn, exitApp, helpInfo, adminItem;
+            lockOn, exitApp, helpInfo, adminItem, addRaz, abonement1m, abonement3m, abonement6m, abonement1y;
     private static JFrame frame;
     private static JPanel panel ;
     private JButton buttonAddClient,buttonAddSale,buttonServices, buttonLock;
@@ -59,6 +59,7 @@ public class Main implements ViewInterface {
         panelButtons.add(buttonAddSale);
         Controller.openAddSale(buttonAddSale, getFrame() );
 
+
         buttonAddClient = new JButton("Добавить нового клиента");
         buttonAddClient.setBounds(372, 277, 400, 70);
         panelButtons.add(buttonAddClient);
@@ -90,10 +91,20 @@ public class Main implements ViewInterface {
         sales = new JMenu("Продажи");
         menuBar.add(sales);
 
-        addSale = new JMenu("Добавить продажу");
-        sales.add(addSale);
-        Controller.clickAddSaleAbonement(addSale.add("Абонемент"));
-        Controller.clickaddSaleRaz(addSale.add("Разовое посещение"));
+        addAbonement = new JMenu("Абонементы");
+        addRaz = new JMenuItem("Разовое посещение");
+        sales.add(addAbonement);
+        sales.add(addRaz);
+        abonement1m = new JMenuItem("1 месяц");
+        abonement3m = new JMenuItem("3 месяца");
+        abonement6m = new JMenuItem("6 месяцев");
+        abonement1y = new JMenuItem("1 год");
+        Controller.clickAbonement1m(addAbonement.add(abonement1m));
+        Controller.clickAbonement3m(addAbonement.add(abonement3m));
+        Controller.clickAbonement6m(addAbonement.add(abonement6m));
+        Controller.clickAbonement1y(addAbonement.add(abonement1y));
+        //Controller.clickAddSaleAbonement(addSale.add("Абонемент"));
+        Controller.clickaddSaleRaz(addRaz);
 
         clients = new JMenu("Клиенты");
         menuBar.add(clients);
@@ -120,8 +131,8 @@ public class Main implements ViewInterface {
 
         groupLessons = new JMenu("Групповые занятия");
         services.add(groupLessons);
-        Controller.clickServicesClickAerobic(groupLessons.add("Аэробика"), getFrame());
-        groupLessons.add("Йога");
+        Controller.clickServicesAerobic(groupLessons.add("Аэробика"), getFrame());
+        Controller.clickServicesIoga(groupLessons.add("Йога"), getFrame());
 
 
         timeTable = new JMenuItem("Расписание");

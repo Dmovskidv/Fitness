@@ -39,6 +39,7 @@ public class AddSale implements ViewInterface {
     private String[] itemTypeClient = Model.getDateForAddSale("client");
 
 
+
     //constructor
     public AddSale() {
         frame = new JFrame();
@@ -156,6 +157,10 @@ public class AddSale implements ViewInterface {
 
     public JComboBox getComboBoxTypeVisit() {
         return comboBoxTypeVisit;
+    }
+
+    public JComboBox getComboBoxTypeClient() {
+        return comboBoxTypeClient;
     }
 
 

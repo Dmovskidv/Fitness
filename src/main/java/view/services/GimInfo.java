@@ -1,5 +1,6 @@
 package view.services;
 
+import Interface.ViewInterface;
 import controller.Controller;
 
 import javax.swing.*;
@@ -7,7 +8,7 @@ import javax.swing.border.BevelBorder;
 import javax.swing.border.LineBorder;
 import java.awt.*;
 
-public class GimInfo {
+public class GimInfo implements ViewInterface {
 
     private JFrame frame;
     private JPanel mainPanel, panelDop;
@@ -31,7 +32,7 @@ public class GimInfo {
         frame.getContentPane().add(mainPanel);
         mainPanel.setLayout(null);
         setInterface();
-        frame.setVisible(true);
+
     }
 
     public void setInterface() {
@@ -163,5 +164,10 @@ public class GimInfo {
 
     public JFrame getFrame() {
         return frame;
+    }
+
+    @Override
+    public void showView() {
+        frame.setVisible(true);
     }
 }

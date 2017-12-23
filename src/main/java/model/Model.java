@@ -8,8 +8,9 @@ import java.util.ArrayList;
 public class Model implements DateInterface {
 
     //for ComboBox  class AddSale
-    private static String[] itemServices = new String[]{"Не выбрано", "Бассеин", "Тренажёрный зал", "Аэробика", "Йога"};;
-    private static String[] itemTypeVisit = new String[]{"Не выбрано", "Разовое посещение", "Абонемент"};
+    private static String[] itemServices = new String[]{"Не выбрано", "Бассеин", "Тренажёрный зал", "Аэробика", "Йога"};
+    private static String[] itemTypeVisit = new String[]{"Не выбрано", "Разовое посещение", "Абонемент 1 месяц","Абонемент 3 месяца","Абонемент 6 месяцев",
+            "Абонемент 1 год",};
     private static String[] itemTypeClient = new String[]{"Не выбрано", "Клиент клуба", "Гость"};
 
     //for ComboBox class AddClient

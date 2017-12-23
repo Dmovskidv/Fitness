@@ -2,10 +2,12 @@ package controller;
 
 import Interface.ViewInterface;
 import model.Client;
+import model.DB;
 import model.Model;
 import view.*;
 import view.services.FitnessInfo;
 import view.services.GimInfo;
+import view.services.IogaInfo;
 import view.services.PoolInfo;
 
 import javax.swing.*;
@@ -144,7 +146,7 @@ public class Controller {
             @Override
             public void actionPerformed(ActionEvent e) {
                 frame.setVisible(false);
-                new PoolInfo();
+                new PoolInfo().showView();
             }
         });
     }
@@ -154,18 +156,18 @@ public class Controller {
             @Override
             public void actionPerformed(ActionEvent e) {
                 frame.setVisible(false);
-                new GimInfo();
+                new GimInfo().showView();
             }
         });
 
     }
 
-    public static void clickServicesClickAerobic(JMenuItem action, final JFrame frame) {
+    public static void clickServicesAerobic(JMenuItem action, final JFrame frame) {
         action.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 frame.setVisible(false);
-                new FitnessInfo();
+                new FitnessInfo().showView();
             }
         });
 
@@ -185,7 +187,7 @@ public class Controller {
         lock.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.exit(0);
+                 System.exit(1);
             }
         });
     }
@@ -254,24 +256,13 @@ public class Controller {
         });
     }
 
-    public static void clickAddSaleAbonement(JMenuItem action) {
-        action.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                AddSale saleAbonement = new AddSale();
-                saleAbonement.getComboBoxTypeVisit().setSelectedItem("Абонемент");
-                saleAbonement.showView();
-
-            }
-        });
-    }
-
     public static void clickaddSaleRaz(JMenuItem action) {
         action.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 AddSale saleRaz = new AddSale();
                 saleRaz.getComboBoxTypeVisit().setSelectedItem("Разовое посещение");
+                saleRaz.getComboBoxTypeClient().setSelectedItem("Гость");
                 saleRaz.showView();
             }
         });
@@ -344,9 +335,77 @@ public class Controller {
     }
 
     public static void readFileClient(String path){
+    }
 
+    public static void clickServicesIoga(JMenuItem action, final JFrame frame) {
+        action.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.setVisible(false);
+                new IogaInfo().showView();
+            }
+        });
+    }
 
+    public static void clickAbonement1m(JMenuItem action) {
+        action.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                AddSale saleRaz = new AddSale();
+                saleRaz.getComboBoxTypeVisit().setSelectedItem("Абонемент 1 месяц");
+                saleRaz.getComboBoxTypeClient().setSelectedItem("Клиент клуба");
+                saleRaz.showView();
+            }
+        });
+    }
 
+    public static void clickAbonement3m(JMenuItem action) {
+        action.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                AddSale saleRaz = new AddSale();
+                saleRaz.getComboBoxTypeVisit().setSelectedItem("Абонемент 3 месяца");
+                saleRaz.getComboBoxTypeClient().setSelectedItem("Клиент клуба");
+                saleRaz.showView();
+            }
+        });
+    }
+
+    public static void clickAbonement6m(JMenuItem action) {
+        action.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                AddSale saleRaz = new AddSale();
+                saleRaz.getComboBoxTypeVisit().setSelectedItem("Абонемент 6 месяцев");
+                saleRaz.getComboBoxTypeClient().setSelectedItem("Клиент клуба");
+                saleRaz.showView();
+            }
+        });
+    }
+
+    public static void clickAbonement1y(JMenuItem action) {
+        action.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                AddSale saleRaz = new AddSale();
+                saleRaz.getComboBoxTypeVisit().setSelectedItem("Абонемент 1 год");
+                saleRaz.getComboBoxTypeClient().setSelectedItem("Клиент клуба");
+                saleRaz.showView();
+            }
+        });
+    }
+
+    public static void writeDB(JButton button_create) {
+        button_create.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(DB.openDB()) {
+                    DB.insertDB();
+                    //DB.selectDB();
+                    DB.closeDB();
+                }
+            }
+        });
 
     }
 }

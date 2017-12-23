@@ -174,7 +174,8 @@ public class AddClient implements ViewInterface {
         button_create.setBounds(796, 638, 179, 54);
         panel.add(button_create);
         //Controller.addClientButton(button_create);
-        Controller.writeClientFile(button_create);
+        //Controller.writeClientFile(button_create);
+        Controller.writeDB(button_create);
 
         button_cancel = new JButton("Отмена");
         button_cancel.setBounds(980, 638, 179, 54);
