@@ -20,7 +20,10 @@ import javax.swing.ImageIcon;
 public class FindClient implements ViewInterface {
 
     private JFrame frame;
-    private JTable tableClients;
+    private static JTable tableClients;
+
+
+
     private JTextField textfieldInputClient;
     private JLabel labelNumberCard, labelFio, labelPol, labelBirthday, labelStatus, labelEmail, labelPass, labelReklama,
             labelWhereKnow, labelDopInfo;
@@ -297,7 +300,9 @@ public class FindClient implements ViewInterface {
         tableClients = new JTable(modelTable);
         tableClients.setBorder(new LineBorder(Color.LIGHT_GRAY));
         tableClients.setBounds(10, 114, 381, 508);
+
         scrollPaneTable.setViewportView(tableClients);
+        Controller.setColumnsWidth(tableClients);
             }
 
     @Override
@@ -308,5 +313,9 @@ public class FindClient implements ViewInterface {
 
     public JFrame getFrame() {
         return frame;
+    }
+
+    public static  JTable getTableClients() {
+        return tableClients;
     }
 }

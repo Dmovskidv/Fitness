@@ -135,20 +135,20 @@ public class AddClient implements ViewInterface {
         field_nameFather.setBounds(403, 85, 180, 45);
         panel.add(field_nameFather);
 
-        field_mobile = new JTextField();
-        field_mobile.setColumns(10);
-        field_mobile.setBounds(403, 280, 180, 45);
-        panel.add(field_mobile);
+        field_workPhone = new JTextField();
+        field_workPhone.setColumns(10);
+        field_workPhone.setBounds(403, 280, 180, 45);
+        panel.add(field_workPhone);
 
         field_homePhone = new JTextField();
         field_homePhone.setColumns(10);
         field_homePhone.setBounds(213, 280, 180, 45);
         panel.add(field_homePhone);
 
-        field_workPhone = new JTextField();
-        field_workPhone.setColumns(10);
-        field_workPhone.setBounds(20, 280, 180, 45);
-        panel.add(field_workPhone);
+        field_mobile = new JTextField();
+        field_mobile.setColumns(10);
+        field_mobile.setBounds(20, 280, 180, 45);
+        panel.add(field_mobile);
 
         field_email = new JTextField();
         field_email.setColumns(10);
@@ -173,8 +173,6 @@ public class AddClient implements ViewInterface {
         button_create = new JButton("Создать");
         button_create.setBounds(796, 638, 179, 54);
         panel.add(button_create);
-        //Controller.addClientButton(button_create);
-        //Controller.writeClientFile(button_create);
         Controller.writeDB(button_create);
 
         button_cancel = new JButton("Отмена");

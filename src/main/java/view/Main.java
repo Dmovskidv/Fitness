@@ -2,6 +2,8 @@ package view;
 
 import Interface.ViewInterface;
 import controller.Controller;
+import model.DB;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -34,7 +36,8 @@ public class Main implements ViewInterface {
         setButtons();
         setImage();
         frame.setVisible(true);
-      //  MyDialog.control_password();
+        Controller.initDB();
+        //  MyDialog.control_password();
 
 
 

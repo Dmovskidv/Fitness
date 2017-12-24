@@ -47,7 +47,18 @@ public class ModelTable implements TableModel {
 
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
-        return null;
+        Object return_object = null;
+        switch (columnIndex) {
+
+            case 0:
+                return_object = model.getDate().get(rowIndex).getLastName()+" "+model.getDate().get(rowIndex).getName()+" "+model.getDate().get(rowIndex).getFatherName();
+                break;
+            case 1:
+                return_object = model.getDate().get(rowIndex).getNumberCard();
+                break;
+                    }
+
+        return return_object;
     }
 
     @Override

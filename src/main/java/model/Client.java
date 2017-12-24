@@ -7,14 +7,14 @@ import java.util.Date;
 public class Client {
 
     //main information
-    private String name;
+    private  String name;
     private String lastName;
     private String fatherName;
     private String dateBirthday;
     private String sex;
     //more
     private int numberCard;
-    private ImageIcon foto;
+    private String pathFoto;
     private String phoneMobile;
     private String phoneHome;
     private String phoneWork;
@@ -22,6 +22,8 @@ public class Client {
     private String numPassport;
     private String infoPassport;
     private String aboutClient;
+    private String whereKnow;
+    private String getReklama;
 
 
     public Client(String name, String lastName, String fatherName, String sex, int numberCard, String phoneMobile) {
@@ -31,17 +33,28 @@ public class Client {
         this.sex = sex;
         this.numberCard = numberCard;
         this.phoneMobile = phoneMobile;
+        this.dateBirthday = "Не указано";
+        this.pathFoto =  "Не указано";
+        this.phoneHome =  "Не указано";
+        this.phoneWork =  "Не указано";
+        this.email = "Не указано";
+        this.numPassport = "Не указано";
+        this.infoPassport =  "Не указано";
+        this.aboutClient =  "Не указано";
+        this.getReklama =  "Не указано";
+        this.whereKnow =  "Не указано";
     }
 
+
     public Client(String name, String lastName, String fatherName, String sex ,String dateBirthday , int numberCard,
-                  ImageIcon foto, String phoneMobile, String phoneHome, String phoneWork, String email, String numPassport, String infoPassport, String aboutClient) {
+                  String pathFoto, String phoneMobile, String phoneHome, String phoneWork, String email, String numPassport, String infoPassport, String aboutClient, String whereKnow, String getReklama) {
         this.name = name;
         this.lastName = lastName;
         this.fatherName = fatherName;
         this.dateBirthday = dateBirthday;
         this.sex = sex;
         this.numberCard = numberCard;
-        this.foto = foto;
+        this.pathFoto = pathFoto;
         this.phoneMobile = phoneMobile;
         this.phoneHome = phoneHome;
         this.phoneWork = phoneWork;
@@ -49,10 +62,12 @@ public class Client {
         this.numPassport = numPassport;
         this.infoPassport = infoPassport;
         this.aboutClient = aboutClient;
+        this.getReklama = getReklama;
+        this.whereKnow = whereKnow;
     }
 
 
-    public String getName() {
+    public  String getName() {
         return name;
     }
 
@@ -76,8 +91,8 @@ public class Client {
         return numberCard;
     }
 
-    public ImageIcon getFoto() {
-        return foto;
+    public String getPathFoto() {
+        return pathFoto;
     }
 
     public String getPhoneMobile() {
@@ -106,6 +121,14 @@ public class Client {
 
     public String getAboutClient() {
         return aboutClient;
+    }
+
+    public String getWhereKnow() {
+        return whereKnow;
+    }
+
+    public String getReklama() {
+        return getReklama;
     }
 
 

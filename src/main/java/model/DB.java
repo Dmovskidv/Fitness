@@ -8,6 +8,7 @@ import java.sql.*;
 
 public class DB {
 
+    static Model model = new Model();
     static Connection connection;
 
    public static  boolean openDB() {
@@ -15,11 +16,11 @@ public class DB {
            Class.forName("org.sqlite.JDBC");
            connection = DriverManager.getConnection(
                    "jdbc:sqlite:c:\\sqlite\\myDB.db");
-           System.out.println("Connected");
-           System.out.println(AddClient.getLabel_foto().getIcon().toString());
+           System.out.println("DB open");
            return true;
+
            } catch (Exception e) {
-               System.out.println("not connection");
+               System.out.println("DB isn't open");
                return false;
            }
    }
@@ -27,17 +28,7 @@ public class DB {
     public static  void insertDB() {
         final String names = AddClient.getField_name().getText();
         final String sirname = AddClient.getField_sirname().getText();
-
         final String lastname = AddClient.getField_nameFather().getText();
-        if (names.trim().length() == 0) {
-            AddClient.getField_sirname().setBorder(BorderFactory.createLineBorder(Color.red));
-        }
-        if (sirname.trim().length() == 0) {
-            AddClient.getField_name().setBorder(BorderFactory.createLineBorder(Color.red));
-        }
-        if (lastname.trim().length() == 0) {
-            AddClient.getField_nameFather().setBorder(BorderFactory.createLineBorder(Color.red));
-        }
         final String sex = ((String) AddClient.getComboBox_sex().getSelectedItem());
         final String age = (AddClient.getDatePicker().getJFormattedTextField().getText().trim().length() > 0) ? AddClient.getDatePicker().getJFormattedTextField().getText() : "Не указано";
         final String mobilePhone = AddClient.getField_mobilePhone().getText();
@@ -60,7 +51,7 @@ public class DB {
         try {
             Statement statement = connection.createStatement();
             statement.executeUpdate(query);
-            System.out.println("Rows added");
+            System.out.println("Client added");
             statement.close();
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -69,48 +60,53 @@ public class DB {
     }
 
     public static  void selectDB() {
-        try {
-            Statement statement = connection.createStatement();
 
-            String query = "SELECT card, sirname, name, lastName, sex, mobilePhone, homePhone, workPhone, email, age, " +
-                    "whereKnow, getReklama, numberPassport, infoPassport, moreInfo" +
-                    " FROM clients" +
-                    " ORDER BY sirName";
-            ResultSet result = statement.executeQuery(query);
-            while(result.next()){
-                int card = result.getInt("card");
-                String sirName = result.getString("sirname");
-                String name = result.getString("name");
-                String lastName = result.getString("lastName");
-                String sex = result.getString("sex");
-                String mobilePhone = result.getString("mobilePhone");
-                String homePhone = result.getString("homePhone");
-                String workPhone = result.getString("workPhone");
-                String email = result.getString("email");
-                String age = result.getString("age");
-                String whereKnow = result.getString("whereKnow");
-                String getReklama = result.getString("getReklama");
-                String numberPassport = result.getString("numberPassport");
-                String infoPassport = result.getString("infoPassport");
-                String moreInfo = result.getString("moreInfo");
-                System.out.println(card);
-                System.out.println(sirName);
-                System.out.println(name);
-                System.out.println(lastName);
-                System.out.println(sex);
 
-            }
-                result.close();
-                statement.close();
+               try {
+                   Statement statement = connection.createStatement();
 
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
+                   String query = "SELECT card, sirname, name, lastName, sex, mobilePhone, homePhone, workPhone, email, age, " +
+                           "whereKnow, getReklama, numberPassport, infoPassport, moreInfo, pathFoto " +
+                           " FROM clients" +
+                           " ORDER BY sirName";
+                   ResultSet result = statement.executeQuery(query);
+                   while(result.next()){
+                       int card = result.getInt("card");
+                       String sirName = result.getString("sirname");
+                       String name = result.getString("name");
+                       String lastName = result.getString("lastName");
+                       String sex = result.getString("sex");
+                       String mobilePhone = result.getString("mobilePhone");
+                       String homePhone = result.getString("homePhone");
+                       String workPhone = result.getString("workPhone");
+                       String email = result.getString("email");
+                       String age = result.getString("age");
+                       String whereKnow = result.getString("whereKnow");
+                       String getReklama = result.getString("getReklama");
+                       String numberPassport = result.getString("numberPassport");
+                       String infoPassport = result.getString("infoPassport");
+                       String moreInfo = result.getString("moreInfo");
+                       String pathFoto = result.getString("pathFoto");
+
+                       model.getDate().add(new Client(name, sirName, lastName, sex, age, card,
+                               pathFoto, mobilePhone, homePhone, workPhone,email,numberPassport,infoPassport,moreInfo,whereKnow, getReklama));
+
+                   }
+
+                   result.close();
+                   statement.close();
+
+               } catch (SQLException e) {
+                   e.printStackTrace();
+               }
+
+
+ }
 
     public static void closeDB() {
         try {
             connection.close();
+            System.out.println("DB close");
         } catch (SQLException e) {
             e.printStackTrace();
         }

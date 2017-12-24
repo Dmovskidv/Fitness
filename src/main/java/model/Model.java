@@ -22,7 +22,7 @@ public class Model implements DateInterface {
 
 
 
-    private   ArrayList<Client> clients = new ArrayList<Client>();
+    private static ArrayList<Client> clients = new ArrayList<Client>();
 
     @Override
     public ArrayList<Client> getDate() {
@@ -65,17 +65,7 @@ public class Model implements DateInterface {
 
 
 
-//    public String[] getItemServices() {
-//        return itemServices;
-//    }
-//
-//    public String[] getItemTypeVisit() {
-//        return itemTypeVisit;
-//    }
-//
-//    public String[] getItemTypeClient() {
-//        return itemTypeClient;
-//    }
+
 
 
 
