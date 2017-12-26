@@ -2,21 +2,20 @@ package model;
 
 import view.AddClient;
 
-import javax.swing.*;
-import java.awt.*;
 import java.sql.*;
 
 public class DB {
 
-    static Model model = new Model();
-    static Connection connection;
+    private static Model model = new Model();
+
+    private static Connection connection;
 
    public static  boolean openDB() {
        try {
            Class.forName("org.sqlite.JDBC");
            connection = DriverManager.getConnection(
                    "jdbc:sqlite:c:\\sqlite\\myDB.db");
-           System.out.println("DB open");
+          //System.out.println("DB open");
            return true;
 
            } catch (Exception e) {
@@ -106,11 +105,96 @@ public class DB {
     public static void closeDB() {
         try {
             connection.close();
-            System.out.println("DB close");
+            //System.out.println("DB close");
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
+
+    public static String selectCostDB(String nameservice, String timeservice){
+        String resultTransaction = "";
+       if(openDB()) {
+
+
+           String query = "SELECT cost " +
+                   " FROM cost WHERE time = ?  AND name = ?";
+
+           try {
+               PreparedStatement ps = connection.prepareStatement(query);
+               ps.setString(1, timeservice);
+               ps.setString(2, nameservice);
+               ResultSet rs = ps.executeQuery();
+               while (rs.next()) {
+                   resultTransaction = rs.getString("cost");
+               }
+               ps.close();
+
+           } catch (SQLException e) {
+               e.printStackTrace();
+           }
+
+
+       }
+        return resultTransaction;
+    }
+
+    public static String getPasswordDB(String adminname){
+        String getPassword = "";
+        if(openDB()) {
+
+
+            String query = "SELECT pass " +
+                    " FROM password WHERE admin = ?";
+
+            try {
+                PreparedStatement ps = connection.prepareStatement(query);
+                ps.setString(1, adminname);
+                ResultSet rs = ps.executeQuery();
+                while (rs.next()) {
+                    getPassword = rs.getString("pass");
+                }
+                ps.close();
+
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+
+
+        }
+        return getPassword;
+    }
+
+    public static String[] getAdminDB(){
+        String getAdmin[] = new String[3];
+        if(openDB()) {
+
+
+            String query = "SELECT admin " +
+                    " FROM password";
+
+            try {
+                PreparedStatement ps = connection.prepareStatement(query);
+
+                ResultSet rs = ps.executeQuery();
+                int i=0;
+                while (rs.next()) {
+
+                    getAdmin[i] = rs.getString("admin");
+                    i++;
+                }
+
+                ps.close();
+
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+
+
+        }
+        return getAdmin;
+    }
+
+
 
 
 }

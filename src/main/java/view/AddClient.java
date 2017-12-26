@@ -268,7 +268,7 @@ public class AddClient implements ViewInterface {
 //format show date
     public class DateLabelFormatter extends JFormattedTextField.AbstractFormatter {
 
-        private String datePattern = "yyyy-MM-dd";
+        private String datePattern = "dd.MM.yyyy";
         private SimpleDateFormat dateFormatter = new SimpleDateFormat(datePattern);
 
         @Override

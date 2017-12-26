@@ -22,18 +22,12 @@ public class Model implements DateInterface {
 
 
 
-    private static ArrayList<Client> clients = new ArrayList<Client>();
+    public static ArrayList<Client> clients = new ArrayList<Client>();
 
     @Override
     public ArrayList<Client> getDate() {
         return clients;
     }
-
-    public int getCountClients(){
-        return clients.size()+1;
-    }
-
-
 
     public static String[] getDateForAddSale(String name){
         switch(name){

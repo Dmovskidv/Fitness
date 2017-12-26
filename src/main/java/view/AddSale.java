@@ -22,14 +22,31 @@ public class AddSale implements ViewInterface {
     private JFrame frame;
     private static JTextField textFieldNumCard;
     private JPanel panel;
-    private JComboBox comboBoxServices;
+
+    public static  JComboBox getComboBoxServices() {
+        return comboBoxServices;
+    }
+
+    private static JComboBox comboBoxServices;
 
 
 
-    private JComboBox comboBoxTypeVisit;
-    private JComboBox comboBoxTypeClient;
-    private JLabel labelTitle, labelService, labelTypeVisit, labelTypeClient, labelNumCard, labelPay, labelStatusPay, labelSum,
-            labelStatus;
+    private static JComboBox comboBoxTypeVisit;
+    private static JComboBox comboBoxTypeClient;
+    private JLabel labelTitle;
+    private JLabel labelService;
+    private JLabel labelTypeVisit;
+    private JLabel labelTypeClient;
+    private JLabel labelNumCard;
+    private JLabel labelPay;
+    private JLabel labelStatusPay;
+
+    public static  JLabel getLabelSum() {
+        return labelSum;
+    }
+
+    private static JLabel labelSum;
+    private JLabel labelStatus;
     private JButton buttonCancel, buttonPay;
 
 
@@ -71,10 +88,12 @@ public class AddSale implements ViewInterface {
         comboBoxTypeVisit = new JComboBox(itemTypeVisit);
         comboBoxTypeVisit.setBounds(143, 154, 416, 40);
         panel.add(comboBoxTypeVisit);
+        Controller.showSumBeforePay(comboBoxTypeVisit);
 
         comboBoxTypeClient = new JComboBox(itemTypeClient);
         comboBoxTypeClient.setBounds(143, 205, 416, 40);
         panel.add(comboBoxTypeClient);
+        Controller.showSumBeforePay(comboBoxTypeClient);
 
         buttonCancel = new JButton("Отмена");
         buttonCancel.setBounds(435, 463, 124, 40);
@@ -155,11 +174,11 @@ public class AddSale implements ViewInterface {
         return textFieldNumCard;
     }
 
-    public JComboBox getComboBoxTypeVisit() {
+    public static JComboBox getComboBoxTypeVisit() {
         return comboBoxTypeVisit;
     }
 
-    public JComboBox getComboBoxTypeClient() {
+    public static  JComboBox getComboBoxTypeClient() {
         return comboBoxTypeClient;
     }
 

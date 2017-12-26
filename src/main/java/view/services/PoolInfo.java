@@ -2,6 +2,8 @@ package view.services;
 
 import Interface.ViewInterface;
 import controller.Controller;
+import model.DB;
+
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.Color;
@@ -84,31 +86,31 @@ public class PoolInfo implements ViewInterface {
         labelAbonentYear.setBounds(10, 324, 198, 35);
         mainPanel.add(labelAbonentYear);
 
-        labelCenaRaz = new JLabel(" 3$");
+        labelCenaRaz = new JLabel(DB.selectCostDB("pool", "1 раз")+"$");
         labelCenaRaz.setBorder(new BevelBorder(BevelBorder.LOWERED, Color.LIGHT_GRAY, null, null, null));
         labelCenaRaz.setFont(new Font("Tahoma", Font.BOLD, 20));
         labelCenaRaz.setBounds(218, 139, 59, 35);
         mainPanel.add(labelCenaRaz);
 
-        labelCenaAbonent1m = new JLabel(" 20$");
+        labelCenaAbonent1m = new JLabel(DB.selectCostDB("pool", "1 мес")+"$");
         labelCenaAbonent1m.setFont(new Font("Tahoma", Font.BOLD, 20));
         labelCenaAbonent1m.setBorder(new BevelBorder(BevelBorder.LOWERED, Color.LIGHT_GRAY, null, null, null));
         labelCenaAbonent1m.setBounds(218, 185, 59, 35);
         mainPanel.add(labelCenaAbonent1m);
 
-        labelCenaAbonent3m = new JLabel(" 35$");
+        labelCenaAbonent3m = new JLabel(DB.selectCostDB("pool", "3 мес")+"$");
         labelCenaAbonent3m.setFont(new Font("Tahoma", Font.BOLD, 20));
         labelCenaAbonent3m.setBorder(new BevelBorder(BevelBorder.LOWERED, Color.LIGHT_GRAY, null, null, null));
         labelCenaAbonent3m.setBounds(218, 231, 59, 35);
         mainPanel.add(labelCenaAbonent3m);
 
-        labelCenaAbonent6m = new JLabel(" 50$");
+        labelCenaAbonent6m = new JLabel(DB.selectCostDB("pool", "6 мес")+"$");
         labelCenaAbonent6m.setFont(new Font("Tahoma", Font.BOLD, 20));
         labelCenaAbonent6m.setBorder(new BevelBorder(BevelBorder.LOWERED, Color.LIGHT_GRAY, null, null, null));
         labelCenaAbonent6m.setBounds(218, 277, 59, 35);
         mainPanel.add(labelCenaAbonent6m);
 
-        labelCenaAbonent1y = new JLabel(" 80$");
+        labelCenaAbonent1y = new JLabel(DB.selectCostDB("pool", "1 год")+"$");
         labelCenaAbonent1y.setFont(new Font("Tahoma", Font.BOLD, 20));
         labelCenaAbonent1y.setBorder(new BevelBorder(BevelBorder.LOWERED, Color.LIGHT_GRAY, null, null, null));
         labelCenaAbonent1y.setBounds(218, 323, 59, 35);

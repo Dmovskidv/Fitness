@@ -35,9 +35,9 @@ public class Main implements ViewInterface {
         setMenuBar();
         setButtons();
         setImage();
-        frame.setVisible(true);
+        showView();
         Controller.initDB();
-        //  MyDialog.control_password();
+        Controller.controlPassword();
 
 
 
@@ -102,11 +102,13 @@ public class Main implements ViewInterface {
         abonement3m = new JMenuItem("3 месяца");
         abonement6m = new JMenuItem("6 месяцев");
         abonement1y = new JMenuItem("1 год");
+
         Controller.clickAbonement1m(addAbonement.add(abonement1m));
         Controller.clickAbonement3m(addAbonement.add(abonement3m));
         Controller.clickAbonement6m(addAbonement.add(abonement6m));
         Controller.clickAbonement1y(addAbonement.add(abonement1y));
-        //Controller.clickAddSaleAbonement(addSale.add("Абонемент"));
+
+
         Controller.clickaddSaleRaz(addRaz);
 
         clients = new JMenu("Клиенты");
@@ -168,7 +170,7 @@ public class Main implements ViewInterface {
 
          @Override
          public void actionPerformed(ActionEvent arg0) {
-         MyDialog.control_password();
+         Controller.controlPassword();
 
          }
          });
@@ -195,7 +197,8 @@ public class Main implements ViewInterface {
 
     @Override
     public void showView() {
-        return;
+        getFrame().setVisible(true);
+
     }
 
 

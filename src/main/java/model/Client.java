@@ -26,24 +26,24 @@ public class Client {
     private String getReklama;
 
 
-    public Client(String name, String lastName, String fatherName, String sex, int numberCard, String phoneMobile) {
-        this.name = name;
-        this.lastName = lastName;
-        this.fatherName = fatherName;
-        this.sex = sex;
-        this.numberCard = numberCard;
-        this.phoneMobile = phoneMobile;
-        this.dateBirthday = "Не указано";
-        this.pathFoto =  "Не указано";
-        this.phoneHome =  "Не указано";
-        this.phoneWork =  "Не указано";
-        this.email = "Не указано";
-        this.numPassport = "Не указано";
-        this.infoPassport =  "Не указано";
-        this.aboutClient =  "Не указано";
-        this.getReklama =  "Не указано";
-        this.whereKnow =  "Не указано";
-    }
+//    public Client(String name, String lastName, String fatherName, String sex, int numberCard, String phoneMobile) {
+//        this.name = name;
+//        this.lastName = lastName;
+//        this.fatherName = fatherName;
+//        this.sex = sex;
+//        this.numberCard = numberCard;
+//        this.phoneMobile = phoneMobile;
+//        this.dateBirthday = "Не указано";
+//        this.pathFoto =  "Не указано";
+//        this.phoneHome =  "Не указано";
+//        this.phoneWork =  "Не указано";
+//        this.email = "Не указано";
+//        this.numPassport = "Не указано";
+//        this.infoPassport =  "Не указано";
+//        this.aboutClient =  "Не указано";
+//        this.getReklama =  "Не указано";
+//        this.whereKnow =  "Не указано";
+//    }
 
 
     public Client(String name, String lastName, String fatherName, String sex ,String dateBirthday , int numberCard,
