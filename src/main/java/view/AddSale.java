@@ -2,35 +2,24 @@ package view;
 
 import Interface.ViewInterface;
 import controller.Controller;
+import model.DB;
 import model.Model;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JLabel;
+import javax.swing.*;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.JComboBox;
-import javax.swing.JButton;
-import javax.swing.JTextField;
 import javax.swing.border.BevelBorder;
 import java.awt.Color;
 
 public class AddSale implements ViewInterface {
 
-    private JFrame frame;
-    private static JTextField textFieldNumCard;
+    private JDialog dialog;
     private JPanel panel;
-
-    public static  JComboBox getComboBoxServices() {
-        return comboBoxServices;
-    }
-
+    private static JTextField textFieldNumCard;
+    private static JLabel labelSum;
     private static JComboBox comboBoxServices;
-
-
-
     private static JComboBox comboBoxTypeVisit;
     private static JComboBox comboBoxTypeClient;
     private JLabel labelTitle;
@@ -39,18 +28,14 @@ public class AddSale implements ViewInterface {
     private JLabel labelTypeClient;
     private JLabel labelNumCard;
     private JLabel labelPay;
-    private JLabel labelStatusPay;
 
-    public static  JLabel getLabelSum() {
-        return labelSum;
+    public static JLabel getLabelStatusPay() {
+        return labelStatusPay;
     }
 
-    private static JLabel labelSum;
+    private static JLabel labelStatusPay;
     private JLabel labelStatus;
     private JButton buttonCancel, buttonPay;
-
-
-
     private String[] itemServices = Model.getDateForAddSale("services");
     private String[] itemTypeVisit = Model.getDateForAddSale("visit");
     private String[] itemTypeClient = Model.getDateForAddSale("client");
@@ -59,16 +44,17 @@ public class AddSale implements ViewInterface {
 
     //constructor
     public AddSale() {
-        frame = new JFrame();
-        frame.setSize(600, 570);
-        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        frame.setLocationRelativeTo(null);
-        frame.setResizable(false);
-        frame.getContentPane().setLayout(null);
+        dialog = new JDialog();
+        dialog.setSize(600, 570);
+        dialog.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        dialog.setLocationRelativeTo(null);
+        dialog.setResizable(false);
+        dialog.getContentPane().setLayout(null);
         panel = new JPanel();
         panel.setBounds(0, 0, 584, 532);
-        frame.getContentPane().add(panel);
+        dialog.getContentPane().add(panel);
         panel.setLayout(null);
+        dialog.setModal(true);
         setInterface();
 
     }
@@ -83,6 +69,7 @@ public class AddSale implements ViewInterface {
         comboBoxServices = new JComboBox(itemServices);
         comboBoxServices.setBounds(143, 100, 416, 40);
         panel.add(comboBoxServices);
+        Controller.showSumBeforePay(comboBoxServices);
 
 
         comboBoxTypeVisit = new JComboBox(itemTypeVisit);
@@ -93,16 +80,17 @@ public class AddSale implements ViewInterface {
         comboBoxTypeClient = new JComboBox(itemTypeClient);
         comboBoxTypeClient.setBounds(143, 205, 416, 40);
         panel.add(comboBoxTypeClient);
-        Controller.showSumBeforePay(comboBoxTypeClient);
+        //Controller.showSumBeforePay(comboBoxTypeClient);
 
         buttonCancel = new JButton("Отмена");
         buttonCancel.setBounds(435, 463, 124, 40);
         panel.add(buttonCancel);
-        Controller.closeAddSale(buttonCancel, getFrame());
+        Controller.closeAddSale(buttonCancel, getDialog());
 
         buttonPay = new JButton("Оплатить");
         buttonPay.setBounds(301, 463, 124, 40);
         panel.add(buttonPay);
+        DB.addPayDB(buttonPay);
 
         labelService = new JLabel("Услуга");
         labelService.setBorder(new BevelBorder(BevelBorder.LOWERED, Color.LIGHT_GRAY, null, null, null));
@@ -127,8 +115,8 @@ public class AddSale implements ViewInterface {
         textFieldNumCard.setBounds(143, 256, 116, 40);
         panel.add(textFieldNumCard);
         textFieldNumCard.setColumns(10);
-        textFieldNumCard.setEditable(false);
-        Controller.clickComboBoxClientClub(comboBoxTypeClient);
+
+        Controller.clickComboBoxClientClub(textFieldNumCard);
 
         labelNumCard = new JLabel("№ карты");
         labelNumCard.setBorder(new BevelBorder(BevelBorder.LOWERED, Color.LIGHT_GRAY, null, null, null));
@@ -163,13 +151,14 @@ public class AddSale implements ViewInterface {
     //show View
     @Override
     public void showView() {
-        frame.setVisible(true);
+        dialog.setVisible(true);
     }
 
     //getters
-    public JFrame getFrame() {
-        return frame;
+    public JDialog getDialog() {
+        return dialog;
     }
+
     public static JTextField getTextFieldNumCard() {
         return textFieldNumCard;
     }
@@ -180,6 +169,14 @@ public class AddSale implements ViewInterface {
 
     public static  JComboBox getComboBoxTypeClient() {
         return comboBoxTypeClient;
+    }
+
+    public static  JComboBox getComboBoxServices() {
+        return comboBoxServices;
+    }
+
+    public static  JLabel getLabelSum() {
+        return labelSum;
     }
 
 

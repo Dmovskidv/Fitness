@@ -17,7 +17,11 @@ import javax.swing.event.ListSelectionListener;
 
 import java.awt.*;
 import java.awt.event.*;
-import java.sql.Statement;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.Locale;
 
 
 public class Controller {
@@ -213,27 +217,31 @@ public class Controller {
         });
     }
 
-    public static void openAddSale(JButton buttonAddSale, JFrame frame) {
+    public static void openAddSale(JButton buttonAddSale, final JFrame frame) {
         buttonAddSale.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
                 new AddSale().showView();
             }
         });
     }
 
-    public static void clickComboBoxClientClub(final JComboBox comboBoxTypeClient) {
-        comboBoxTypeClient.addActionListener(new ActionListener() {
+    public static void clickComboBoxClientClub(final JTextField field) {
+        field.addMouseListener(new MouseAdapter() {
             @Override
-            public void actionPerformed(ActionEvent e) {
-                if(comboBoxTypeClient.getSelectedItem().equals("Клиент клуба")) {
-                    AddSale.getTextFieldNumCard().setEditable(true);
+            public void mouseClicked(MouseEvent e) {
+                if(((String)AddSale.getComboBoxTypeClient().getSelectedItem()).equals("Гость")){
+                    field.setEditable(false);
+                                   }
+                else if(!((String)AddSale.getComboBoxTypeClient().getSelectedItem()).equals("Гость")){
+                    field.setEditable(true);
                 }
             }
         });
     }
 
-    public static void closeAddSale(JButton buttonCancel, final JFrame frame) {
+    public static void closeAddSale(JButton buttonCancel, final JDialog frame) {
         buttonCancel.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -284,6 +292,7 @@ public class Controller {
                 AddSale saleRaz = new AddSale();
                 saleRaz.getComboBoxTypeVisit().setSelectedItem("Разовое посещение");
                 saleRaz.getComboBoxTypeClient().setSelectedItem("Гость");
+                showSumBeforePay2(AddSale.getComboBoxServices(), "1 раз");
                 saleRaz.showView();
             }
         });
@@ -306,6 +315,9 @@ public class Controller {
                 AddSale saleRaz = new AddSale();
                 saleRaz.getComboBoxTypeVisit().setSelectedItem("Абонемент 1 месяц");
                 saleRaz.getComboBoxTypeClient().setSelectedItem("Клиент клуба");
+                showSumBeforePay2(AddSale.getComboBoxServices(), "1 мес");
+
+
                 saleRaz.showView();
             }
         });
@@ -318,6 +330,7 @@ public class Controller {
                 AddSale saleRaz = new AddSale();
                 saleRaz.getComboBoxTypeVisit().setSelectedItem("Абонемент 3 месяца");
                 saleRaz.getComboBoxTypeClient().setSelectedItem("Клиент клуба");
+                showSumBeforePay2(AddSale.getComboBoxServices(), "3 мес");
                 saleRaz.showView();
             }
         });
@@ -330,6 +343,7 @@ public class Controller {
                 AddSale saleRaz = new AddSale();
                 saleRaz.getComboBoxTypeVisit().setSelectedItem("Абонемент 6 месяцев");
                 saleRaz.getComboBoxTypeClient().setSelectedItem("Клиент клуба");
+                showSumBeforePay2(AddSale.getComboBoxServices(), "6 мес");
                 saleRaz.showView();
             }
         });
@@ -342,6 +356,7 @@ public class Controller {
                 AddSale saleRaz = new AddSale();
                 saleRaz.getComboBoxTypeVisit().setSelectedItem("Абонемент 1 год");
                 saleRaz.getComboBoxTypeClient().setSelectedItem("Клиент клуба");
+                showSumBeforePay2(AddSale.getComboBoxServices(), "1 год");
                 saleRaz.showView();
             }
         });
@@ -551,52 +566,75 @@ public class Controller {
         });
     }
 
-
     public static void showSumBeforePay(final JComboBox comboBoxTypeVisit) {
 
-comboBoxTypeVisit.addActionListener(new ActionListener() {
+            comboBoxTypeVisit.addActionListener(new ActionListener() {
     @Override
     public void actionPerformed(ActionEvent e) {
-        if((AddSale.getComboBoxTypeClient()!=null)) {
-            String timeService = (String) comboBoxTypeVisit.getSelectedItem();
+
+            String timeService = (String) AddSale.getComboBoxTypeVisit().getSelectedItem();
             String service = (String)AddSale.getComboBoxServices().getSelectedItem();
-            if(timeService.equals("Разовое посещение")){
-                AddSale.getComboBoxTypeClient().setSelectedItem("Гость");
 
-            }else { AddSale.getComboBoxTypeClient().setSelectedItem("Клиент клуба");}
-
-
-
-
-            switch (service){
-                case "Тренажёрный зал" : service = "gim";
-                    break;
-                case "Бассеин" : service = "pool";
-                    break;
-                case "Аэробика" : service = "aerobic";
-                    break;
-                case "Йога" : service = "ioga";
-                    break;
+            if(timeService.equals("Разовое посещение") && !service.equals("Не выбрано")){
+             AddSale.getComboBoxTypeClient().setSelectedItem("Гость");
+            }
+            else if(!timeService.equals("Разовое посещение") && !service.equals("Не выбрано")){
+                AddSale.getComboBoxTypeClient().setSelectedItem("Клиент клуба");
             }
 
-            switch (timeService){
-                case "Разовое посещение" : timeService = "1 раз";
-                    break;
-                case "Абонемент 1 месяц" : timeService = "1 мес";
-                    break;
-                case "Абонемент 3 месяца" : timeService = "3 мес";
-                    break;
-                case "Абонемент 6 месяцев" : timeService = "6 мес";
-                    break;
-                case "Абонемент 1 год" : timeService = "1 год";
-                    break;
-            }
+            service = convertationService(service);
+            timeService = convertationTimeService(timeService);
+
             String s = DB.selectCostDB(service, timeService);
              AddSale.getLabelSum().setText(s+"$");
         }
-    }
+
 });
 
+    }
+
+    public static String convertationTimeService(String timeService) {
+        switch (timeService){
+            case "Разовое посещение" : timeService = "1 раз";
+                break;
+            case "Абонемент 1 месяц" : timeService = "1 мес";
+                break;
+            case "Абонемент 3 месяца" : timeService = "3 мес";
+                break;
+            case "Абонемент 6 месяцев" : timeService = "6 мес";
+                break;
+            case "Абонемент 1 год" : timeService = "1 год";
+                break;
+        }
+        return timeService;
+    }
+
+    public static String convertationService(String service) {
+        switch (service){
+            case "Тренажёрный зал" : service = "gim";
+                break;
+            case "Бассеин" : service = "pool";
+                break;
+            case "Аэробика" : service = "aerobic";
+                break;
+            case "Йога" : service = "ioga";
+                break;
+        }
+        return service;
+    }
+
+    public static void showSumBeforePay2(final JComboBox comboBoxServices, final String time) {
+        comboBoxServices.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String service = (String)comboBoxServices.getSelectedItem();
+                service = convertationService(service);
+                String s = DB.selectCostDB(service, time);
+                AddSale.getLabelSum().setText(s+"$");
+
+
+            }
+        });
     }
 
 

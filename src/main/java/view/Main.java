@@ -12,8 +12,27 @@ public class Main implements ViewInterface {
 
     private static JMenuBar menuBar;
     private static JMenu sales, services, clients, staff, reports, lock, help, groupLessons, admin, addAbonement ;
-    private static JMenuItem addClient, findClient, gim, pool, timeTable, addStaff, findStaff, reportDay, reportMonth,
-            lockOn, exitApp, helpInfo, adminItem, addRaz, abonement1m, abonement3m, abonement6m, abonement1y;
+    private static JMenuItem addClient;
+    private static JMenuItem findClient;
+    private static JMenuItem gim;
+    private static JMenuItem pool;
+    private static JMenuItem timeTable;
+    private static JMenuItem addStaff;
+    private static JMenuItem findStaff;
+    private static JMenuItem reportDay;
+    private static JMenuItem reportMonth;
+    private static JMenuItem lockOn;
+    private static JMenuItem exitApp;
+    private static JMenuItem helpInfo;
+
+
+
+    private static JMenuItem adminItem;
+    private static JMenuItem addRaz;
+    private static JMenuItem abonement1m;
+    private static JMenuItem abonement3m;
+    private static JMenuItem abonement6m;
+    private static JMenuItem abonement1y;
     private static JFrame frame;
     private static JPanel panel ;
     private JButton buttonAddClient,buttonAddSale,buttonServices, buttonLock;
@@ -192,6 +211,10 @@ public class Main implements ViewInterface {
     }
 
     public static JMenuItem setadminItem() {
+        return adminItem;
+    }
+
+    public static JMenuItem getAdminItem() {
         return adminItem;
     }
 

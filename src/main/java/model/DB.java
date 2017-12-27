@@ -1,8 +1,18 @@
 package model;
 
+import controller.Controller;
 import view.AddClient;
+import view.AddSale;
+import view.Main;
 
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.sql.*;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+import java.util.Locale;
 
 public class DB {
 
@@ -194,6 +204,48 @@ public class DB {
         return getAdmin;
     }
 
+    public static  void addPayDB(JButton actionPay) {
+
+                actionPay.addActionListener(new ActionListener() {
+
+                @Override
+            public void actionPerformed(ActionEvent e) {
+                String service = (String) AddSale.getComboBoxServices().getSelectedItem();
+                String timeService = (String) AddSale.getComboBoxTypeVisit().getSelectedItem();
+                Calendar c = new GregorianCalendar();
+                SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss", Locale.getDefault());
+
+                String date = format.format(c.getTime());
+                String admin =  Main.getAdminItem().getText();
+                service = Controller.convertationService(service);
+                timeService = Controller.convertationTimeService(timeService);
+                double payment = Double.parseDouble(DB.selectCostDB(service, timeService));
+                String numberCard = (((String)AddSale.getComboBoxTypeClient().getSelectedItem()).equals("Гость"))? "Гость" : AddSale.getTextFieldNumCard().getText();
+                double cashSum = 0.0;
+
+                //command INSERT in DB
+                String query = "INSERT INTO cashBox (date, admin, service, period, payment, sum, numberCard) " +
+                        "VALUES ('" + date + "', '" + admin + "', '" + service + "', '" + timeService + "', '" + payment + "', '" + cashSum
+                        + "', '" + numberCard  + "')";
+
+                try {
+                    Statement statement = connection.createStatement();
+                    statement.executeUpdate(query);
+                    System.out.println("Данные об оплате сохранены в базу данных");
+                    JOptionPane.showMessageDialog(null,"Операция прошла успешно");
+                   AddSale.getLabelStatusPay().setText("Оплачено");
+                    statement.close();
+                } catch (Exception exc) {
+                    System.out.println(exc.getMessage());
+                }
+                }
+                });
+    }
+
+//    private static double selectSumDB() {
+//
+//        return;
+//    }
 
 
 

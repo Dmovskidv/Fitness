@@ -27,29 +27,29 @@
       <Position>1</Position>
       <DataType>VARCHAR(50)|0</DataType>
     </column>
-    <column id="14" parent="6" name="time">
+    <column id="14" parent="6" name="admin">
       <Position>2</Position>
       <DataType>VARCHAR(50)|0</DataType>
     </column>
-    <column id="15" parent="6" name="admin">
+    <column id="15" parent="6" name="period">
       <Position>3</Position>
       <DataType>VARCHAR(50)|0</DataType>
     </column>
-    <column id="16" parent="6" name="client">
+    <column id="16" parent="6" name="service">
       <Position>4</Position>
       <DataType>VARCHAR(50)|0</DataType>
     </column>
-    <column id="17" parent="6" name="service">
+    <column id="17" parent="6" name="payment">
       <Position>5</Position>
-      <DataType>VARCHAR(50)|0</DataType>
+      <DataType>DOUBLE|0</DataType>
     </column>
-    <column id="18" parent="6" name="payment">
+    <column id="18" parent="6" name="sum">
       <Position>6</Position>
       <DataType>DOUBLE|0</DataType>
     </column>
-    <column id="19" parent="6" name="sum">
+    <column id="19" parent="6" name="numberCard">
       <Position>7</Position>
-      <DataType>DOUBLE|0</DataType>
+      <DataType>VARCHAR(10)|0</DataType>
     </column>
     <key id="20" parent="6">
       <ColNames>id</ColNames>
