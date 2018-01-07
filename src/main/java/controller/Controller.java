@@ -10,18 +10,14 @@ import view.services.GimInfo;
 import view.services.IogaInfo;
 import view.services.PoolInfo;
 import javax.swing.*;
+import javax.swing.border.Border;
 import javax.swing.event.AncestorEvent;
 import javax.swing.event.AncestorListener;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
-
 import java.awt.*;
 import java.awt.event.*;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
-import java.util.Locale;
+
 
 
 public class Controller {
@@ -144,68 +140,72 @@ public class Controller {
 
     public static void controlPassword(){
 
-
-         final JPasswordField passwordField = new JPasswordField(10);
-         JLabel label_login = new JLabel("Администратор");
-         JLabel label_password = new JLabel("Пароль");
-         String[] user = DB.getAdminDB();
-         JComboBox combo_users = new JComboBox(user);
-         Object[] array = { label_login, combo_users, label_password, passwordField };
-         String login = "";
-
-        passwordField.addAncestorListener(new AncestorListener() {
+        new Thread(new Runnable() {
             @Override
-            public void ancestorAdded(AncestorEvent event) {
-                passwordField.requestFocusInWindow();
+            public void run() {
+                final JPasswordField passwordField = new JPasswordField(10);
+                JLabel label_login = new JLabel("Администратор");
+                JLabel label_password = new JLabel("Пароль");
+                String[] user = DB.getAdminDB();
+                JComboBox combo_users = new JComboBox(user);
+                Object[] array = { label_login, combo_users, label_password, passwordField };
+                String login = "";
+
+                passwordField.addAncestorListener(new AncestorListener() {
+                    @Override
+                    public void ancestorAdded(AncestorEvent event) {
+                        passwordField.requestFocusInWindow();
+                    }
+                    @Override
+                    public void ancestorRemoved(AncestorEvent event) {
+
+                    }
+
+                    @Override
+                    public void ancestorMoved(AncestorEvent event) {
+
+                    }
+                });//Установить фокус полю ввода пароля
+
+                int res = JOptionPane.showConfirmDialog(null, array, "Авторизация", JOptionPane.OK_CANCEL_OPTION,
+                        JOptionPane.QUESTION_MESSAGE);//Вызов диалогового окна
+
+                if (res == JOptionPane.OK_OPTION) {
+
+                    login = (String) combo_users.getSelectedItem();
+                    char[] password = passwordField.getPassword();
+                    String inputPass = "";
+                    for (char c : password) {
+                        inputPass += c;
+                    }
+
+                     if (inputPass.equals(DB.getPasswordDB(login))) {
+                        JOptionPane.showMessageDialog(null, "Добро пожаловать, " + login);
+                        passwordField.setBorder(BorderFactory.createLineBorder(Color.LIGHT_GRAY));
+                        passwordField.setText("");
+                        Main.setadminItem().setText(login);
+
+                    } else {
+                        passwordField.setBorder(BorderFactory.createLineBorder(Color.red));
+                        passwordField.setToolTipText("Неверный пароль");
+                        passwordField.setText("");
+                        controlPassword();
+                    }
+
+                } else if (res == JOptionPane.CANCEL_OPTION || res == JOptionPane.CLOSED_OPTION) {
+                    int res2 = JOptionPane.showConfirmDialog(null, "Выйти из приложения?", "Exit", JOptionPane.OK_CANCEL_OPTION,
+                            JOptionPane.QUESTION_MESSAGE);
+                    if (res2 == 0) {
+                        System.exit(0);
+                    } else
+                        controlPassword();
+
+                }
             }
-
-            @Override
-            public void ancestorRemoved(AncestorEvent event) {
-
-            }
-
-            @Override
-            public void ancestorMoved(AncestorEvent event) {
-
-            }
-        });
+        }).start();
 
 
-        int res = JOptionPane.showConfirmDialog(null, array, "Авторизация", JOptionPane.OK_CANCEL_OPTION,
-                JOptionPane.QUESTION_MESSAGE);
 
-        if (res == JOptionPane.OK_OPTION) {
-
-            login = (String) combo_users.getSelectedItem();
-            char[] password = passwordField.getPassword();
-            String inputPass = "";
-            for (char c : password) {
-                inputPass += c;
-            }
-
-
-            if (inputPass.equals(DB.getPasswordDB(login))) {
-                JOptionPane.showMessageDialog(null, "Добро пожаловать, " + login);
-                passwordField.setBorder(BorderFactory.createLineBorder(Color.LIGHT_GRAY));
-                passwordField.setText("");
-                Main.setadminItem().setText(login);
-
-            } else {
-                passwordField.setBorder(BorderFactory.createLineBorder(Color.red));
-                passwordField.setToolTipText("Неверный пароль");
-                passwordField.setText("");
-                controlPassword();
-            }
-
-        } else if (res == JOptionPane.CANCEL_OPTION || res == JOptionPane.CLOSED_OPTION) {
-            int res2 = JOptionPane.showConfirmDialog(null, "Выйти из приложения?", "Exit", JOptionPane.OK_CANCEL_OPTION,
-                    JOptionPane.QUESTION_MESSAGE);
-            if (res2 == 0) {
-                System.exit(0);
-            } else
-                controlPassword();
-
-        }
     }
 
     public static void exitProgram(JMenuItem lock) {
@@ -453,7 +453,9 @@ public class Controller {
 
                 if(DB.openDB()){
                     DB.selectDB();
-                    //DB.closeDB();
+                    System.out.println("БД чтение...");
+                    DB.closeDB();
+                   System.out.println("БД закрыта");
                 }
 
 
@@ -475,7 +477,8 @@ public class Controller {
          String whereKnow = (String)AddClient.getComboBox_whyKnow().getSelectedItem();
          String getReklama = (String)AddClient.getComboBox_getPublic().getSelectedItem();
          String getPathFoto = AddClient.getLabel_foto().getIcon().toString();
-         model.getDate().add(new Client(name,sirname,lastname,sex,age,model.getDate().size()+1,getPathFoto,mobilePhone,homePhone,workPhone,mailAddress,numberPassport,infoPassport,moreInformation, whereKnow, getReklama));
+         String getClientStatus = "Не активный";
+         model.getDate().add(new Client(name,sirname,lastname,sex,age,model.getDate().size()+1,getPathFoto,mobilePhone,homePhone,workPhone,mailAddress,numberPassport,infoPassport,moreInformation, whereKnow, getReklama,getClientStatus));
           }
 
     public static void clickClientJTable(final JTable tableClients) {
@@ -505,7 +508,8 @@ public class Controller {
                             FindClient.getLabelInfoClientKnow().setText(m.getWhereKnow());
                             FindClient.getLabelInfoClientFoto().setIcon(new ImageIcon(m.getPathFoto()));
                             FindClient.getLabelInfoClientBirthday().setText(m.getDateBirthday());
-                            FindClient.getLabelInfoClientContactNumber().setText("m: "+m.getPhoneMobile()+", h: "+m.getPhoneHome()+", w: "+m.getPhoneWork());
+                            FindClient.getLabelInfoClientContactNumber().setText("M: "+m.getPhoneMobile()+", H: "+m.getPhoneHome()+", W: "+m.getPhoneWork());
+                            FindClient.getLabelInfoClientStatus().setText(m.getStatus());
                         }
                     }
 
@@ -528,7 +532,8 @@ public class Controller {
             public void mouseClicked(MouseEvent e) {
 
                 textfieldInputClient.setText("");
-                textfieldInputClient.setForeground(Color.BLACK);
+                textfieldInputClient.setForeground(Color.black);
+                FindClient.getTextfieldInputClient().setBorder(BorderFactory.createLineBorder(Color.gray));
             }
         });
     }
@@ -539,14 +544,14 @@ public class Controller {
             public void actionPerformed(ActionEvent e) {
 
 
-                String fio = (FindClient.getTextfieldInputClient().getText().length()>0)? FindClient.getTextfieldInputClient().getText() : "";
-                String idCard = (FindClient.getTextfieldInputClient().getText().length()>0)? FindClient.getTextfieldInputClient().getText() : "";
+                String date = (FindClient.getTextfieldInputClient().getText().length()>0)? FindClient.getTextfieldInputClient().getText() : "";
+                boolean resultFind = true;
 
                 for (Client m: model.getDate()
                      ) {
                     String id = m.getNumberCard()+"";
                     String str = m.getLastName()+" "+ m.getName();
-                    if(str.equals(fio) || id.equals(idCard)){
+                    if(str.equals(date) || id.equals(date)){
 
                         FindClient.getLabelInfoClientFio().setText(m.getLastName()+" "+m.getName()+" "+
                                 m.getFatherName());
@@ -560,8 +565,19 @@ public class Controller {
                         FindClient.getLabelInfoClientFoto().setIcon(new ImageIcon(m.getPathFoto()));
                         FindClient.getLabelInfoClientBirthday().setText(m.getDateBirthday());
                         FindClient.getLabelInfoClientContactNumber().setText("m: "+m.getPhoneMobile()+", h: "+m.getPhoneHome()+", w: "+m.getPhoneWork());
+                        resultFind = false;
+                        break;
                     }
                 }
+                if(resultFind && date.length()>0 && !FindClient.getTextfieldInputClient().getText().equals("Введите ФИО клиента или номер карты")){
+                    JOptionPane.showMessageDialog(null,"Клиент с такими данными не найден" );
+                }else if(resultFind && date.length()==0 || FindClient.getTextfieldInputClient().getText().equals("Введите ФИО клиента или номер карты")){
+                    FindClient.getTextfieldInputClient().setBorder((BorderFactory.createLineBorder(Color.red)));
+                    JOptionPane.showMessageDialog(null, "Введите данные в поле поиска");}
+
+
+
+
             }
         });
     }
@@ -637,7 +653,38 @@ public class Controller {
         });
     }
 
+    public static void clickCloseAboutApp(JButton close, final JDialog dialog) {
+        close.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dialog.dispose();
+              //  Main.getFrame().setVisible(true);
+            }
+        });
+    }
 
+    public static void openAboutApp(JMenuItem helpInfo, final JFrame frame) {
+        helpInfo.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                                new AboutApp().showView();
+            }
+        });
+    }
+
+    public static boolean validateNumberCard(String numberCard) {
+
+        boolean result = false;
+        for (Client m: model.getDate()
+             ) {
+            if(numberCard.equals(m.getNumberCard()+"")){
+                result = true;
+
+                break;
+            }
+        }
+        return result;
+    }
 }
 
 

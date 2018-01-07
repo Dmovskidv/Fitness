@@ -8,28 +8,8 @@ public class Start {
 
         new Controller().showApp();
 
+       }
 
-
-
-
-
-
-
-
-
-
-
-
-
-        }
-
-
-
-
-
-
-
-
-    }
+   }
 
 

@@ -36,9 +36,6 @@ public class AddClient implements ViewInterface {
     private JLabel label_infoPassport;
     private JLabel label_aboutClient;
     private JLabel label_Sex;
-
-
-
     private static JLabel label_foto;
     private static  JTextField field_sirname, field_name, field_nameFather, field_mobile, field_homePhone,
             field_workPhone, field_email, field_passport, field_infoPassport ;
@@ -175,7 +172,7 @@ public class AddClient implements ViewInterface {
         panel.add(button_create);
         Controller.writeDB(button_create);
 
-        button_cancel = new JButton("Отмена");
+        button_cancel = new JButton("Закрыть");
         button_cancel.setBounds(980, 638, 179, 54);
         panel.add(button_cancel);
         Controller.cancelClientButton(button_cancel, getFrame());
@@ -290,11 +287,7 @@ public class AddClient implements ViewInterface {
 
     }
 
-
-
 //getters and setters
-
-
     public static JFrame getFrame() {
         return frame;
     }

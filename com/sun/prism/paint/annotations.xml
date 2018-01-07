@@ -1,0 +1,5 @@
+<root>
+    <item name='com.sun.prism.paint.Color'>
+        <annotation name='java.lang.Deprecated'/>
+    </item>
+</root>

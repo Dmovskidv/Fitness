@@ -26,28 +26,13 @@ public class Client {
     private String getReklama;
 
 
-//    public Client(String name, String lastName, String fatherName, String sex, int numberCard, String phoneMobile) {
-//        this.name = name;
-//        this.lastName = lastName;
-//        this.fatherName = fatherName;
-//        this.sex = sex;
-//        this.numberCard = numberCard;
-//        this.phoneMobile = phoneMobile;
-//        this.dateBirthday = "Не указано";
-//        this.pathFoto =  "Не указано";
-//        this.phoneHome =  "Не указано";
-//        this.phoneWork =  "Не указано";
-//        this.email = "Не указано";
-//        this.numPassport = "Не указано";
-//        this.infoPassport =  "Не указано";
-//        this.aboutClient =  "Не указано";
-//        this.getReklama =  "Не указано";
-//        this.whereKnow =  "Не указано";
-//    }
+
+    private String status;
 
 
-    public Client(String name, String lastName, String fatherName, String sex ,String dateBirthday , int numberCard,
-                  String pathFoto, String phoneMobile, String phoneHome, String phoneWork, String email, String numPassport, String infoPassport, String aboutClient, String whereKnow, String getReklama) {
+
+    public Client(String name, String lastName, String fatherName, String sex , String dateBirthday , int numberCard,
+                  String pathFoto, String phoneMobile, String phoneHome, String phoneWork, String email, String numPassport, String infoPassport, String aboutClient, String whereKnow, String getReklama, String status) {
         this.name = name;
         this.lastName = lastName;
         this.fatherName = fatherName;
@@ -64,6 +49,7 @@ public class Client {
         this.aboutClient = aboutClient;
         this.getReklama = getReklama;
         this.whereKnow = whereKnow;
+        this.status = status;
     }
 
 
@@ -131,7 +117,13 @@ public class Client {
         return getReklama;
     }
 
+    public String getStatus() {
+        return status;
+    }
 
+    public void setStatus(String status) {
+        this.status = status;
+    }
 
 
 }

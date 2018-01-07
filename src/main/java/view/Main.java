@@ -1,12 +1,18 @@
 package view;
 
 import Interface.ViewInterface;
+
 import controller.Controller;
-import model.DB;
+
+
 
 import javax.swing.*;
+
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class Main implements ViewInterface {
 
@@ -17,16 +23,13 @@ public class Main implements ViewInterface {
     private static JMenuItem gim;
     private static JMenuItem pool;
     private static JMenuItem timeTable;
-    private static JMenuItem addStaff;
-    private static JMenuItem findStaff;
+    private static JMenuItem addAdmin;
+    private static JMenuItem addTrainer;
     private static JMenuItem reportDay;
     private static JMenuItem reportMonth;
     private static JMenuItem lockOn;
     private static JMenuItem exitApp;
     private static JMenuItem helpInfo;
-
-
-
     private static JMenuItem adminItem;
     private static JMenuItem addRaz;
     private static JMenuItem abonement1m;
@@ -60,6 +63,7 @@ public class Main implements ViewInterface {
 
 
 
+
     }
 
     private void setImage() {
@@ -82,6 +86,7 @@ public class Main implements ViewInterface {
         Controller.openAddSale(buttonAddSale, getFrame() );
 
 
+
         buttonAddClient = new JButton("Добавить нового клиента");
         buttonAddClient.setBounds(372, 277, 400, 70);
         panelButtons.add(buttonAddClient);
@@ -90,7 +95,11 @@ public class Main implements ViewInterface {
         buttonServices = new JButton("Учёт посещений клиентов");
         buttonServices.setBounds(372, 358, 400, 70);
         panelButtons.add(buttonServices);
+
         Controller.openFindClient(buttonServices);
+//        buttonServices.setBorderPainted(true);
+//        buttonServices.setContentAreaFilled(false);
+//        buttonServices.setOpaque(false);
 
         buttonLock = new JButton("Блокировка");
         buttonLock.setBounds(1060, 10, 100, 100);
@@ -159,17 +168,20 @@ public class Main implements ViewInterface {
         Controller.clickServicesIoga(groupLessons.add("Йога"), getFrame());
 
 
-        timeTable = new JMenuItem("Расписание");
-        services.add(timeTable);
-
         staff = new JMenu("Персонал");
         menuBar.add(staff);
 
-        addStaff = new JMenuItem("Добавить сотрудника");
-        staff.add(addStaff);
+        addAdmin = new JMenu("Администраторы");
+        staff.add(addAdmin);
 
-        findStaff = new JMenuItem("Найти сотрудника");
-        staff.add(findStaff);
+        JMenuItem firstAdmin = new JMenuItem("Арнольд Шварценеггер");
+        addAdmin.add(firstAdmin);
+
+        JMenuItem secondAdmin = new JMenuItem("Сильвестр Сталлоне");
+        addAdmin.add(secondAdmin);
+
+        JMenuItem thirdAdmin = new JMenuItem("Дуэйн Джонсон");
+        addAdmin.add(thirdAdmin);
 
         reports = new JMenu("Отчёты");
         menuBar.add(reports);
@@ -201,9 +213,10 @@ public class Main implements ViewInterface {
         help = new JMenu("Справка");
         menuBar.add(help);
 
+
         helpInfo = new JMenuItem("О программе");
         help.add(helpInfo);
-
+Controller.openAboutApp(helpInfo, getFrame());
     }
 
     public static JFrame  getFrame() {

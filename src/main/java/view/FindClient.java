@@ -21,12 +21,8 @@ public class FindClient implements ViewInterface {
 
     private JFrame frame;
     private static JTable tableClients;
-
-
-
     private static JTextField textfieldInputClient;
     private JLabel labelNumberCard,labelFio,labelPol,labelBirthday,labelStatus,labelEmail,labelPass,labelReklama,labelWhereKnow,labelDopInfo, labelTitle, labelPhones;
-
     private static JLabel labelInfoClientCard;
     private static JLabel labelInfoClientFio;
     private static JLabel labelInfoClientBirthday;
@@ -36,19 +32,14 @@ public class FindClient implements ViewInterface {
     private static JLabel labelInfoClientGetR;
     private static JLabel labelInfoClientKnow;
     private static JLabel labelInfoClientMore;
-
-
     private static JLabel labelInfoClientPol;
     private static JLabel labelInfoClientContactNumber;
-
-
     private static JLabel labelInfoClientFoto;
-
     private JPanel mainpanel, panelInfo, panelClient, topPanel;
     private JScrollPane scrollPaneTable;
     private JButton buttonFindClient, buttonClientEnter, buttonReturnMain, buttonClientExit, buttonChangePhoto;
-
     ModelTable modelTable = new ModelTable();
+
 
     public FindClient() {
         frame = new JFrame();

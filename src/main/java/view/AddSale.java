@@ -4,12 +4,8 @@ import Interface.ViewInterface;
 import controller.Controller;
 import model.DB;
 import model.Model;
-
 import javax.swing.*;
 import java.awt.Font;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
 import javax.swing.border.BevelBorder;
 import java.awt.Color;
 
@@ -27,19 +23,13 @@ public class AddSale implements ViewInterface {
     private JLabel labelTypeVisit;
     private JLabel labelTypeClient;
     private JLabel labelNumCard;
-    private JLabel labelPay;
-
-    public static JLabel getLabelStatusPay() {
-        return labelStatusPay;
-    }
-
+    private static JLabel labelPay;
     private static JLabel labelStatusPay;
-    private JLabel labelStatus;
+    private static JLabel labelStatus;
     private JButton buttonCancel, buttonPay;
     private String[] itemServices = Model.getDateForAddSale("services");
     private String[] itemTypeVisit = Model.getDateForAddSale("visit");
     private String[] itemTypeClient = Model.getDateForAddSale("client");
-
 
 
     //constructor
@@ -56,7 +46,6 @@ public class AddSale implements ViewInterface {
         panel.setLayout(null);
         dialog.setModal(true);
         setInterface();
-
     }
 
     //set Interfase
@@ -82,7 +71,7 @@ public class AddSale implements ViewInterface {
         panel.add(comboBoxTypeClient);
         //Controller.showSumBeforePay(comboBoxTypeClient);
 
-        buttonCancel = new JButton("Отмена");
+        buttonCancel = new JButton("Закрыть");
         buttonCancel.setBounds(435, 463, 124, 40);
         panel.add(buttonCancel);
         Controller.closeAddSale(buttonCancel, getDialog());
@@ -141,9 +130,9 @@ public class AddSale implements ViewInterface {
         labelSum.setBounds(198, 354, 85, 31);
         panel.add(labelSum);
 
-        labelStatus = new JLabel("нет");
+        labelStatus = new JLabel("не оплачено");
         labelStatus.setFont(new Font("Tahoma", Font.PLAIN, 18));
-        labelStatus.setBounds(198, 389, 75, 32);
+        labelStatus.setBounds(198, 389, 120, 32);
         panel.add(labelStatus);
 
     }
@@ -177,6 +166,10 @@ public class AddSale implements ViewInterface {
 
     public static  JLabel getLabelSum() {
         return labelSum;
+    }
+
+    public static  JLabel getLabelStatus() {
+        return labelStatus;
     }
 
 
