@@ -3,16 +3,10 @@ package view;
 import Interface.ViewInterface;
 
 import controller.Controller;
-
-
-
 import javax.swing.*;
-
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
+
 
 public class Main implements ViewInterface {
 
@@ -45,14 +39,14 @@ public class Main implements ViewInterface {
     public Main() {
         frame = new JFrame();
         frame.setTitle("Фитнеc-центр");
-        frame.setSize(1200, 750);
+        frame.setSize(1600, 900);
         frame.setResizable(false);
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.getContentPane().setLayout(null);
         panel = new JPanel();
         panel.setLayout(null);
-        panel.setBounds(0, 0, 1190, 700);
+        panel.setBounds(0, 0, 1600, 860);
         frame.getContentPane().add(panel);
         setMenuBar();
         setButtons();
@@ -69,7 +63,7 @@ public class Main implements ViewInterface {
     private void setImage() {
         JLabel images = new JLabel();
         images.setIcon(new ImageIcon("src\\main\\resources\\images\\mainBackground11.jpg"));
-        images.setBounds(0, 0, 1180, 690);
+        images.setBounds(0, 0, 1600, 860);
         panel.add(images);
 
        }
@@ -77,32 +71,30 @@ public class Main implements ViewInterface {
     public void setButtons() {
 
         panelButtons = new JLayeredPane();
-        panelButtons.setBounds(10, 10, 1150, 646);
+        panelButtons.setBounds(0, 0, 1570, 850);
         panel.add(panelButtons);
 
         buttonAddSale = new JButton("Добавить продажу");
-        buttonAddSale.setBounds(372, 196, 400, 70);
+        buttonAddSale.setBounds(585, 266, 400, 70);
         panelButtons.add(buttonAddSale);
         Controller.openAddSale(buttonAddSale, getFrame() );
 
 
 
         buttonAddClient = new JButton("Добавить нового клиента");
-        buttonAddClient.setBounds(372, 277, 400, 70);
+        buttonAddClient.setBounds(585, 347, 400, 70);
         panelButtons.add(buttonAddClient);
         Controller.openAddClient(buttonAddClient, getFrame());
 
         buttonServices = new JButton("Учёт посещений клиентов");
-        buttonServices.setBounds(372, 358, 400, 70);
+        buttonServices.setBounds(585, 428, 400, 70);
         panelButtons.add(buttonServices);
 
         Controller.openFindClient(buttonServices);
-//        buttonServices.setBorderPainted(true);
-//        buttonServices.setContentAreaFilled(false);
-//        buttonServices.setOpaque(false);
+
 
         buttonLock = new JButton("Блокировка");
-        buttonLock.setBounds(1060, 10, 100, 100);
+        buttonLock.setBounds(1470, 10, 110, 110);
         buttonLock.setBorder(null);
         panelButtons.add(buttonLock);
         buttonLock.setIcon(new ImageIcon("src\\main\\resources\\images\\lock3.jpg"));
@@ -171,17 +163,12 @@ public class Main implements ViewInterface {
         staff = new JMenu("Персонал");
         menuBar.add(staff);
 
-        addAdmin = new JMenu("Администраторы");
+        addAdmin = new JMenu("Тренер");
         staff.add(addAdmin);
-
-        JMenuItem firstAdmin = new JMenuItem("Арнольд Шварценеггер");
-        addAdmin.add(firstAdmin);
-
-        JMenuItem secondAdmin = new JMenuItem("Сильвестр Сталлоне");
-        addAdmin.add(secondAdmin);
 
         JMenuItem thirdAdmin = new JMenuItem("Дуэйн Джонсон");
         addAdmin.add(thirdAdmin);
+        Controller.clickItemTrener(thirdAdmin);
 
         reports = new JMenu("Отчёты");
         menuBar.add(reports);

@@ -1,8 +1,6 @@
 package model;
 
-import javax.swing.*;
-import java.awt.*;
-import java.util.Date;
+
 
 public class Client {
 
@@ -24,9 +22,6 @@ public class Client {
     private String aboutClient;
     private String whereKnow;
     private String getReklama;
-
-
-
     private String status;
 
 
@@ -123,6 +118,69 @@ public class Client {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setFatherName(String fatherName) {
+        this.fatherName = fatherName;
+    }
+
+    public void setDateBirthday(String dateBirthday) {
+        this.dateBirthday = dateBirthday;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
+
+    public void setNumberCard(int numberCard) {
+        this.numberCard = numberCard;
+    }
+
+    public void setPathFoto(String pathFoto) {
+        this.pathFoto = pathFoto;
+    }
+
+    public void setPhoneMobile(String phoneMobile) {
+        this.phoneMobile = phoneMobile;
+    }
+
+    public void setPhoneHome(String phoneHome) {
+        this.phoneHome = phoneHome;
+    }
+
+    public void setPhoneWork(String phoneWork) {
+        this.phoneWork = phoneWork;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setNumPassport(String numPassport) {
+        this.numPassport = numPassport;
+    }
+
+    public void setInfoPassport(String infoPassport) {
+        this.infoPassport = infoPassport;
+    }
+
+    public void setAboutClient(String aboutClient) {
+        this.aboutClient = aboutClient;
+    }
+
+    public void setWhereKnow(String whereKnow) {
+        this.whereKnow = whereKnow;
+    }
+
+    public void setGetReklama(String getReklama) {
+        this.getReklama = getReklama;
     }
 
 

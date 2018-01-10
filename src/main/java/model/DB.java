@@ -3,6 +3,7 @@ package model;
 import controller.Controller;
 import view.AddClient;
 import view.AddSale;
+import view.FindClient;
 import view.Main;
 
 import javax.swing.*;
@@ -25,7 +26,7 @@ public class DB {
         try {
             Class.forName("org.sqlite.JDBC");
             connection = DriverManager.getConnection(
-                    "jdbc:sqlite:c:\\sqlite\\myDB.db");
+                    "jdbc:sqlite:src\\sqlite\\myDB.db");
             //System.out.println("DB open");
             return true;
 
@@ -223,6 +224,8 @@ try {
     SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss", Locale.getDefault());
     String date = format.format(c.getTime());
     String admin = Main.getAdminItem().getText();
+    String rusNameService = service;
+    String rusNameTimeService = timeService;
     service = Controller.convertationService(service);
     timeService = Controller.convertationTimeService(timeService);
     double payment = Double.parseDouble(DB.selectCostDB(service, timeService));
@@ -239,7 +242,7 @@ try {
     int lastID = DB.selectLastID();
     CashBox cashBox = new CashBox(DB.incLastSum(lastID), payment, lastID);
     double cashSum = cashBox.count();
-    //double cashSum = (lastID>1)?  DB.incLastSum(lastID)+payment : payment;
+
 
 
                 //command INSERT in DB
@@ -252,10 +255,22 @@ try {
                     statement.executeUpdate(query);
                     System.out.println("Данные об оплате сохранены в базу данных");
                     AddSale.getLabelStatus().setText("оплачено");
+
+
                     JOptionPane.showMessageDialog(null, "Операция прошла успешно");
                     if(!numberCard.equals("Гость")){
-                        DB.setStatusClient(numberCard);
-                        model.getDate().get(model.getDate().size()).setStatus("активный");
+
+                        DB.setStatusClient(numberCard, rusNameService, rusNameTimeService);
+
+                       for (int i=0;i<model.getDate().size();i++){
+                           if(model.getDate().get(i).getNumberCard()==Integer.parseInt(numberCard)){
+                               model.getDate().get(i).setStatus(rusNameService+" "+rusNameTimeService);
+                           }
+                       }
+
+
+
+
                     }
                     statement.close();
                 } catch (Exception exc) {
@@ -270,18 +285,20 @@ try {
 
     }
 
-    private static void setStatusClient(String numberCard) {
+    private static void setStatusClient(String numberCard, String service, String time) {
 
         int idcard = Integer.parseInt(numberCard);
+        String nameAndTimeService = service+" "+time;
 
         if (openDB()) {
 
            //command INSERT in DB
-            String query = "UPDATE clients SET status = 'активный' WHERE card = ?";
+            String query = "UPDATE clients SET status = ? WHERE card = ?";
 
             try {
                 PreparedStatement ps = connection.prepareStatement(query);
-                ps.setInt(1, idcard);
+                ps.setString(1, nameAndTimeService);
+                ps.setInt(2, idcard);
                 ps.executeUpdate();
 
                 ps.close();
@@ -341,4 +358,73 @@ try {
         }
         return resultTransaction;
     }
-}
+
+    public static void updateClient(String id, String textForChange, String nameColumn) {
+
+        Controller.updateJTable(id, textForChange, nameColumn);
+
+        String[] mass = new String[3];
+        int idcard = Integer.parseInt(id);
+        if(nameColumn.equals("fio")) {
+            mass = textForChange.split(" ");
+                   }
+
+
+            String query = null;
+            if (openDB()) {
+
+               switch(nameColumn){
+
+                   case "fio" : query = "UPDATE clients SET sirName = ?, name = ?, lastName = ? WHERE card = ?";
+                       break;
+                   case "sex" : query = "UPDATE clients SET sex = ? WHERE card = ?";
+                       break;
+                   case "mobilePhone" : query = "UPDATE clients SET mobilePhone = ? WHERE card = ?";
+                       break;
+                   case "homePhone" : query = "UPDATE clients SET homePhone = ? WHERE card = ?";
+                       break;
+                   case "workPhone" : query = "UPDATE clients SET workPhone = ? WHERE card = ?";
+                       break;
+                   case "email" : query = "UPDATE clients SET email = ? WHERE card = ?";
+                       break;
+                   case "age" : query = "UPDATE clients SET age = ? WHERE card = ?";
+                       break;
+                   case "whereKnow" : query = "UPDATE clients SET whereKnow = ? WHERE card = ?";
+                       break;
+                   case "moreInfo" : query = "UPDATE clients SET moreInfo = ? WHERE card = ?";
+                       break;
+                   case "getReklama" : query = "UPDATE clients SET getReklama = ? WHERE card = ?";
+                       break;
+                   case "numberPassport" : query = "UPDATE clients SET numberPassport = ? WHERE card = ?";
+                       break;
+                   case "pathFoto" : query = "UPDATE clients SET pathFoto = ? WHERE card = ?";
+                       break;
+               }
+
+                try {
+
+                    PreparedStatement ps = connection.prepareStatement(query);
+
+                    if(!nameColumn.equals("fio")){
+                    ps.setString(1, textForChange);
+                    ps.setInt(2, idcard);
+                }
+                if(nameColumn.equals("fio")){
+                    ps.setString(1, mass[0]);
+                    ps.setString(2, mass[1]);
+                    ps.setString(3, mass[2]);
+                    ps.setInt(4, idcard);
+                }
+                    ps.executeUpdate();
+
+                    ps.close();
+                } catch (Exception e) {
+                    System.out.println(e);
+                }
+
+
+            }
+        }
+
+    }
+
