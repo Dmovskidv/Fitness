@@ -52,12 +52,8 @@ public class Main implements ViewInterface {
         setButtons();
         setImage();
         showView();
-        Controller.initDB();
         Controller.controlPassword();
-
-
-
-
+        Controller.initDB();
     }
 
     private void setImage() {
@@ -127,8 +123,6 @@ public class Main implements ViewInterface {
         Controller.clickAbonement3m(addAbonement.add(abonement3m));
         Controller.clickAbonement6m(addAbonement.add(abonement6m));
         Controller.clickAbonement1y(addAbonement.add(abonement1y));
-
-
         Controller.clickaddSaleRaz(addRaz);
 
         clients = new JMenu("Клиенты");
@@ -150,7 +144,7 @@ public class Main implements ViewInterface {
         services.add(gim);
         Controller.clickServicesGim(gim, getFrame());
 
-        pool = new JMenuItem("Бассеин");
+        pool = new JMenuItem("Бассейн");
         services.add(pool);
         Controller.clickServicesPool(pool, getFrame());
 
@@ -170,14 +164,14 @@ public class Main implements ViewInterface {
         addAdmin.add(thirdAdmin);
         Controller.clickItemTrener(thirdAdmin);
 
-        reports = new JMenu("Отчёты");
+        reports = new JMenu("Отчёт");
         menuBar.add(reports);
 
-        reportDay = new JMenuItem("Отчёт за день");
+        reportDay = new JMenuItem("Отчёт");
         reports.add(reportDay);
+        Controller.clickReport(reportDay);
 
-        reportMonth = new JMenuItem("Отчёт за месяц");
-        reports.add(reportMonth);
+
 
         lock = new JMenu("Блокировка");
         menuBar.add(lock);
@@ -203,7 +197,7 @@ public class Main implements ViewInterface {
 
         helpInfo = new JMenuItem("О программе");
         help.add(helpInfo);
-Controller.openAboutApp(helpInfo, getFrame());
+        Controller.openAboutApp(helpInfo, getFrame());
     }
 
     public static JFrame  getFrame() {

@@ -29,7 +29,7 @@ public class FindClient implements ViewInterface {
 
     public FindClient() {
         frame = new JFrame();
-        frame.setTitle("Новый клиент");
+        frame.setTitle("Учёт клиентов");
         frame.setSize(1600, 900);
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -310,10 +310,8 @@ public class FindClient implements ViewInterface {
         mainpanel.add(buttonClientEnter);
         Controller.clickEnterClient(buttonClientEnter);
 
-
-
         buttonReturnMain = new JButton("");
-         buttonReturnMain.setBorder(null);
+        buttonReturnMain.setBorder(null);
         buttonReturnMain.setIcon(new ImageIcon(IMAGE_PATH_RETURN));
         buttonReturnMain.setBounds(10, 10, 47, 53);
         mainpanel.add(buttonReturnMain);

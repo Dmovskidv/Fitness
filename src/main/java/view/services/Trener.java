@@ -15,7 +15,7 @@ public class Trener implements ViewInterface {
     public Trener() {
         frame = new JFrame();
         frame.setSize(600, 570);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setLocationRelativeTo(null);
         frame.setResizable(false);
         frame.getContentPane().setLayout(null);

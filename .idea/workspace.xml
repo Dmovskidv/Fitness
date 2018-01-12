@@ -2,80 +2,63 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e00d1bc-47f9-4a35-be1e-66e9c856f6e2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/view/services/Trener.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$10.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$11$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$11.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$12.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$13.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$14.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$15.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$16.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$17.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$18.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$19.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$20.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$21.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$22.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$23.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$24.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$25.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$26.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$27.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$28.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$29.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$30.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$31.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$7.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$8.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$9.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/Controller.class" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/view/Report.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/16f53413-dd47-4145-a7e9-f03691b97b09/_metadata_/metadata" afterPath="$PROJECT_DIR$/.idea/dataSources/16f53413-dd47-4145-a7e9-f03691b97b09/_metadata_/metadata" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/16f53413-dd47-4145-a7e9-f03691b97b09/_metadata_/metadata.values.at" afterPath="$PROJECT_DIR$/.idea/dataSources/16f53413-dd47-4145-a7e9-f03691b97b09/_metadata_/metadata.values.at" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/images/fitness.jpg" afterPath="$PROJECT_DIR$/src/main/resources/images/fitness.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/images/fotoForAddClient.jpg" afterPath="$PROJECT_DIR$/src/main/resources/images/fotoForAddClient.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/images/gim.jpg" afterPath="$PROJECT_DIR$/src/main/resources/images/gim.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/images/ioga.jpg" afterPath="$PROJECT_DIR$/src/main/resources/images/ioga.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/images/lock3.jpg" afterPath="$PROJECT_DIR$/src/main/resources/images/lock3.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/images/mainBackground11.jpg" afterPath="$PROJECT_DIR$/src/main/resources/images/mainBackground11.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/images/pool.jpg" afterPath="$PROJECT_DIR$/src/main/resources/images/pool.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/images/fitness.jpg" afterPath="$PROJECT_DIR$/target/classes/images/fitness.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/images/fotoForAddClient.jpg" afterPath="$PROJECT_DIR$/target/classes/images/fotoForAddClient.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/images/gim.jpg" afterPath="$PROJECT_DIR$/target/classes/images/gim.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/images/ioga.jpg" afterPath="$PROJECT_DIR$/target/classes/images/ioga.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/images/lock3.jpg" afterPath="$PROJECT_DIR$/target/classes/images/lock3.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/images/mainBackground11.jpg" afterPath="$PROJECT_DIR$/target/classes/images/mainBackground11.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/images/pool.jpg" afterPath="$PROJECT_DIR$/target/classes/images/pool.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/Client.class" afterPath="$PROJECT_DIR$/target/classes/model/Client.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/fotoClients/dmovski.jpg" afterPath="$PROJECT_DIR$/src/main/resources/fotoClients/dmovski.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sqlite/myDB.db" afterPath="$PROJECT_DIR$/src/sqlite/myDB.db" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$1$1.class" afterPath="$PROJECT_DIR$/target/classes/controller/Controller$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$1.class" afterPath="$PROJECT_DIR$/target/classes/controller/Controller$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$10.class" afterPath="$PROJECT_DIR$/target/classes/controller/Controller$10.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$11.class" afterPath="$PROJECT_DIR$/target/classes/controller/Controller$11.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$12.class" afterPath="$PROJECT_DIR$/target/classes/controller/Controller$12.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$13.class" afterPath="$PROJECT_DIR$/target/classes/controller/Controller$13.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$14.class" afterPath="$PROJECT_DIR$/target/classes/controller/Controller$14.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$15.class" afterPath="$PROJECT_DIR$/target/classes/controller/Controller$15.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$16.class" afterPath="$PROJECT_DIR$/target/classes/controller/Controller$16.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$17.class" afterPath="$PROJECT_DIR$/target/classes/controller/Controller$17.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$18.class" afterPath="$PROJECT_DIR$/target/classes/controller/Controller$18.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$19.class" afterPath="$PROJECT_DIR$/target/classes/controller/Controller$19.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$2.class" afterPath="$PROJECT_DIR$/target/classes/controller/Controller$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$20.class" afterPath="$PROJECT_DIR$/target/classes/controller/Controller$20.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$21.class" afterPath="$PROJECT_DIR$/target/classes/controller/Controller$21.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$22.class" afterPath="$PROJECT_DIR$/target/classes/controller/Controller$22.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$23.class" afterPath="$PROJECT_DIR$/target/classes/controller/Controller$23.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$24.class" afterPath="$PROJECT_DIR$/target/classes/controller/Controller$24.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$25.class" afterPath="$PROJECT_DIR$/target/classes/controller/Controller$25.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$26.class" afterPath="$PROJECT_DIR$/target/classes/controller/Controller$26.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$27.class" afterPath="$PROJECT_DIR$/target/classes/controller/Controller$27.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$28.class" afterPath="$PROJECT_DIR$/target/classes/controller/Controller$28.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$29.class" afterPath="$PROJECT_DIR$/target/classes/controller/Controller$29.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$3.class" afterPath="$PROJECT_DIR$/target/classes/controller/Controller$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$30.class" afterPath="$PROJECT_DIR$/target/classes/controller/Controller$30.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$31.class" afterPath="$PROJECT_DIR$/target/classes/controller/Controller$31.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$32.class" afterPath="$PROJECT_DIR$/target/classes/controller/Controller$32.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$33.class" afterPath="$PROJECT_DIR$/target/classes/controller/Controller$33.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$34.class" afterPath="$PROJECT_DIR$/target/classes/controller/Controller$34.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$35.class" afterPath="$PROJECT_DIR$/target/classes/controller/Controller$35.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$4.class" afterPath="$PROJECT_DIR$/target/classes/controller/Controller$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$5.class" afterPath="$PROJECT_DIR$/target/classes/controller/Controller$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$6.class" afterPath="$PROJECT_DIR$/target/classes/controller/Controller$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$7.class" afterPath="$PROJECT_DIR$/target/classes/controller/Controller$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$8.class" afterPath="$PROJECT_DIR$/target/classes/controller/Controller$8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/Controller$9.class" afterPath="$PROJECT_DIR$/target/classes/controller/Controller$9.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/Controller.class" afterPath="$PROJECT_DIR$/target/classes/controller/Controller.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/fotoClients/dmovski.jpg" afterPath="$PROJECT_DIR$/target/classes/fotoClients/dmovski.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/DB$1.class" afterPath="$PROJECT_DIR$/target/classes/model/DB$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/DB.class" afterPath="$PROJECT_DIR$/target/classes/model/DB.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/view/AddClient$DateLabelFormatter.class" afterPath="$PROJECT_DIR$/target/classes/view/AddClient$DateLabelFormatter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/view/AddClient.class" afterPath="$PROJECT_DIR$/target/classes/view/AddClient.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/view/FindClient.class" afterPath="$PROJECT_DIR$/target/classes/view/FindClient.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/view/Main$1.class" afterPath="$PROJECT_DIR$/target/classes/view/Main$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/view/Main.class" afterPath="$PROJECT_DIR$/target/classes/view/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/view/services/FitnessInfo.class" afterPath="$PROJECT_DIR$/target/classes/view/services/FitnessInfo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/view/services/GimInfo.class" afterPath="$PROJECT_DIR$/target/classes/view/services/GimInfo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/view/services/IogaInfo.class" afterPath="$PROJECT_DIR$/target/classes/view/services/IogaInfo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/view/services/PoolInfo.class" afterPath="$PROJECT_DIR$/target/classes/view/services/PoolInfo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/16f53413-dd47-4145-a7e9-f03691b97b09.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/16f53413-dd47-4145-a7e9-f03691b97b09.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Start.java" afterPath="$PROJECT_DIR$/src/main/java/Start.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/Controller.java" afterPath="$PROJECT_DIR$/src/main/java/controller/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/Client.java" afterPath="$PROJECT_DIR$/src/main/java/model/Client.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/DB.java" afterPath="$PROJECT_DIR$/src/main/java/model/DB.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/view/AddClient.java" afterPath="$PROJECT_DIR$/src/main/java/view/AddClient.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/Model.java" afterPath="$PROJECT_DIR$/src/main/java/model/Model.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/view/FindClient.java" afterPath="$PROJECT_DIR$/src/main/java/view/FindClient.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/view/Main.java" afterPath="$PROJECT_DIR$/src/main/java/view/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/view/services/FitnessInfo.java" afterPath="$PROJECT_DIR$/src/main/java/view/services/FitnessInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/view/services/GimInfo.java" afterPath="$PROJECT_DIR$/src/main/java/view/services/GimInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/view/services/IogaInfo.java" afterPath="$PROJECT_DIR$/src/main/java/view/services/IogaInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/view/services/PoolInfo.java" afterPath="$PROJECT_DIR$/src/main/java/view/services/PoolInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/view/services/Trener.java" afterPath="$PROJECT_DIR$/src/main/java/view/services/Trener.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -107,35 +90,11 @@
         <item name="myDB.db" type="e3449647:DbNodeDescriptor" />
         <item name="main" type="e3449647:DbNodeDescriptor" />
       </path>
-      <path>
-        <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="myDB.db" type="e3449647:DbNodeDescriptor" />
-        <item name="main" type="e3449647:DbNodeDescriptor" />
-        <item name="visits" type="e3449647:DbNodeDescriptor" />
-      </path>
-      <path>
-        <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="myDB.db" type="e3449647:DbNodeDescriptor" />
-        <item name="main" type="e3449647:DbNodeDescriptor" />
-        <item name="visits" type="e3449647:DbNodeDescriptor" />
-        <item name="" type="fce03ad6:DatabaseStructure$GroupNode" />
-      </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Start.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Start.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -164,7 +123,6 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="src:table:/a45b9f24/9a99cdac-997d-492b-bdc1-c15aab2ff783/main.table_clients" />
         <option value="$PROJECT_DIR$/src/main/java/model/ModelTable.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/Model.java" />
         <option value="$PROJECT_DIR$/src/main/java/view/services/Sport.java" />
         <option value="$PROJECT_DIR$/src/main/java/Interface/Sport.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/Pool.java" />
@@ -174,19 +132,21 @@
         <option value="$PROJECT_DIR$/src/main/java/model/services/Aerobic.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/services/Ioga.java" />
         <option value="$PROJECT_DIR$/src/main/java/view/MyDialog.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Start.java" />
         <option value="$PROJECT_DIR$/src/main/java/view/AboutApp.java" />
         <option value="$PROJECT_DIR$/src/main/java/view/AddSale.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/CashBox.java" />
-        <option value="$PROJECT_DIR$/src/main/java/view/services/Trener.java" />
         <option value="$PROJECT_DIR$/src/main/java/view/AddClient.java" />
         <option value="$PROJECT_DIR$/src/main/java/view/services/FitnessInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/view/services/GimInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/view/services/PoolInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/view/services/IogaInfo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/view/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/view/FindClient.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/Client.java" />
+        <option value="$PROJECT_DIR$/src/main/java/view/FindClient.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Start.java" />
+        <option value="$PROJECT_DIR$/src/main/java/view/Report.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/Model.java" />
+        <option value="$PROJECT_DIR$/src/main/java/view/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/view/services/Trener.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/DB.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/Controller.java" />
       </list>
@@ -205,9 +165,14 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="800" />
-    <option name="width" value="800" />
+    <option name="width" value="1015" />
     <option name="height" value="870" />
   </component>
   <component name="ProjectView">
@@ -225,9 +190,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -278,10 +242,23 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Diplom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Diplom" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Diplom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -470,36 +447,40 @@
       <workItem from="1515567481475" duration="2150000" />
       <workItem from="1515569920305" duration="8916000" />
       <workItem from="1515580818394" duration="6925000" />
+      <workItem from="1515590298046" duration="11919000" />
+      <workItem from="1515652973500" duration="7235000" />
+      <workItem from="1515700193548" duration="6712000" />
+      <workItem from="1515742979902" duration="19486000" />
+      <workItem from="1515775615355" duration="8363000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="513466000" />
+    <option name="totallyTimeSpent" value="567181000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12225275" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12087912" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2554945" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2541209" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.061813187" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298153" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1651671" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="20" y="95" width="236" height="826" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11439589" sideWeight="0.48615918" order="5" side_tool="false" content_ui="tabs" x="1323" y="30" width="269" height="832" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14717224" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="20" y="95" width="236" height="826" />
+      <window_info id="Database" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1092545" sideWeight="0.48615918" order="5" side_tool="false" content_ui="tabs" x="1323" y="30" width="269" height="832" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14524421" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.125" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2445055" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969153" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -518,148 +499,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="24" />
+      <option name="time" value="49" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Abonement.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/view/services/Sport.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Interface/Sport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/a45b9f24/16f53413-dd47-4145-a7e9-f03691b97b09/main.password">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/a45b9f24/16f53413-dd47-4145-a7e9-f03691b97b09/main.password">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/a45b9f24/16f53413-dd47-4145-a7e9-f03691b97b09/main.password">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/a45b9f24/16f53413-dd47-4145-a7e9-f03691b97b09/main.password">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/a45b9f24/16f53413-dd47-4145-a7e9-f03691b97b09/main.password">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/a45b9f24/16f53413-dd47-4145-a7e9-f03691b97b09/main.password">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/a45b9f24/16f53413-dd47-4145-a7e9-f03691b97b09/main.password">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/a45b9f24/16f53413-dd47-4145-a7e9-f03691b97b09/main.password">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/a45b9f24/16f53413-dd47-4145-a7e9-f03691b97b09/main.password">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/a45b9f24/16f53413-dd47-4145-a7e9-f03691b97b09/main.password">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/a45b9f24/16f53413-dd47-4145-a7e9-f03691b97b09/main.password">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/a45b9f24/16f53413-dd47-4145-a7e9-f03691b97b09/main.password">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/a45b9f24/16f53413-dd47-4145-a7e9-f03691b97b09/main.password">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/a45b9f24/16f53413-dd47-4145-a7e9-f03691b97b09/main.password">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/view/MyDialog.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/clients.txt" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/services/Gim.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="9" lean-forward="false" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/services/Ioga.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="27" lean-forward="true" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/services/Aerobic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9/lib/src.zip!/java.desktop/javax/swing/JFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="376" column="16" lean-forward="false" selection-start-line="376" selection-start-column="16" selection-end-line="376" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/services/Pool.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -710,20 +554,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/view/services/Trener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/ModelTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/view/services/GimInfo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
@@ -744,14 +574,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="148" column="107" lean-forward="false" selection-start-line="148" selection-start-column="107" selection-end-line="148" selection-end-column="107" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/view/services/PoolInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1394">
-          <caret line="62" column="66" lean-forward="true" selection-start-line="62" selection-start-column="66" selection-end-line="62" selection-end-column="66" />
           <folding />
         </state>
       </provider>
@@ -777,37 +599,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Model.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding>
-            <element signature="e#1186#1187#0" expanded="false" />
-            <element signature="method#getDateForAddSale#0;class#Model#0" expanded="false" />
-            <element signature="method#getDateForAddClient#0;class#Model#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/view/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="55" column="26" lean-forward="false" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="e#3681#3682#0" expanded="true" />
-            <element signature="e#3715#3716#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/view/AddClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -822,20 +613,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/view/AboutApp.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="65" column="56" lean-forward="false" selection-start-line="65" selection-start-column="56" selection-end-line="65" selection-end-column="56" />
-          <folding>
-            <element signature="method#AboutApp#0;class#AboutApp#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/a45b9f24/16f53413-dd47-4145-a7e9-f03691b97b09/main.cashBox">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+        <state relative-caret-position="146">
+          <caret line="115" column="0" lean-forward="false" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -846,15 +627,244 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/view/services/PoolInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/view/AboutApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="65" column="56" lean-forward="false" selection-start-line="65" selection-start-column="56" selection-end-line="65" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/services/Gim.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="18" column="9" lean-forward="false" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Start.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/xerial/sqlite-jdbc/3.21.0.1/sqlite-jdbc-3.21.0.1.jar!/org/sqlite/date/FormatCache.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/xerial/sqlite-jdbc/3.21.0.1/sqlite-jdbc-3.21.0.1.jar!/org/sqlite/date/FastDateFormat.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/xerial/sqlite-jdbc/3.21.0.1/sqlite-jdbc-3.21.0.1.jar!/org/sqlite/SQLiteConfig.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="114" column="0" lean-forward="false" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/xerial/sqlite-jdbc/3.21.0.1/sqlite-jdbc-3.21.0.1.jar!/org/sqlite/SQLiteConnection.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/xerial/sqlite-jdbc/3.21.0.1/sqlite-jdbc-3.21.0.1.jar!/org/sqlite/JDBC.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/xerial/sqlite-jdbc/3.21.0.1/sqlite-jdbc-3.21.0.1.jar!/org/sqlite/jdbc4/JDBC4PreparedStatement.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/xerial/sqlite-jdbc/3.21.0.1/sqlite-jdbc-3.21.0.1.jar!/org/sqlite/jdbc3/JDBC3Connection.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="166" column="0" lean-forward="false" selection-start-line="166" selection-start-column="0" selection-end-line="166" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/xerial/sqlite-jdbc/3.21.0.1/sqlite-jdbc-3.21.0.1.jar!/org/sqlite/core/CorePreparedStatement.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/xerial/sqlite-jdbc/3.21.0.1/sqlite-jdbc-3.21.0.1.jar!/org/sqlite/core/NativeDB.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/xerial/sqlite-jdbc/3.21.0.1/sqlite-jdbc-3.21.0.1.jar!/org/sqlite/jdbc3/JDBC3PreparedStatement.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/xerial/sqlite-jdbc/3.21.0.1/sqlite-jdbc-3.21.0.1.jar!/org/sqlite/jdbc4/JDBC4Statement.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/xerial/sqlite-jdbc/3.21.0.1/sqlite-jdbc-3.21.0.1.jar!/org/sqlite/jdbc3/JDBC3Statement.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/xerial/sqlite-jdbc/3.21.0.1/sqlite-jdbc-3.21.0.1.jar!/org/sqlite/core/CoreConnection.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="249" column="0" lean-forward="false" selection-start-line="249" selection-start-column="0" selection-end-line="249" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/xerial/sqlite-jdbc/3.21.0.1/sqlite-jdbc-3.21.0.1.jar!/org/sqlite/jdbc4/JDBC4Connection.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/xerial/sqlite-jdbc/3.21.0.1/sqlite-jdbc-3.21.0.1.jar!/org/sqlite/core/CoreResultSet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/xerial/sqlite-jdbc/3.21.0.1/sqlite-jdbc-3.21.0.1.jar!/org/sqlite/jdbc4/JDBC4ResultSet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/xerial/sqlite-jdbc/3.21.0.1/sqlite-jdbc-3.21.0.1.jar!/org/sqlite/core/CoreStatement.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="100" column="0" lean-forward="false" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/xerial/sqlite-jdbc/3.21.0.1/sqlite-jdbc-3.21.0.1.jar!/org/sqlite/core/DB.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="126" column="0" lean-forward="false" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/xerial/sqlite-jdbc/3.21.0.1/sqlite-jdbc-3.21.0.1.jar!/org/sqlite/jdbc3/JDBC3ResultSet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-12">
+          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/Model.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-182">
+          <caret line="10" column="77" lean-forward="false" selection-start-line="10" selection-start-column="77" selection-end-line="10" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hs_err_pid2632.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/ModelTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="543">
+          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/view/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="171" column="24" lean-forward="true" selection-start-line="171" selection-start-column="24" selection-end-line="171" selection-end-column="24" />
+          <folding>
+            <element signature="method#setButtons#0;class#Main#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/view/AddSale.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="81" column="16" lean-forward="false" selection-start-line="81" selection-start-column="16" selection-end-line="81" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/a45b9f24/16f53413-dd47-4145-a7e9-f03691b97b09/main.cashBox">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/a45b9f24/16f53413-dd47-4145-a7e9-f03691b97b09/main.visits">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/view/services/Trener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controller/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="581" column="1" lean-forward="false" selection-start-line="581" selection-start-column="1" selection-end-line="581" selection-end-column="1" />
+        <state relative-caret-position="274">
+          <caret line="853" column="5" lean-forward="false" selection-start-line="853" selection-start-column="5" selection-end-line="853" selection-end-column="5" />
           <folding>
-            <element signature="method#controlPassword#0;class#Controller#0" expanded="false" />
-            <element signature="class#1429:1853" expanded="false" />
-            <element signature="method#ancestorRemoved#0;class#1429:1853" expanded="false" />
-            <element signature="method#ancestorMoved#0;class#1429:1853" expanded="false" />
+            <element signature="class#1549:1973" expanded="false" />
+            <element signature="method#ancestorRemoved#0;class#1549:1973" expanded="false" />
+            <element signature="method#ancestorMoved#0;class#1549:1973" expanded="false" />
             <element signature="method#clickLockProgram#0;class#Controller#0" expanded="false" />
             <element signature="method#exitProgram#0;class#Controller#0" expanded="false" />
             <element signature="method#openAddClient#0;class#Controller#0" expanded="false" />
@@ -863,17 +873,14 @@
             <element signature="method#openFindClientClickItem#0;class#Controller#0" expanded="false" />
             <element signature="method#openAddSale#0;class#Controller#0" expanded="false" />
             <element signature="method#openAboutApp#0;class#Controller#0" expanded="false" />
-            <element signature="method#clickServicesIoga#0;class#Controller#0" expanded="false" />
             <element signature="method#clickServicesPool#0;class#Controller#0" expanded="false" />
             <element signature="method#clickServicesGim#0;class#Controller#0" expanded="false" />
             <element signature="method#clickServicesAerobic#0;class#Controller#0" expanded="false" />
-            <element signature="method#clickItemTrener#0;class#Controller#0" expanded="false" />
             <element signature="method#clickaddSaleRaz#0;class#Controller#0" expanded="false" />
             <element signature="method#clickAbonement1m#0;class#Controller#0" expanded="false" />
             <element signature="method#clickAbonement3m#0;class#Controller#0" expanded="false" />
             <element signature="method#clickAbonement6m#0;class#Controller#0" expanded="false" />
             <element signature="method#clickAbonement1y#0;class#Controller#0" expanded="false" />
-            <element signature="method#returnMainMenu#0;class#Controller#0" expanded="false" />
             <element signature="method#cancelClientButton#0;class#Controller#0" expanded="false" />
             <element signature="method#clickComboBoxClientClub#0;class#Controller#0" expanded="false" />
             <element signature="method#closeAddSale#0;class#Controller#0" expanded="false" />
@@ -887,85 +894,79 @@
             <element signature="method#initDB#0;class#Controller#0" expanded="false" />
             <element signature="method#writeClientInTableAddNow#0;class#Controller#0" expanded="false" />
             <element signature="method#clickClientJTable#0;class#Controller#0" expanded="false" />
-            <element signature="method#inputTextFindClient#0;class#Controller#0" expanded="false" />
-            <element signature="method#showSumBeforePay#0;class#Controller#0" expanded="false" />
-            <element signature="method#convertationTimeService#0;class#Controller#0" expanded="false" />
-            <element signature="method#convertationService#0;class#Controller#0" expanded="false" />
             <element signature="method#showSumBeforePay2#0;class#Controller#0" expanded="false" />
-            <element signature="method#clickCloseAboutApp#0;class#Controller#0" expanded="false" />
-            <element signature="method#validateNumberCard#0;class#Controller#0" expanded="false" />
             <element signature="method#clickChangeText#0;class#Controller#0" expanded="false" />
-            <element signature="method#changeDateBD#0;class#Controller#0" expanded="false" />
-            <element signature="method#updateJTable#0;class#Controller#0" expanded="false" />
-            <element signature="method#clickExitClient#0;class#Controller#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/view/Report.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1198">
+          <caret line="211" column="25" lean-forward="false" selection-start-line="211" selection-start-column="25" selection-end-line="211" selection-end-column="25" />
+          <folding>
+            <element signature="e#6956#6957#0" expanded="true" />
+            <element signature="e#6985#6986#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/DB.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="286" column="0" lean-forward="false" selection-start-line="286" selection-start-column="0" selection-end-line="286" selection-end-column="0" />
+        <state relative-caret-position="-1093">
+          <caret line="210" column="23" lean-forward="false" selection-start-line="210" selection-start-column="23" selection-end-line="210" selection-end-column="23" />
           <folding>
-            <element signature="method#openDB#0;class#DB#0" expanded="false" />
-            <element signature="method#insertDB#0;class#DB#0" expanded="false" />
-            <element signature="method#selectDB#0;class#DB#0" expanded="false" />
             <element signature="method#closeDB#0;class#DB#0" expanded="false" />
-            <element signature="method#selectCostDB#0;class#DB#0" expanded="false" />
-            <element signature="method#getPasswordDB#0;class#DB#0" expanded="false" />
-            <element signature="method#getAdminDB#0;class#DB#0" expanded="false" />
-            <element signature="method#incLastSum#0;class#DB#0" expanded="false" />
-            <element signature="method#selectLastID#0;class#DB#0" expanded="false" />
-            <marker date="1515586705203" expanded="false" signature="2835:3415" ph="INSERT INTO clients... " />
-            <marker date="1515586705203" expanded="true" signature="3863:4138" ph="SELECT card,... clients" />
-            <marker date="1515586705203" expanded="true" signature="6105:6181" ph="SELECT cost cost" />
-            <marker date="1515586705203" expanded="true" signature="6854:6921" ph="SELECT pass password" />
-            <marker date="1515586705203" expanded="true" signature="7527:7579" ph="SELECT admin... password" />
-            <marker date="1515586705203" expanded="true" signature="9844:10115" ph="INSERT INTO cashBox... " />
-            <marker date="1515586705203" expanded="true" signature="11679:11723" ph="UPDATE clien... " />
-            <marker date="1515586705203" expanded="true" signature="12231:12267" ph="SELECT sum F... cashBox" />
-            <marker date="1515586705203" expanded="true" signature="12860:12907" ph="SELECT id FR... cashBox" />
-            <marker date="1515586705203" expanded="true" signature="13820:13889" ph="UPDATE clien... " />
-            <marker date="1515586705203" expanded="true" signature="13963:14004" ph="UPDATE clien... " />
-            <marker date="1515586705203" expanded="true" signature="14086:14135" ph="UPDATE clien... " />
-            <marker date="1515586705203" expanded="true" signature="14215:14262" ph="UPDATE clien... " />
-            <marker date="1515586705203" expanded="true" signature="14342:14389" ph="UPDATE clien... " />
-            <marker date="1515586705203" expanded="true" signature="14465:14508" ph="UPDATE clien... " />
-            <marker date="1515586705203" expanded="true" signature="14582:14623" ph="UPDATE clien... " />
-            <marker date="1515586705203" expanded="true" signature="14703:14750" ph="UPDATE clien... " />
-            <marker date="1515586705203" expanded="true" signature="14829:14875" ph="UPDATE clien... " />
-            <marker date="1515586705203" expanded="true" signature="14956:15004" ph="UPDATE clien... " />
-            <marker date="1515586705203" expanded="true" signature="15089:15141" ph="UPDATE clien... " />
-            <marker date="1515586705203" expanded="true" signature="15220:15266" ph="UPDATE clien... " />
+            <element signature="method#updateClient#0;class#DB#0" expanded="false" />
+            <element signature="method#insertExitVisitClientDB#0;class#DB#0" expanded="false" />
+            <element signature="method#sumOfDay#0;class#DB#0" expanded="false" />
+            <marker date="1515793997197" expanded="true" signature="2858:3438" ph="INSERT INTO clients... " />
+            <marker date="1515793997197" expanded="true" signature="3886:4161" ph="SELECT card,... clients" />
+            <marker date="1515793997197" expanded="true" signature="6128:6204" ph="SELECT cost cost" />
+            <marker date="1515793997197" expanded="true" signature="6877:6944" ph="SELECT pass password" />
+            <marker date="1515793997197" expanded="true" signature="7550:7602" ph="SELECT admin... password" />
+            <marker date="1515793997197" expanded="true" signature="10005:10143" ph="INSERT INTO cashBox... " />
+            <marker date="1515793997197" expanded="true" signature="10005:10299" ph="INSERT INTO cashBox... " />
+            <marker date="1515793997197" expanded="true" signature="11859:11903" ph="UPDATE clien... " />
+            <marker date="1515793997197" expanded="true" signature="12411:12447" ph="SELECT sum F... cashBox" />
+            <marker date="1515793997197" expanded="true" signature="13040:13087" ph="SELECT id FR... cashBox" />
+            <marker date="1515793997197" expanded="true" signature="14000:14069" ph="UPDATE clien... " />
+            <marker date="1515793997197" expanded="true" signature="14143:14184" ph="UPDATE clien... " />
+            <marker date="1515793997197" expanded="true" signature="14266:14315" ph="UPDATE clien... " />
+            <marker date="1515793997197" expanded="true" signature="14395:14442" ph="UPDATE clien... " />
+            <marker date="1515793997197" expanded="true" signature="14522:14569" ph="UPDATE clien... " />
+            <marker date="1515793997197" expanded="true" signature="14645:14688" ph="UPDATE clien... " />
+            <marker date="1515793997197" expanded="true" signature="14762:14803" ph="UPDATE clien... " />
+            <marker date="1515793997197" expanded="true" signature="14883:14930" ph="UPDATE clien... " />
+            <marker date="1515793997197" expanded="true" signature="15009:15055" ph="UPDATE clien... " />
+            <marker date="1515793997197" expanded="true" signature="15136:15184" ph="UPDATE clien... " />
+            <marker date="1515793997197" expanded="true" signature="15269:15321" ph="UPDATE clien... " />
+            <marker date="1515793997197" expanded="true" signature="15400:15446" ph="UPDATE clien... " />
+            <marker date="1515793997197" expanded="true" signature="17105:17205" ph="INSERT INTO visits... " />
+            <marker date="1515793997197" expanded="true" signature="17105:17217" ph="INSERT INTO visits... " />
+            <marker date="1515793997197" expanded="true" signature="17105:17222" ph="INSERT INTO visits... " />
+            <marker date="1515793997197" expanded="true" signature="17105:17261" ph="INSERT INTO visits... " />
+            <marker date="1515793997197" expanded="true" signature="17105:17263" ph="INSERT INTO clients... " />
+            <marker date="1515793997197" expanded="true" signature="17105:17264" ph="INSERT INTO clients... " />
+            <marker date="1515793997197" expanded="true" signature="18000:18047" ph="UPDATE clien... " />
+            <marker date="1515793997197" expanded="true" signature="18882:19024" ph="INSERT INTO visits... " />
+            <marker date="1515793997197" expanded="true" signature="18882:19042" ph="INSERT INTO visits... " />
+            <marker date="1515793997197" expanded="true" signature="19614:19686" ph="SELECT COUNT... visits" />
+            <marker date="1515793997197" expanded="true" signature="20413:20470" ph="SELECT SUM (... cashBox" />
+            <marker date="1515793997197" expanded="true" signature="21174:21212" ph="SELECT MAX (... cashBox" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/view/AddSale.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="81" column="15" lean-forward="false" selection-start-line="81" selection-start-column="15" selection-end-line="81" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/view/FindClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="60" column="27" lean-forward="false" selection-start-line="60" selection-start-column="27" selection-end-line="60" selection-end-column="27" />
+        <state relative-caret-position="182">
+          <caret line="305" column="24" lean-forward="false" selection-start-line="305" selection-start-column="24" selection-end-line="305" selection-end-column="24" />
           <folding>
             <element signature="method#setPanelInfo#0;class#FindClient#0" expanded="false" />
             <element signature="method#setTableClient#0;class#FindClient#0" expanded="false" />
             <element signature="method#formatText#0;class#FindClient#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Start.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>

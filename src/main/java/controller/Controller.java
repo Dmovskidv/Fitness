@@ -13,7 +13,10 @@ import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import java.awt.*;
 import java.awt.event.*;
-
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 
 
 public class Controller {
@@ -650,7 +653,7 @@ public static void clickLockProgram(JButton buttonLock) {
         switch (service){
             case "Тренажёрный зал" : service = "gim";
                 break;
-            case "Бассеин" : service = "pool";
+            case "Бассейн" : service = "pool";
                 break;
             case "Аэробика" : service = "aerobic";
                 break;
@@ -843,7 +846,9 @@ if(FindClient.getLabelInfoClientCard().getText().length()>0) {
         buttonClientExit.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                if(FindClient.getLabelInfoClientCard().getText().length()>0 && !FindClient.getLabelInfoClientStatus().getText().equals("не активный") && !FindClient.getLabelInfoClientStatus().getText().equals("Не активный") ){
+                    DB.insertExitVisitClientDB();
+            }else JOptionPane.showMessageDialog(null,"Выберете клиента и повторите ввод");
             }
         });
     }
@@ -852,29 +857,70 @@ if(FindClient.getLabelInfoClientCard().getText().length()>0) {
         buttonClientEnter.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String fio = FindClient.getLabelInfoClientFio().getText();
-                String date = FindClient.getLabelInfoClientBirthday().getText();
-                String idClient = FindClient.getLabelInfoClientCard().getText();
-                String serviceClient = Controller.findClientId(idClient);
+               try {
+                   if(FindClient.getLabelInfoClientCard().getText().length()>0 && !FindClient.getLabelInfoClientStatus().getText().equals("не активный")) {
+                       DB.insertEnterVisitClientDB();
+                   }else JOptionPane.showMessageDialog(null, "Клиент не активный");
+               }catch(Exception exc){JOptionPane.showMessageDialog(null,"Выберете клиента и повторите ввод");}
             }
+
         });
     }
 
-    private static String findClientId(String idClient) {
+    public static String findClientId(String idClient) {
         String result = null;
         for (Client m: model.getDate()
              ) {
             if(m.getNumberCard() == Integer.parseInt(idClient)){
                result = m.getStatus();
+               break;
             }
+
         }
         return result;
     }
 
+    public static void clickReport(JMenuItem reportDay) {
+        reportDay.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                Report report = new Report();
+                String fioAdmin =  Main.getAdminItem().getText();
+                Report.getFioAdmin().setText(fioAdmin);
+
+                String date = new SimpleDateFormat ( "dd MMMM yyyy, EEEE, HH:mm" ).format ( new Date() );
+                Report.getLabel_allDate().setText(date);
+
+
+
+                int countVisitPool = DB.selectForReportService( "Бассейн");
+                 Report.getCountPool().setText(countVisitPool+"");
+                int countVisitGim = DB.selectForReportService( "Тренажёрный зал");
+                Report.getCountGim().setText(countVisitGim+"");
+                int countVisitAerobic = DB.selectForReportService( "Аэробика");
+                Report.getCountAerobic().setText(countVisitAerobic+"");
+                int countIoga = DB.selectForReportService( "Йога");
+                Report.getCountIoga().setText(countIoga+"");
+
+                int countVisit = countVisitAerobic+countIoga+countVisitGim+countVisitPool;
+                Report.getAllCountVisit().setText(countVisit+"");
+
+                double sumDay = DB.sumOfDay();
+                Report.getSumOfDay().setText(sumDay+" $");
+
+                double sumAll = DB.sumAll();
+                Report.getAllSum().setText(sumAll+" $");
 
 
 
 
+                report.showView();
+            }
+        });
+
+
+    }
 
 
     //-------------------------------------------------------------

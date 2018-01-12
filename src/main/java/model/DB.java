@@ -13,6 +13,7 @@ import java.awt.event.ActionListener;
 import java.sql.*;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.Locale;
 
@@ -221,8 +222,9 @@ try {
     String service = (String) AddSale.getComboBoxServices().getSelectedItem();
     String timeService = (String) AddSale.getComboBoxTypeVisit().getSelectedItem();
     Calendar c = new GregorianCalendar();
-    SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss", Locale.getDefault());
+    SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy", Locale.getDefault());
     String date = format.format(c.getTime());
+    String time = new SimpleDateFormat ( "HH:mm:ss" ).format ( new Date() );
     String admin = Main.getAdminItem().getText();
     String rusNameService = service;
     String rusNameTimeService = timeService;
@@ -242,12 +244,12 @@ try {
     int lastID = DB.selectLastID();
     CashBox cashBox = new CashBox(DB.incLastSum(lastID), payment, lastID);
     double cashSum = cashBox.count();
-
+    if(numberCard.equals("Гость")){insertVisitGostDB(rusNameService);}
 
 
                 //command INSERT in DB
-                String query = "INSERT INTO cashBox (date, admin, service, period, payment, sum, numberCard) " +
-                        "VALUES ('" + date + "', '" + admin + "', '" + service + "', '" + timeService + "', '" + payment + "', '" + cashSum
+                String query = "INSERT INTO cashBox (date, time , admin, service, period, payment, sum, numberCard) " +
+                        "VALUES ('" + date + "', '" + time + "', '" + admin + "', '" + service + "', '" + timeService + "', '" + payment + "', '" + cashSum
                        + "', '" + numberCard + "')";
 
                 try {
@@ -268,9 +270,6 @@ try {
                            }
                        }
 
-
-
-
                     }
                     statement.close();
                 } catch (Exception exc) {
@@ -279,7 +278,6 @@ try {
    }      else {  JOptionPane.showMessageDialog(null, "Такой номер карты клиента не существует");}
 
             }catch(Exception exception){JOptionPane.showMessageDialog(null,"Не корректно заполнена форма оплаты");}
-
             }
         });
 
@@ -426,5 +424,166 @@ try {
             }
         }
 
+    public static void insertEnterVisitClientDB() {
+        Calendar c = new GregorianCalendar();
+        Calendar calendar = Calendar.getInstance();
+        SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy");
+        String date = format.format(c.getTime());
+        String timeEnter = calendar.getTime().getHours()+":"+calendar.getTime().getMinutes();
+        String fio = FindClient.getLabelInfoClientFio().getText();
+        String idClient = FindClient.getLabelInfoClientCard().getText();
+        String serviceClient = FindClient.getLabelInfoClientStatus().getText();//Controller.findClientId(idClient);
+        String serviceName[] = serviceClient.split(" ");
+        String serviceRez = (serviceName[0].equals("Тренажёрный") || serviceName[0].equals("Тренажерный") )? serviceName[0]+" "+serviceName[1]  : serviceName[0];
+
+
+
+        //command INSERT in DB
+        String query = "INSERT INTO visits (client, date, timeEntrance, service) " +
+                "VALUES ('" + fio + "','"  + date + "','"  + timeEnter + "','"  + serviceRez + "')";
+
+        try {
+            Statement statement = connection.createStatement();
+            statement.executeUpdate(query);
+            statement.close();
+           JOptionPane.showMessageDialog(null,"Вход клиента №"+idClient+" добавлен");
+        } catch (Exception exc) {
+            System.out.println(exc.getMessage());
+        }
     }
+
+    public static void insertExitVisitClientDB() {
+        Calendar calendar = Calendar.getInstance();
+        String timeEdit = calendar.getTime().getHours()+":"+calendar.getTime().getMinutes();
+        String idClient = FindClient.getLabelInfoClientCard().getText();
+        String fio = FindClient.getLabelInfoClientFio().getText();
+
+        //command INSERT in DB
+        String query = "UPDATE visits SET timeExit = ? WHERE client = ?";
+
+
+        try {
+            PreparedStatement ps = connection.prepareStatement(query);
+            ps.setString(2, fio);
+            ps.setString(1, timeEdit);
+            ps.executeUpdate();
+            ps.close();
+            JOptionPane.showMessageDialog(null,"Выход клиента №"+idClient+" добавлен");
+        } catch (Exception exc) {
+            System.out.println(exc.getMessage());
+        }
+    }
+
+    public static void insertVisitGostDB(String service) {
+        Calendar c = new GregorianCalendar();
+        Calendar calendar = Calendar.getInstance();
+        SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy");
+        String date = format.format(c.getTime());
+        String timeEnter = calendar.getTime().getHours()+":"+calendar.getTime().getMinutes();
+
+        //command INSERT in DB
+        String query = "INSERT INTO visits (client, date, timeEntrance, service) " +
+                "VALUES ('" + "Гость" + "','"  + date + "','"  + timeEnter + "','"  + service + "')";
+
+        try {
+            Statement statement = connection.createStatement();
+            statement.executeUpdate(query);
+            statement.close();
+            //JOptionPane.showMessageDialog(null,"Вход на разовое посещение добавлен");
+        } catch (Exception exc) {
+            System.out.println(exc.getMessage());
+        }
+    }
+
+    public static int selectForReportService( String service) {
+
+        String date = new SimpleDateFormat ( "dd.MM.yyyy" ).format ( new Date() );
+        int result = 0;
+        if (openDB()) {
+
+
+            String query = "SELECT COUNT (client) AS total FROM visits WHERE date= ? AND service = ? ";
+
+            try {
+                PreparedStatement ps = connection.prepareStatement(query);
+                ps.setString(1, date);
+                ps.setString(2, service);
+                ResultSet rs = ps.executeQuery();
+
+
+                while (rs.next()) {
+                    result = rs.getInt("total");
+
+                }
+                ps.close();
+                rs.close();
+
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+
+        }
+        return result;
+    }
+
+    public static double sumOfDay() {
+        String date = new SimpleDateFormat ( "dd.MM.yyyy" ).format ( new Date() );
+
+        double result = 0;
+
+        if (openDB()) {
+
+
+            String query = "SELECT SUM (payment) AS total FROM cashBox WHERE date = ? ";
+
+            try {
+                PreparedStatement ps = connection.prepareStatement(query);
+                ps.setString(1, date);
+                ResultSet rs = ps.executeQuery();
+
+                while (rs.next()) {
+                    result = rs.getDouble("total");
+                                   }
+                ps.close();
+                rs.close();
+
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+
+        }
+        return result;
+    }
+
+    public static double sumAll() {
+
+        String date = new SimpleDateFormat ( "dd.MM.yyyy" ).format ( new Date() );
+
+        double result = 0;
+
+        if (openDB()) {
+
+
+            String query = "SELECT MAX (sum) AS total FROM cashBox ";
+
+            try {
+                PreparedStatement ps = connection.prepareStatement(query);
+                //ps.setString(1, date);
+                ResultSet rs = ps.executeQuery();
+
+                while (rs.next()) {
+                    result = rs.getDouble("total");
+
+                }
+                ps.close();
+                rs.close();
+
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+
+        }
+        return result;
+    }
+}
 
